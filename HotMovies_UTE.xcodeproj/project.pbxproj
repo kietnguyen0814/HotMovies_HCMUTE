@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E3D61E01ED98C0500883EB4 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D61DF1ED98C0500883EB4 /* LoginTextField.swift */; };
+		2E3D61E31ED9AF5600883EB4 /* DesignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D61E21ED9AF5600883EB4 /* DesignButton.swift */; };
 		2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078B21ED95A0400B619C3 /* AppDelegate.swift */; };
-		2EE078B51ED95A0400B619C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078B41ED95A0400B619C3 /* ViewController.swift */; };
+		2EE078B51ED95A0400B619C3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078B41ED95A0400B619C3 /* SignInViewController.swift */; };
 		2EE078B81ED95A0400B619C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE078B61ED95A0400B619C3 /* Main.storyboard */; };
 		2EE078BA1ED95A0400B619C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EE078B91ED95A0400B619C3 /* Assets.xcassets */; };
 		2EE078BD1ED95A0400B619C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE078BB1ED95A0400B619C3 /* LaunchScreen.storyboard */; };
 		2EE078C81ED95A0400B619C3 /* HotMovies_UTETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078C71ED95A0400B619C3 /* HotMovies_UTETests.swift */; };
 		2EE078D31ED95A0400B619C3 /* HotMovies_UTEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078D21ED95A0400B619C3 /* HotMovies_UTEUITests.swift */; };
+		2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA61EDA988A003060A3 /* DesignView.swift */; };
+		2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E3D61DF1ED98C0500883EB4 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		2E3D61E21ED9AF5600883EB4 /* DesignButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignButton.swift; sourceTree = "<group>"; };
 		2EE078AF1ED95A0400B619C3 /* HotMovies_UTE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotMovies_UTE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE078B21ED95A0400B619C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2EE078B41ED95A0400B619C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2EE078B41ED95A0400B619C3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2EE078B71ED95A0400B619C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EE078B91ED95A0400B619C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EE078BC1ED95A0400B619C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 		2EE078CE1ED95A0400B619C3 /* HotMovies_UTEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotMovies_UTEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE078D21ED95A0400B619C3 /* HotMovies_UTEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMovies_UTEUITests.swift; sourceTree = "<group>"; };
 		2EE078D41ED95A0400B619C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EEE8FA61EDA988A003060A3 /* DesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
+		2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E3D61E11ED98C1400883EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EE078B61ED95A0400B619C3 /* Main.storyboard */,
+				2EE078BB1ED95A0400B619C3 /* LaunchScreen.storyboard */,
+				2E3D61DF1ED98C0500883EB4 /* LoginTextField.swift */,
+				2E3D61E21ED9AF5600883EB4 /* DesignButton.swift */,
+				2EEE8FA61EDA988A003060A3 /* DesignView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2E583CD91ED9DDD100630DDA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2EE078B41ED95A0400B619C3 /* SignInViewController.swift */,
+				2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		2EE078A61ED95A0400B619C3 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +126,11 @@
 		2EE078B11ED95A0400B619C3 /* HotMovies_UTE */ = {
 			isa = PBXGroup;
 			children = (
-				2EE078B21ED95A0400B619C3 /* AppDelegate.swift */,
-				2EE078B41ED95A0400B619C3 /* ViewController.swift */,
-				2EE078B61ED95A0400B619C3 /* Main.storyboard */,
 				2EE078B91ED95A0400B619C3 /* Assets.xcassets */,
-				2EE078BB1ED95A0400B619C3 /* LaunchScreen.storyboard */,
 				2EE078BE1ED95A0400B619C3 /* Info.plist */,
+				2EE078B21ED95A0400B619C3 /* AppDelegate.swift */,
+				2E583CD91ED9DDD100630DDA /* Controller */,
+				2E3D61E11ED98C1400883EB4 /* View */,
 			);
 			path = HotMovies_UTE;
 			sourceTree = "<group>";
@@ -259,8 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE078B51ED95A0400B619C3 /* ViewController.swift in Sources */,
+				2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */,
+				2E3D61E01ED98C0500883EB4 /* LoginTextField.swift in Sources */,
+				2EE078B51ED95A0400B619C3 /* SignInViewController.swift in Sources */,
+				2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */,
 				2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */,
+				2E3D61E31ED9AF5600883EB4 /* DesignButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HotMovies_UTE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Group-9---iOSUTE.HotMovies-UTE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HotMovies_UTE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Group-9---iOSUTE.HotMovies-UTE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +539,7 @@
 				2EE078D91ED95A0400B619C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EE078DA1ED95A0400B619C3 /* Build configuration list for PBXNativeTarget "HotMovies_UTETests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +548,7 @@
 				2EE078DC1ED95A0400B619C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EE078DD1ED95A0400B619C3 /* Build configuration list for PBXNativeTarget "HotMovies_UTEUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +557,7 @@
 				2EE078DF1ED95A0400B619C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
