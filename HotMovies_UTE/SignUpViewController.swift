@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
@@ -15,6 +16,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtConfirmSignUp: LoginTextField!
     @IBOutlet weak var txtAddressSignUp: LoginTextField!
     @IBOutlet weak var txtPhoneSignUp: LoginTextField!
+    
+    var mDatabase: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.DismissKeyboard))
@@ -22,49 +26,78 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         observerKeyboard()
         //addDoneButtonOnKeyboard()
         // Do any additional setup after loading the view.
+        mDatabase = Database.database().reference()
     }
     
     @IBAction func btnClose(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    /*
-    //MARK - Set Done button on keyboard
-    func addDoneButtonOnKeyboard()
-    {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        //doneToolbar.barStyle = UIBarStyle.blackTranslucent // set style for done button bar
+    @IBAction func btnRegister(_ sender: Any) {
+        var result: Bool = true
+        let email: String = txtEmailSignUp.text!
+        let password: String = txtPassSignUp.text!
+        let phone: String = txtPhoneSignUp.text!
+        let confirmPass: String = txtConfirmSignUp.text!
+        let address: String = txtAddressSignUp.text!
         
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(SignUpViewController.doneButtonAction))
-        
-        let items = NSMutableArray()
-        items.add(flexSpace)
-        items.add(done)
-        
-        doneToolbar.items = items as? [UIBarButtonItem]
-        doneToolbar.sizeToFit()
-        
-        self.txtPhoneSignUp.inputAccessoryView = doneToolbar
+        if (email.isEmpty || password.isEmpty || phone.isEmpty || confirmPass.isEmpty || address.isEmpty){
+            showAlertDialog(message: "Hãy điền đầy đủ thông tin");
+            result = false
+        }
+        else{
+            if !(Validate.isValidEmail(testStr: email)) {
+                showAlertDialog(message: "Sai định dạng Email")
+                result = false
+            }
+            
+            if (password.characters.count < 6 || confirmPass.characters.count < 6) {
+                showAlertDialog(message: "Mật khẩu phải có ít nhất 6 kí tự");
+                result = false;
+            }
+            else {
+                if (password != confirmPass) {
+                    showAlertDialog(message: "Mật khẩu không khớp")
+                    result = false;
+                }
+            }
+            
+            if (result) {
+                Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+                    if error == nil {
+                        let dataUser = [
+                            "uid": user?.uid,
+                            "email": email,
+                            "phone": phone,
+                            "address": address,
+                            "password": password,
+                            "balance": 200000
+                        ] as [String : Any]
+                        self.mDatabase.child("users").child((user?.uid)!).updateChildValues(dataUser)
+                    } else {
+                        if let errCode = AuthErrorCode(rawValue: error!._code) {
+                            switch errCode {
+                            case .invalidEmail:
+                                self.showAlertDialog(message: "Sai định dạng Email")
+                            case .emailAlreadyInUse:
+                                self.showAlertDialog(message: "Email đã được sử dụng, vui lòng thử lại")
+                            default:
+                                self.showAlertDialog(message: "Không thể tạo tài khoản, vui lòng thử lại")
+                            }
+                        }                    }
+                }
+            }
+            
+        }
         
     }
     
-    //MARK: - User click on done button
-    func doneButtonAction()
-    {
-        view.endEditing(true)
-    }*/
-    
+    func showAlertDialog(message: String) {
+        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertView.addAction(action)
+        self.present(alertView, animated: true, completion: nil)
+    }
     
     //MARK: - Show, Hide Keyboard
     
@@ -97,5 +130,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         }, completion: nil)
     }
-    
+
 }
+

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
 
@@ -28,23 +29,37 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    /*override func viewWillAppear(_ animated: Bool) {
-        imgBackground.alpha = 0.0
-        btnSignIn.alpha = 0.0
+    
+    @IBAction func btnLogin(_ sender: Any) {
+        let email: String = txtEmailSignIn.text!
+        let password: String = txtPassSignIn.text!
+        
+        if (email.isEmpty || password.isEmpty) {
+            showAlertDialog(message: "Hãy điền đầy đủ thông tin");
+        }
+        else {
+            if !(Validate.isValidEmail(testStr: email)) {
+                self.showAlertDialog(message: "Sai định dạng Email")
+            }
+            else {
+                Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                    if (error == nil) {
+                        self.showAlertDialog(message: "Đăng nhập thành công");
+                    }
+                    else {
+                        self.showAlertDialog(message: "Đăng nhập khong thành công")
+                    }
+                }
+            }
+        }
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        
-        UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
-            self.imgBackground.alpha = 1
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 1.0, animations: {
-            self.btnSignIn.alpha = 1.0
-        }, completion: nil)
-    }*/
     
-    
+    func showAlertDialog(message: String) {
+        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertView.addAction(action)
+        self.present(alertView, animated: true, completion: nil)
+    }
     
     @IBAction func btnClose(_ sender: Any) {
         dismiss(animated: true, completion: nil)

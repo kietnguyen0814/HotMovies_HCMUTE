@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07D9908428325FEC589FD2F5 /* Pods_HotMovies_UTE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E79531A8482B65FC4D75752 /* Pods_HotMovies_UTE.framework */; };
 		2E3D61E01ED98C0500883EB4 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D61DF1ED98C0500883EB4 /* LoginTextField.swift */; };
 		2E3D61E31ED9AF5600883EB4 /* DesignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D61E21ED9AF5600883EB4 /* DesignButton.swift */; };
 		2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078B21ED95A0400B619C3 /* AppDelegate.swift */; };
@@ -18,6 +19,10 @@
 		2EE078D31ED95A0400B619C3 /* HotMovies_UTEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078D21ED95A0400B619C3 /* HotMovies_UTEUITests.swift */; };
 		2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA61EDA988A003060A3 /* DesignView.swift */; };
 		2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */; };
+		305995681EDF0C35009C1DD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */; };
+		3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059956A1EDF12AD009C1DD4 /* Validate.swift */; };
+		D918AD2EC2649B046662092D /* Pods_HotMovies_UTETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0670A8C1FC023A34059B8F29 /* Pods_HotMovies_UTETests.framework */; };
+		E9F453DA69FB2B446778A480 /* Pods_HotMovies_UTEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892EAE197E577950B4558738 /* Pods_HotMovies_UTEUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03CB53A2E3BF87D5A4E00006 /* Pods-HotMovies_UTETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTETests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTETests/Pods-HotMovies_UTETests.release.xcconfig"; sourceTree = "<group>"; };
+		0670A8C1FC023A34059B8F29 /* Pods_HotMovies_UTETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotMovies_UTETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E79531A8482B65FC4D75752 /* Pods_HotMovies_UTE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotMovies_UTE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2395458CF2E56E791282E986 /* Pods-HotMovies_UTE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTE/Pods-HotMovies_UTE.debug.xcconfig"; sourceTree = "<group>"; };
+		270ACBBBD1334E1477517D3B /* Pods-HotMovies_UTE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTE.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTE/Pods-HotMovies_UTE.release.xcconfig"; sourceTree = "<group>"; };
 		2E3D61DF1ED98C0500883EB4 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		2E3D61E21ED9AF5600883EB4 /* DesignButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignButton.swift; sourceTree = "<group>"; };
 		2EE078AF1ED95A0400B619C3 /* HotMovies_UTE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotMovies_UTE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +65,12 @@
 		2EE078D41ED95A0400B619C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EEE8FA61EDA988A003060A3 /* DesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3059956A1EDF12AD009C1DD4 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
+		7C1E44AB87E8DA8127F12EB8 /* Pods-HotMovies_UTETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTETests/Pods-HotMovies_UTETests.debug.xcconfig"; sourceTree = "<group>"; };
+		892EAE197E577950B4558738 /* Pods_HotMovies_UTEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotMovies_UTEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98A13522311E62ACF1DADC27 /* Pods-HotMovies_UTEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTEUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTEUITests/Pods-HotMovies_UTEUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FE289ABB0419C727692DE54F /* Pods-HotMovies_UTEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTEUITests/Pods-HotMovies_UTEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D9908428325FEC589FD2F5 /* Pods_HotMovies_UTE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D918AD2EC2649B046662092D /* Pods_HotMovies_UTETests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F453DA69FB2B446778A480 /* Pods_HotMovies_UTEUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +129,8 @@
 				2EE078C61ED95A0400B619C3 /* HotMovies_UTETests */,
 				2EE078D11ED95A0400B619C3 /* HotMovies_UTEUITests */,
 				2EE078B01ED95A0400B619C3 /* Products */,
+				EA943E207FBD8A4D13032936 /* Pods */,
+				3C1A9864A528B46AAE542B99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +147,8 @@
 		2EE078B11ED95A0400B619C3 /* HotMovies_UTE */ = {
 			isa = PBXGroup;
 			children = (
+				305995691EDF129C009C1DD4 /* Utils */,
+				305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */,
 				2EE078B91ED95A0400B619C3 /* Assets.xcassets */,
 				2EE078BE1ED95A0400B619C3 /* Info.plist */,
 				2EE078B21ED95A0400B619C3 /* AppDelegate.swift */,
@@ -153,6 +176,37 @@
 			path = HotMovies_UTEUITests;
 			sourceTree = "<group>";
 		};
+		305995691EDF129C009C1DD4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3059956A1EDF12AD009C1DD4 /* Validate.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3C1A9864A528B46AAE542B99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E79531A8482B65FC4D75752 /* Pods_HotMovies_UTE.framework */,
+				0670A8C1FC023A34059B8F29 /* Pods_HotMovies_UTETests.framework */,
+				892EAE197E577950B4558738 /* Pods_HotMovies_UTEUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA943E207FBD8A4D13032936 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2395458CF2E56E791282E986 /* Pods-HotMovies_UTE.debug.xcconfig */,
+				270ACBBBD1334E1477517D3B /* Pods-HotMovies_UTE.release.xcconfig */,
+				7C1E44AB87E8DA8127F12EB8 /* Pods-HotMovies_UTETests.debug.xcconfig */,
+				03CB53A2E3BF87D5A4E00006 /* Pods-HotMovies_UTETests.release.xcconfig */,
+				FE289ABB0419C727692DE54F /* Pods-HotMovies_UTEUITests.debug.xcconfig */,
+				98A13522311E62ACF1DADC27 /* Pods-HotMovies_UTEUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EE078D71ED95A0400B619C3 /* Build configuration list for PBXNativeTarget "HotMovies_UTE" */;
 			buildPhases = (
+				2E2B9431522A52B7A38EC137 /* [CP] Check Pods Manifest.lock */,
 				2EE078AB1ED95A0400B619C3 /* Sources */,
 				2EE078AC1ED95A0400B619C3 /* Frameworks */,
 				2EE078AD1ED95A0400B619C3 /* Resources */,
+				17E3A6EE0E1F468DCE8423A3 /* [CP] Embed Pods Frameworks */,
+				B69A99B505AD56528310A2BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EE078DA1ED95A0400B619C3 /* Build configuration list for PBXNativeTarget "HotMovies_UTETests" */;
 			buildPhases = (
+				9ED0BF3D7B2F303B02F5D951 /* [CP] Check Pods Manifest.lock */,
 				2EE078BF1ED95A0400B619C3 /* Sources */,
 				2EE078C01ED95A0400B619C3 /* Frameworks */,
 				2EE078C11ED95A0400B619C3 /* Resources */,
+				26C7F278D840F123CE353C02 /* [CP] Embed Pods Frameworks */,
+				CE99C86527C2AD0E80FD5156 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EE078DD1ED95A0400B619C3 /* Build configuration list for PBXNativeTarget "HotMovies_UTEUITests" */;
 			buildPhases = (
+				0D5AD6D8C52287B0E1565F6F /* [CP] Check Pods Manifest.lock */,
 				2EE078CA1ED95A0400B619C3 /* Sources */,
 				2EE078CB1ED95A0400B619C3 /* Frameworks */,
 				2EE078CC1ED95A0400B619C3 /* Resources */,
+				19BAA075AC6EF8A74569793E /* [CP] Embed Pods Frameworks */,
+				709F691A92DACBE2EC761645 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EE078BD1ED95A0400B619C3 /* LaunchScreen.storyboard in Resources */,
+				305995681EDF0C35009C1DD4 /* GoogleService-Info.plist in Resources */,
 				2EE078BA1ED95A0400B619C3 /* Assets.xcassets in Resources */,
 				2EE078B81ED95A0400B619C3 /* Main.storyboard in Resources */,
 			);
@@ -282,6 +346,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D5AD6D8C52287B0E1565F6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		17E3A6EE0E1F468DCE8423A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotMovies_UTE/Pods-HotMovies_UTE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19BAA075AC6EF8A74569793E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotMovies_UTEUITests/Pods-HotMovies_UTEUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26C7F278D840F123CE353C02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotMovies_UTETests/Pods-HotMovies_UTETests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E2B9431522A52B7A38EC137 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		709F691A92DACBE2EC761645 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotMovies_UTEUITests/Pods-HotMovies_UTEUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ED0BF3D7B2F303B02F5D951 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B69A99B505AD56528310A2BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotMovies_UTE/Pods-HotMovies_UTE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE99C86527C2AD0E80FD5156 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotMovies_UTETests/Pods-HotMovies_UTETests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2EE078AB1ED95A0400B619C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -289,6 +491,7 @@
 			files = (
 				2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */,
 				2E3D61E01ED98C0500883EB4 /* LoginTextField.swift in Sources */,
+				3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */,
 				2EE078B51ED95A0400B619C3 /* SignInViewController.swift in Sources */,
 				2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */,
 				2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */,
@@ -442,6 +645,7 @@
 		};
 		2EE078D81ED95A0400B619C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2395458CF2E56E791282E986 /* Pods-HotMovies_UTE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HotMovies_UTE/Info.plist;
@@ -455,6 +659,7 @@
 		};
 		2EE078D91ED95A0400B619C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 270ACBBBD1334E1477517D3B /* Pods-HotMovies_UTE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HotMovies_UTE/Info.plist;
@@ -468,6 +673,7 @@
 		};
 		2EE078DB1ED95A0400B619C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C1E44AB87E8DA8127F12EB8 /* Pods-HotMovies_UTETests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,6 +688,7 @@
 		};
 		2EE078DC1ED95A0400B619C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03CB53A2E3BF87D5A4E00006 /* Pods-HotMovies_UTETests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -496,6 +703,7 @@
 		};
 		2EE078DE1ED95A0400B619C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE289ABB0419C727692DE54F /* Pods-HotMovies_UTEUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = HotMovies_UTEUITests/Info.plist;
@@ -509,6 +717,7 @@
 		};
 		2EE078DF1ED95A0400B619C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98A13522311E62ACF1DADC27 /* Pods-HotMovies_UTEUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = HotMovies_UTEUITests/Info.plist;

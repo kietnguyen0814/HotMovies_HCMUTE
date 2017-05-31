@@ -1,0 +1,6 @@
+framework module Pods_HotMovies_UTEUITests {
+  umbrella header "Pods-HotMovies_UTEUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
