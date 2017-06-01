@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,7 +44,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8c-1o-hah" id="IM0-Jv-WDI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -354,7 +354,7 @@
         <!--User Info View Controller-->
         <scene sceneID="OcQ-0e-WUG">
             <objects>
-                <viewController id="eFY-c0-1ge" customClass="UserInfoViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userInfoId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eFY-c0-1ge" customClass="UserInfoViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BhK-UN-1gS"/>
                         <viewControllerLayoutGuide type="bottom" id="me3-PI-K0B"/>
@@ -504,6 +504,13 @@
                             <constraint firstItem="me3-PI-K0B" firstAttribute="top" secondItem="1zp-ur-d4S" secondAttribute="bottom" id="zXM-AU-T95"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtAddress" destination="rLM-AI-HBD" id="lHt-tE-UNs"/>
+                        <outlet property="txtBalance" destination="Oaj-9J-fwB" id="bIg-E0-Obk"/>
+                        <outlet property="txtEmail" destination="wnZ-r5-J1Z" id="1HM-jZ-luY"/>
+                        <outlet property="txtFullName" destination="k7W-Es-sHE" id="R0g-Kf-W8F"/>
+                        <outlet property="txtPhone" destination="Owe-Y1-iTB" id="u24-bC-i9T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXG-Ea-BUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -702,6 +709,7 @@
                         <outlet property="txtAddressSignUp" destination="D2q-np-AF9" id="lYn-9d-xLv"/>
                         <outlet property="txtConfirmSignUp" destination="zal-a8-tqW" id="Wlw-zX-tnk"/>
                         <outlet property="txtEmailSignUp" destination="knV-kT-brE" id="sBe-w9-wev"/>
+                        <outlet property="txtFullNameSignUp" destination="e6t-p9-PLu" id="SMi-hr-UaZ"/>
                         <outlet property="txtPassSignUp" destination="42N-6G-fFU" id="Zl4-Uo-cTm"/>
                         <outlet property="txtPhoneSignUp" destination="b6Q-Bo-28l" id="xas-yV-ZVh"/>
                     </connections>
@@ -748,7 +756,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jsr-ap-Wk7" id="JAK-fU-zsp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -781,7 +789,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gfz-hy-1RL" id="fNs-Ls-e5e">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

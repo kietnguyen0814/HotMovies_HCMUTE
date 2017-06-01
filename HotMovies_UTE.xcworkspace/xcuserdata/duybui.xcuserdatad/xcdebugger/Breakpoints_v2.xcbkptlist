@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotMovies_UTE/UserInfoViewController.swift"
+            timestampString = "518026668.780053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HotMovies_UTE.UserInfoViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "HotMovies_UTE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duybui/Documents/HotMovies_HCMUTE/HotMovies_UTE/UserInfoViewController.swift"
+                  timestampString = "518026970.201745"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "250">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HotMovies_UTE.UserInfoViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "HotMovies_UTE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duybui/Documents/HotMovies_HCMUTE/HotMovies_UTE/UserInfoViewController.swift"
+                  timestampString = "518026970.212255"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "629">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

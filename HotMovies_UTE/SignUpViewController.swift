@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtConfirmSignUp: LoginTextField!
     @IBOutlet weak var txtAddressSignUp: LoginTextField!
     @IBOutlet weak var txtPhoneSignUp: LoginTextField!
+    @IBOutlet weak var txtFullNameSignUp: LoginTextField!
     
     var mDatabase: DatabaseReference!
     
@@ -40,8 +41,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         let phone: String = txtPhoneSignUp.text!
         let confirmPass: String = txtConfirmSignUp.text!
         let address: String = txtAddressSignUp.text!
+        let fullName: String = txtFullNameSignUp.text!
         
-        if (email.isEmpty || password.isEmpty || phone.isEmpty || confirmPass.isEmpty || address.isEmpty){
+        if (email.isEmpty || password.isEmpty || phone.isEmpty || confirmPass.isEmpty || address.isEmpty || fullName.isEmpty){
             showAlertDialog(message: "Hãy điền đầy đủ thông tin");
             result = false
         }
@@ -71,7 +73,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                             "phone": phone,
                             "address": address,
                             "password": password,
-                            "balance": 200000
+                            "balance": 200000,
+                            "fullname": fullName
                         ] as [String : Any]
                         self.mDatabase.child("users").child((user?.uid)!).updateChildValues(dataUser)
                     } else {

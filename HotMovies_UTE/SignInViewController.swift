@@ -44,7 +44,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             else {
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                     if (error == nil) {
-                        self.showAlertDialog(message: "Đăng nhập thành công");
+                        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
+                        self.present(srcUserInfo, animated: true)
                     }
                     else {
                         self.showAlertDialog(message: "Đăng nhập khong thành công")

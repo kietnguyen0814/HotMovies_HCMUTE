@@ -23,6 +23,7 @@
 		2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */; };
 		305995681EDF0C35009C1DD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */; };
 		3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059956A1EDF12AD009C1DD4 /* Validate.swift */; };
+		30F1498D1EE070D500E284D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1498C1EE070D500E284D5 /* User.swift */; };
 		D918AD2EC2649B046662092D /* Pods_HotMovies_UTETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0670A8C1FC023A34059B8F29 /* Pods_HotMovies_UTETests.framework */; };
 		E9F453DA69FB2B446778A480 /* Pods_HotMovies_UTEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892EAE197E577950B4558738 /* Pods_HotMovies_UTEUITests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3059956A1EDF12AD009C1DD4 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
+		30F1498C1EE070D500E284D5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7C1E44AB87E8DA8127F12EB8 /* Pods-HotMovies_UTETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTETests/Pods-HotMovies_UTETests.debug.xcconfig"; sourceTree = "<group>"; };
 		892EAE197E577950B4558738 /* Pods_HotMovies_UTEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotMovies_UTEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A13522311E62ACF1DADC27 /* Pods-HotMovies_UTEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTEUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTEUITests/Pods-HotMovies_UTEUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		2EE078B11ED95A0400B619C3 /* HotMovies_UTE */ = {
 			isa = PBXGroup;
 			children = (
+				30F1498B1EE0702B00E284D5 /* Model */,
 				305995691EDF129C009C1DD4 /* Utils */,
 				305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */,
 				2EE078B91ED95A0400B619C3 /* Assets.xcassets */,
@@ -188,6 +191,14 @@
 				3059956A1EDF12AD009C1DD4 /* Validate.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		30F1498B1EE0702B00E284D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30F1498C1EE070D500E284D5 /* User.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		3C1A9864A528B46AAE542B99 /* Frameworks */ = {
@@ -503,6 +514,7 @@
 				2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */,
 				2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */,
 				2E407B071EE0462A00208130 /* ForgetPassViewController.swift in Sources */,
+				30F1498D1EE070D500E284D5 /* User.swift in Sources */,
 				2E3D61E31ED9AF5600883EB4 /* DesignButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
