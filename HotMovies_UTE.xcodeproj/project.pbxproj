@@ -10,6 +10,8 @@
 		07D9908428325FEC589FD2F5 /* Pods_HotMovies_UTE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E79531A8482B65FC4D75752 /* Pods_HotMovies_UTE.framework */; };
 		2E3D61E01ED98C0500883EB4 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D61DF1ED98C0500883EB4 /* LoginTextField.swift */; };
 		2E3D61E31ED9AF5600883EB4 /* DesignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D61E21ED9AF5600883EB4 /* DesignButton.swift */; };
+		2E407B071EE0462A00208130 /* ForgetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E407B061EE0462A00208130 /* ForgetPassViewController.swift */; };
+		2E407B091EE04C5900208130 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E407B081EE04C5900208130 /* UserInfoViewController.swift */; };
 		2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078B21ED95A0400B619C3 /* AppDelegate.swift */; };
 		2EE078B51ED95A0400B619C3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078B41ED95A0400B619C3 /* SignInViewController.swift */; };
 		2EE078B81ED95A0400B619C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE078B61ED95A0400B619C3 /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		270ACBBBD1334E1477517D3B /* Pods-HotMovies_UTE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTE.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTE/Pods-HotMovies_UTE.release.xcconfig"; sourceTree = "<group>"; };
 		2E3D61DF1ED98C0500883EB4 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		2E3D61E21ED9AF5600883EB4 /* DesignButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignButton.swift; sourceTree = "<group>"; };
+		2E407B061EE0462A00208130 /* ForgetPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPassViewController.swift; sourceTree = "<group>"; };
+		2E407B081EE04C5900208130 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		2EE078AF1ED95A0400B619C3 /* HotMovies_UTE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotMovies_UTE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE078B21ED95A0400B619C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EE078B41ED95A0400B619C3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			children = (
 				2EE078B41ED95A0400B619C3 /* SignInViewController.swift */,
 				2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */,
+				2E407B061EE0462A00208130 /* ForgetPassViewController.swift */,
+				2E407B081EE04C5900208130 /* UserInfoViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -493,8 +499,10 @@
 				2E3D61E01ED98C0500883EB4 /* LoginTextField.swift in Sources */,
 				3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */,
 				2EE078B51ED95A0400B619C3 /* SignInViewController.swift in Sources */,
+				2E407B091EE04C5900208130 /* UserInfoViewController.swift in Sources */,
 				2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */,
 				2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */,
+				2E407B071EE0462A00208130 /* ForgetPassViewController.swift in Sources */,
 				2E3D61E31ED9AF5600883EB4 /* DesignButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
