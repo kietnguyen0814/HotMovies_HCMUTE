@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import MBProgressHUD
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
 
@@ -15,6 +16,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnSignIn: UIButton!*/
     @IBOutlet weak var txtEmailSignIn: LoginTextField!
     @IBOutlet weak var txtPassSignIn: LoginTextField!
+    var loadingNotification: MBProgressHUD!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,15 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func showProgress() {
+        loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+        loadingNotification.label.text = "Đang tải..."
+    }
+    
+    func hideProgress() {
+        loadingNotification.hide(animated: true)
+    }
     
     @IBAction func btnLogin(_ sender: Any) {
         let email: String = txtEmailSignIn.text!
@@ -42,7 +53,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 self.showAlertDialog(message: "Sai định dạng Email")
             }
             else {
+                //show progress
+                self.showProgress()
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                    //hide progress
+                    self.hideProgress()
                     if (error == nil) {
                         let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
                         self.present(srcUserInfo, animated: true)

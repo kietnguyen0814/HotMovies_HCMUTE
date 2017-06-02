@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import MBProgressHUD
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
@@ -19,6 +20,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtFullNameSignUp: LoginTextField!
     
     var mDatabase: DatabaseReference!
+    var loadingNotification: MBProgressHUD!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +67,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             }
             
             if (result) {
+                //show progress
+                self.showProgress()
                 Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+                    //hide progress
+                    self.hideProgress()
                     if error == nil {
                         let dataUser = [
                             "uid": user?.uid,
@@ -96,6 +102,16 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             
         }
         
+    }
+    
+    func showProgress() {
+        loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+        loadingNotification.label.text = "Đang tải..."
+    }
+    
+    func hideProgress() {
+        loadingNotification.hide(animated: true)
     }
     
     func showAlertDialog(message: String) {

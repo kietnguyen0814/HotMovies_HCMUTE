@@ -7,6 +7,7 @@ target 'HotMovies_UTE' do
 
 pod ‘Firebase/Auth’
 pod ‘Firebase/Database’
+pod 'MBProgressHUD', '~> 1.0.0'
 
   # Pods for HotMovies_UTE
 
