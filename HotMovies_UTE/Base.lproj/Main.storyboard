@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,8 +19,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="9mQ-On-oUQ" kind="relationship" relationship="viewControllers" id="PV6-h1-go3"/>
-                        <segue destination="aEO-qh-I6q" kind="relationship" relationship="viewControllers" id="r1f-zs-aoP"/>
-                        <segue destination="KJo-Ql-iMZ" kind="relationship" relationship="viewControllers" id="pJv-Y6-NEA"/>
+                        <segue destination="89E-U6-wCD" kind="relationship" relationship="viewControllers" id="r1f-zs-aoP"/>
+                        <segue destination="1JV-5N-vfq" kind="relationship" relationship="viewControllers" id="pJv-Y6-NEA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9Y-jA-AUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -44,7 +44,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8c-1o-hah" id="IM0-Jv-WDI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -128,7 +128,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="user"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="mail"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
@@ -288,24 +288,6 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsg-zm-1sI" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="40" y="380" width="305" height="50"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="user"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                    <real key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="15"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </textField>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oj9-DN-Mbm" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                             <rect key="frame" x="40" y="525" width="305" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -339,6 +321,24 @@
                                                 <action selector="btnClose:" destination="pmx-0N-kma" eventType="touchUpInside" id="N0L-4t-gFE"/>
                                             </connections>
                                         </button>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsg-zm-1sI" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="40" y="447" width="305" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="mail"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
                                     </subviews>
                                 </view>
                                 <blurEffect style="light"/>
@@ -349,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t84-Bv-DMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4072.8000000000002" y="187.55622188905548"/>
+            <point key="canvasLocation" x="4073" y="188"/>
         </scene>
         <!--User Info View Controller-->
         <scene sceneID="OcQ-0e-WUG">
@@ -363,19 +363,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1zp-ur-d4S">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user info" translatesAutoresizingMaskIntoConstraints="NO" id="1zp-ur-d4S">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnZ-r5-J1Z" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="239" width="305" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thông Tin Cá Nhân" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sc-4A-eZz">
+                                <rect key="frame" x="40" y="20" width="295" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtL-hU-iRG" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="199" y="562" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88126586294416243" green="0.10404776460844972" blue="0.033539686087899187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title="Đăng Xuất">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-KW-Wb6" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="16" y="562" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnZ-r5-J1Z" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="97" y="324" width="252" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="user"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
@@ -387,16 +427,15 @@
                                     <outlet property="delegate" destination="qby-DW-SPe" id="FbS-PY-caN"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Địa Chỉ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLM-AI-HBD" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="297" width="305" height="35"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Địa Chỉ" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLM-AI-HBD" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="97" y="382" width="252" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="address"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
@@ -408,16 +447,15 @@
                                     <outlet property="delegate" destination="qby-DW-SPe" id="DhF-E4-GCr"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Điện Thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owe-Y1-iTB" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="363" width="305" height="35"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Điện Thoại" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owe-Y1-iTB" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="97" y="448" width="252" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="phone"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
@@ -429,16 +467,15 @@
                                     <outlet property="delegate" destination="qby-DW-SPe" id="XkV-rV-DjM"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7W-Es-sHE" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="179" width="305" height="35"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7W-Es-sHE" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="97" y="264" width="252" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="user"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
@@ -450,16 +487,15 @@
                                     <outlet property="delegate" destination="qby-DW-SPe" id="NVb-sf-IpW"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Dư Tài Khoản" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-9J-fwB" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="422" width="305" height="35"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Dư Tài Khoản" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-9J-fwB" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="97" y="507" width="252" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="money"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
@@ -471,20 +507,48 @@
                                     <outlet property="delegate" destination="qby-DW-SPe" id="WwA-hH-sJr"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bO-vl-Ila" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="520" width="305" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tiền:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-7R-IAP">
+                                <rect key="frame" x="25" y="515" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Đổi Mật Khẩu">
-                                            <attributes>
-                                                <color key="NSColor" red="0.96465145808368635" green="0.9801517539315745" blue="1" alpha="0.75123073630136983" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="20" name="AmericanTypewriter-Semibold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Địa Chỉ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQD-2r-O73">
+                                <rect key="frame" x="25" y="384" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9F-Pj-PKh">
+                                <rect key="frame" x="25" y="321" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SĐT:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvF-1k-66O">
+                                <rect key="frame" x="27" y="452" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Họ Tên:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM1-LY-L3f">
+                                <rect key="frame" x="27" y="271" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAb-c9-zwA" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="21" y="610" width="333" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.34564505779999999" green="0.68379254869999995" blue="0.78481942419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title="Đổi Mật Khẩu">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -494,6 +558,9 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="4Xa-4X-XeR" kind="showDetail" id="pe6-wB-rcp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -514,7 +581,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXG-Ea-BUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4773.6000000000004" y="188.45577211394306"/>
+            <point key="canvasLocation" x="4773.6000000000004" y="187.55622188905548"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Pnw-xh-68A">
@@ -564,7 +631,7 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="user"/>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="mail"/>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                                     <real key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
@@ -718,11 +785,11 @@
             </objects>
             <point key="canvasLocation" x="4773.6000000000004" y="-529.38530734632684"/>
         </scene>
-        <!--Item-->
+        <!--Đang Chiếu-->
         <scene sceneID="ZdX-B9-9zt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9mQ-On-oUQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ltU-sf-cnc">
+                    <tabBarItem key="tabBarItem" title="Đang Chiếu" id="ltU-sf-cnc">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -739,7 +806,7 @@
             </objects>
             <point key="canvasLocation" x="2405.5999999999999" y="-529.38530734632684"/>
         </scene>
-        <!--Item-->
+        <!--Table View Controller-->
         <scene sceneID="2mu-QE-Rva">
             <objects>
                 <tableViewController id="KJo-Ql-iMZ" sceneMemberID="viewController">
@@ -756,7 +823,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jsr-ap-Wk7" id="JAK-fU-zsp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -766,13 +833,15 @@
                             <outlet property="delegate" destination="KJo-Ql-iMZ" id="5fM-ot-y6Q"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="JdA-Jk-KM4"/>
+                    <navigationItem key="navigationItem" id="gCF-LD-58u">
+                        <barButtonItem key="rightBarButtonItem" image="user" id="1Ja-gS-WGF"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heQ-0l-PTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="494" y="369"/>
+            <point key="canvasLocation" x="494" y="1019"/>
         </scene>
-        <!--Item-->
+        <!--Table View Controller-->
         <scene sceneID="qCa-iw-Ooa">
             <objects>
                 <tableViewController id="aEO-qh-I6q" sceneMemberID="viewController">
@@ -789,7 +858,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gfz-hy-1RL" id="fNs-Ls-e5e">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -799,11 +868,189 @@
                             <outlet property="delegate" destination="aEO-qh-I6q" id="sys-F5-Exg"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="VIA-g8-jIe"/>
+                    <navigationItem key="navigationItem" id="E0D-ic-WtW">
+                        <barButtonItem key="rightBarButtonItem" image="user" id="5J8-h9-PJZ"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSv-i5-bRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="388"/>
+            <point key="canvasLocation" x="1404" y="1019"/>
+        </scene>
+        <!--Đã Chiếu-->
+        <scene sceneID="1ha-Am-7fm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1JV-5N-vfq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Đã Chiếu" id="JdA-Jk-KM4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sgG-Qz-895">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KJo-Ql-iMZ" kind="relationship" relationship="rootViewController" id="1BY-Bl-SU3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4J-u2-zQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="494" y="230"/>
+        </scene>
+        <!--Sẽ Chiếu-->
+        <scene sceneID="Ndh-kT-re1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="89E-U6-wCD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sẽ Chiếu" id="VIA-g8-jIe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XPD-Wb-HIe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aEO-qh-I6q" kind="relationship" relationship="rootViewController" id="qIi-cn-RSV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bb6-i0-rZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1442" y="230"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lVS-eX-FBx">
+            <objects>
+                <viewController id="4Xa-4X-XeR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fDA-O0-EVZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="PO5-Hx-R1W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5V8-aO-htT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user info" translatesAutoresizingMaskIntoConstraints="NO" id="5fO-ki-Gfa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6A-Sv-ebS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xfq-g9-YwB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đổi Mật Khẩu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hE-gV-NeC">
+                                            <rect key="frame" x="40" y="28" width="295" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="28"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Mới" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zjg-rK-WiG" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="294" width="300" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="pass"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VcL-wg-xxw" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="37" y="358" width="300" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="pass"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Hiện Tại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVI-4y-v1a" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="235" width="300" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="pass"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRc-SX-Lcb" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="192" y="424" width="153" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.34564505779999999" green="0.68379254869999995" blue="0.78481942419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                            <state key="normal" title="Đồng Ý">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsq-0k-wRB" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="31" y="424" width="153" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.78481942419999995" green="0.3088352385" blue="0.17911139179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                            <state key="normal" title="Trở Lại">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PO5-Hx-R1W" firstAttribute="top" secondItem="O6A-Sv-ebS" secondAttribute="bottom" id="00X-pa-Kyf"/>
+                            <constraint firstItem="O6A-Sv-ebS" firstAttribute="top" secondItem="5V8-aO-htT" secondAttribute="top" id="4Ly-Ft-7zi"/>
+                            <constraint firstItem="PO5-Hx-R1W" firstAttribute="top" secondItem="5fO-ki-Gfa" secondAttribute="bottom" id="9W5-bu-lq7"/>
+                            <constraint firstItem="5fO-ki-Gfa" firstAttribute="leading" secondItem="5V8-aO-htT" secondAttribute="leading" id="EUZ-pk-0Ur"/>
+                            <constraint firstItem="5fO-ki-Gfa" firstAttribute="top" secondItem="5V8-aO-htT" secondAttribute="top" id="UxV-2V-p2n"/>
+                            <constraint firstAttribute="trailing" secondItem="5fO-ki-Gfa" secondAttribute="trailing" id="Zog-9Z-R5u"/>
+                            <constraint firstAttribute="trailing" secondItem="O6A-Sv-ebS" secondAttribute="trailing" id="jCX-9v-gOE"/>
+                            <constraint firstItem="O6A-Sv-ebS" firstAttribute="leading" secondItem="5V8-aO-htT" secondAttribute="leading" id="nhk-DV-kpc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tRb-MB-nhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5495" y="188"/>
         </scene>
     </scenes>
     <resources>
@@ -811,9 +1058,10 @@
         <image name="bg3" width="540" height="960"/>
         <image name="close" width="128" height="128"/>
         <image name="fithcmute" width="577" height="142"/>
-        <image name="money" width="512" height="512"/>
+        <image name="mail" width="512" height="512"/>
         <image name="pass" width="60" height="60"/>
         <image name="phone" width="256" height="256"/>
         <image name="user" width="28" height="28"/>
+        <image name="user info" width="750" height="1334"/>
     </resources>
 </document>

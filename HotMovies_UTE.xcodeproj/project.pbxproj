@@ -19,6 +19,8 @@
 		2EE078BD1ED95A0400B619C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE078BB1ED95A0400B619C3 /* LaunchScreen.storyboard */; };
 		2EE078C81ED95A0400B619C3 /* HotMovies_UTETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078C71ED95A0400B619C3 /* HotMovies_UTETests.swift */; };
 		2EE078D31ED95A0400B619C3 /* HotMovies_UTEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE078D21ED95A0400B619C3 /* HotMovies_UTEUITests.swift */; };
+		2EECD3021EE1E27500080789 /* DesignTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EECD3001EE1E27500080789 /* DesignTableViewCell.swift */; };
+		2EECD3031EE1E27500080789 /* DesignTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EECD3011EE1E27500080789 /* DesignTableViewCell.xib */; };
 		2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA61EDA988A003060A3 /* DesignView.swift */; };
 		2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */; };
 		305995681EDF0C35009C1DD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */; };
@@ -68,6 +70,8 @@
 		2EE078CE1ED95A0400B619C3 /* HotMovies_UTEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotMovies_UTEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE078D21ED95A0400B619C3 /* HotMovies_UTEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMovies_UTEUITests.swift; sourceTree = "<group>"; };
 		2EE078D41ED95A0400B619C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EECD3001EE1E27500080789 /* DesignTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignTableViewCell.swift; sourceTree = "<group>"; };
+		2EECD3011EE1E27500080789 /* DesignTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DesignTableViewCell.xib; sourceTree = "<group>"; };
 		2EEE8FA61EDA988A003060A3 /* DesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -112,9 +116,11 @@
 			children = (
 				2EE078B61ED95A0400B619C3 /* Main.storyboard */,
 				2EE078BB1ED95A0400B619C3 /* LaunchScreen.storyboard */,
+				2EECD3011EE1E27500080789 /* DesignTableViewCell.xib */,
 				2E3D61DF1ED98C0500883EB4 /* LoginTextField.swift */,
 				2E3D61E21ED9AF5600883EB4 /* DesignButton.swift */,
 				2EEE8FA61EDA988A003060A3 /* DesignView.swift */,
+				2EECD3001EE1E27500080789 /* DesignTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 				305995681EDF0C35009C1DD4 /* GoogleService-Info.plist in Resources */,
 				2EE078BA1ED95A0400B619C3 /* Assets.xcassets in Resources */,
 				2EE078B81ED95A0400B619C3 /* Main.storyboard in Resources */,
+				2EECD3031EE1E27500080789 /* DesignTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +515,7 @@
 			files = (
 				2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */,
 				2E3D61E01ED98C0500883EB4 /* LoginTextField.swift in Sources */,
+				2EECD3021EE1E27500080789 /* DesignTableViewCell.swift in Sources */,
 				3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */,
 				2EE078B51ED95A0400B619C3 /* SignInViewController.swift in Sources */,
 				2E407B091EE04C5900208130 /* UserInfoViewController.swift in Sources */,
