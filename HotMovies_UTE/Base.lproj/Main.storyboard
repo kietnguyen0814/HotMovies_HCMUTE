@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,11 +40,11 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="R8c-1o-hah">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="R8c-1o-hah" customClass="DesignTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="145" width="375" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8c-1o-hah" id="IM0-Jv-WDI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -559,7 +559,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="4Xa-4X-XeR" kind="showDetail" id="pe6-wB-rcp"/>
+                                    <action selector="btnChangePass:" destination="eFY-c0-1ge" eventType="touchUpInside" id="deU-cr-psU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -823,7 +823,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jsr-ap-Wk7" id="JAK-fU-zsp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -858,7 +858,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gfz-hy-1RL" id="fNs-Ls-e5e">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -914,10 +914,10 @@
             </objects>
             <point key="canvasLocation" x="1442" y="230"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Pass View Controller-->
         <scene sceneID="lVS-eX-FBx">
             <objects>
-                <viewController id="4Xa-4X-XeR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="changePassId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Xa-4X-XeR" customClass="ChangePassViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fDA-O0-EVZ"/>
                         <viewControllerLayoutGuide type="bottom" id="PO5-Hx-R1W"/>
@@ -1012,6 +1012,9 @@
                                                     <real key="value" value="0.0"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="btnOk:" destination="4Xa-4X-XeR" eventType="touchUpInside" id="aDb-aM-ugO"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsq-0k-wRB" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                             <rect key="frame" x="31" y="424" width="153" height="40"/>
@@ -1029,6 +1032,9 @@
                                                     <real key="value" value="0.0"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="btnBack:" destination="4Xa-4X-XeR" eventType="touchUpInside" id="f9G-fK-dJ9"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -1047,6 +1053,11 @@
                             <constraint firstItem="O6A-Sv-ebS" firstAttribute="leading" secondItem="5V8-aO-htT" secondAttribute="leading" id="nhk-DV-kpc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtConfirmPass" destination="VcL-wg-xxw" id="2RF-rR-H08"/>
+                        <outlet property="txtCurrentPass" destination="UVI-4y-v1a" id="7NO-r2-F60"/>
+                        <outlet property="txtNewPass" destination="Zjg-rK-WiG" id="eIv-CL-ycx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRb-MB-nhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

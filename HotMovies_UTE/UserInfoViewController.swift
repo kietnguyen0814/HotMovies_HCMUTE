@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import MBProgressHUD
 
 class UserInfoViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var txtBalance: LoginTextField!
     
     var mDatabase: DatabaseReference!
+    var loadingNotification: MBProgressHUD!
+    var userToMove: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +33,25 @@ class UserInfoViewController: UIViewController {
         mDatabase = Database.database().reference()
         
         //load user info
+        //show progress
+        self.showProgress()
         if let uid = Auth.auth().currentUser?.uid {
             mDatabase.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                self.hideProgress()
                 if let user = snapshot.value as? [String: AnyObject] {
-                    self.txtFullName.text! = user["fullName"] as? String ?? ""
-                    self.txtEmail.text! = user["email"] as? String ?? ""
-                    self.txtAddress.text! = user["address"] as? String ?? ""
-                    self.txtPhone.text! = user["phone"] as? String ?? ""
-                    self.txtBalance.text! = String(user["balance"] as? Double ?? 0)
+                    let fullName = user["fullName"] as? String ?? ""
+                    let email = user["email"] as? String ?? ""
+                    let address = user["address"] as? String ?? ""
+                    let phone = user["phone"] as? String ?? ""
+                    let balance = String(user["balance"] as? Double ?? 0)
+                    
+                    self.txtFullName.text! = fullName
+                    self.txtEmail.text! = email
+                    self.txtAddress.text! = address
+                    self.txtPhone.text! = phone
+                    self.txtBalance.text! = balance
+                    
+                    self.userToMove = User.init(fullName: fullName, email: email, address: address, balance: Double(balance)!, password: user["password"] as? String ?? "" , phone: phone, uid: uid)
                     
                 }
             }) { (error) in
@@ -45,7 +59,26 @@ class UserInfoViewController: UIViewController {
             }
         }
     }
+    
+    //event click change pass
+    
+    @IBAction func btnChangePass(_ sender: Any) {
+        let srcChangePass = self.storyboard?.instantiateViewController(withIdentifier: "changePassId") as! ChangePassViewController
+        srcChangePass.user = userToMove
+        self.present(srcChangePass, animated: true)
+    }
 
+    func showProgress() {
+        loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+        loadingNotification.label.text = "Đang tải..."
+    }
+    
+    func hideProgress() {
+        loadingNotification.hide(animated: true)
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
