@@ -34,6 +34,7 @@
 		F72C1D6B1EE2B46800FE5306 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C1D6A1EE2B46800FE5306 /* Film.swift */; };
 		F72C1D6D1EE2B4A300FE5306 /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C1D6C1EE2B4A300FE5306 /* Seat.swift */; };
 		F72C1D6F1EE2B4DE00FE5306 /* ShowTimeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C1D6E1EE2B4DE00FE5306 /* ShowTimeInfo.swift */; };
+		F7609A081EE2C08900B0FB61 /* ShowTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7609A071EE2C08900B0FB61 /* ShowTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		F72C1D6A1EE2B46800FE5306 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		F72C1D6C1EE2B4A300FE5306 /* Seat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
 		F72C1D6E1EE2B4DE00FE5306 /* ShowTimeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTimeInfo.swift; sourceTree = "<group>"; };
+		F7609A071EE2C08900B0FB61 /* ShowTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTime.swift; sourceTree = "<group>"; };
 		FE289ABB0419C727692DE54F /* Pods-HotMovies_UTEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTEUITests/Pods-HotMovies_UTEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +223,7 @@
 				F72C1D6A1EE2B46800FE5306 /* Film.swift */,
 				F72C1D6C1EE2B4A300FE5306 /* Seat.swift */,
 				F72C1D6E1EE2B4DE00FE5306 /* ShowTimeInfo.swift */,
+				F7609A071EE2C08900B0FB61 /* ShowTime.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				2EE078B51ED95A0400B619C3 /* SignInViewController.swift in Sources */,
 				2E407B091EE04C5900208130 /* UserInfoViewController.swift in Sources */,
 				2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */,
+				F7609A081EE2C08900B0FB61 /* ShowTime.swift in Sources */,
 				2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */,
 				2E407B071EE0462A00208130 /* ForgetPassViewController.swift in Sources */,
 				F72C1D6B1EE2B46800FE5306 /* Film.swift in Sources */,
