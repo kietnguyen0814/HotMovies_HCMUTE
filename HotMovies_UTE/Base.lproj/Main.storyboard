@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="1098" y="-595"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Comming Soon Table View Controller-->
         <scene sceneID="ulh-jL-gvd">
             <objects>
-                <tableViewController id="uru-Kp-b76" sceneMemberID="viewController">
+                <tableViewController id="uru-Kp-b76" customClass="CommingSoonTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" id="nR9-UG-lX7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="R8c-1o-hah" customClass="DesignTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmRow" rowHeight="94" id="R8c-1o-hah" customClass="DesignTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="145" width="375" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8c-1o-hah" id="IM0-Jv-WDI">

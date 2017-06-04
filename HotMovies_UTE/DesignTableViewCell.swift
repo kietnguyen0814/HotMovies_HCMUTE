@@ -10,6 +10,18 @@ import UIKit
 
 class DesignTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var imgPoster: UIImageView!
+
+    @IBOutlet weak var txtType: UILabel!
+    @IBOutlet weak var txtTitle: UILabel!
+    
+    func configWithCell(filmInfo: FilmInfo) {
+        txtType.text! = filmInfo.filmName
+        txtTitle.text = filmInfo.type
+    }
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
