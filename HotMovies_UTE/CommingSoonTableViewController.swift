@@ -72,8 +72,9 @@ class CommingSoonTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmRow", for: indexPath) as! DesignTableViewCell
-        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmRow", for: indexPath) as! DesignTableViewCell
+
+        let cell = Bundle.main.loadNibNamed("DesignTableViewCell", owner: self, options: nil)?.first as! DesignTableViewCell
         let filmInfo = films[indexPath.row]
         
         //cell.txtTitle.text! = "dsa"

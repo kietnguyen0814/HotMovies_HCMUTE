@@ -23,6 +23,7 @@
 		2EECD3031EE1E27500080789 /* DesignTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EECD3011EE1E27500080789 /* DesignTableViewCell.xib */; };
 		2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA61EDA988A003060A3 /* DesignView.swift */; };
 		2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */; };
+		301F53E01EE4591C0032AD66 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301F53DF1EE4591C0032AD66 /* Downloader.swift */; };
 		305995681EDF0C35009C1DD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */; };
 		3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059956A1EDF12AD009C1DD4 /* Validate.swift */; };
 		30F1498D1EE070D500E284D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1498C1EE070D500E284D5 /* User.swift */; };
@@ -81,6 +82,7 @@
 		2EECD3011EE1E27500080789 /* DesignTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DesignTableViewCell.xib; sourceTree = "<group>"; };
 		2EEE8FA61EDA988A003060A3 /* DesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		301F53DF1EE4591C0032AD66 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3059956A1EDF12AD009C1DD4 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		30F1498C1EE070D500E284D5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				3059956A1EDF12AD009C1DD4 /* Validate.swift */,
+				301F53DF1EE4591C0032AD66 /* Downloader.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				2E407B091EE04C5900208130 /* UserInfoViewController.swift in Sources */,
 				2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */,
 				F7609A081EE2C08900B0FB61 /* ShowTime.swift in Sources */,
+				301F53E01EE4591C0032AD66 /* Downloader.swift in Sources */,
 				2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */,
 				2E407B071EE0462A00208130 /* ForgetPassViewController.swift in Sources */,
 				F72C1D6B1EE2B46800FE5306 /* Film.swift in Sources */,

@@ -19,6 +19,7 @@ class DesignTableViewCell: UITableViewCell {
     func configWithCell(filmInfo: FilmInfo) {
         txtType.text! = filmInfo.filmName
         txtTitle.text = filmInfo.type
+        imgPoster.image = Downloader.downloadImageWithURL(filmInfo.posterUrl)
     }
     
 
