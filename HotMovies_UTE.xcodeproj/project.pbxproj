@@ -133,10 +133,10 @@
 				2EE078B61ED95A0400B619C3 /* Main.storyboard */,
 				2EE078BB1ED95A0400B619C3 /* LaunchScreen.storyboard */,
 				2EECD3011EE1E27500080789 /* DesignTableViewCell.xib */,
+				2EECD3001EE1E27500080789 /* DesignTableViewCell.swift */,
 				2E3D61DF1ED98C0500883EB4 /* LoginTextField.swift */,
 				2E3D61E21ED9AF5600883EB4 /* DesignButton.swift */,
 				2EEE8FA61EDA988A003060A3 /* DesignView.swift */,
-				2EECD3001EE1E27500080789 /* DesignTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";

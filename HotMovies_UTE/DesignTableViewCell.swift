@@ -13,12 +13,14 @@ class DesignTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imgPoster: UIImageView!
 
+    @IBOutlet weak var txtContent: UILabel!
     @IBOutlet weak var txtType: UILabel!
     @IBOutlet weak var txtTitle: UILabel!
     
     func configWithCell(filmInfo: FilmInfo) {
-        txtType.text! = filmInfo.filmName
-        txtTitle.text = filmInfo.type
+        //txtType.text! = filmInfo.type
+        txtTitle.text = filmInfo.filmName
+        txtContent.text! = filmInfo.content
         imgPoster.image = Downloader.downloadImageWithURL(filmInfo.posterUrl)
     }
     
@@ -33,5 +35,4 @@ class DesignTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
