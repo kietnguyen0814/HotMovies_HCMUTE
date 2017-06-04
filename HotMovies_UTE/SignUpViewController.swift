@@ -129,6 +129,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         txtConfirmSignUp.resignFirstResponder()
         txtAddressSignUp.resignFirstResponder()
         txtPhoneSignUp.resignFirstResponder()
+        txtFullNameSignUp.resignFirstResponder()
         return true
     }
     
@@ -143,7 +144,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     func keyboardWillShow(sender: NSNotification) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.view.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: self.view.frame.height)
+            self.view.frame = CGRect(x: 0, y: -170, width: self.view.frame.width, height: self.view.frame.height)
         }, completion: nil)
     }
     

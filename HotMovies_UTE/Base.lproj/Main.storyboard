@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,19 +33,19 @@
             <objects>
                 <tableViewController id="uru-Kp-b76" customClass="CommingSoonTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="nR9-UG-lX7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fithcmute" id="oBa-y7-EW5">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+                            <rect key="frame" x="0.0" y="0.0" width="667" height="117"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmRow" rowHeight="150" id="R8c-1o-hah" customClass="DesignTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="145" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="145" width="667" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8c-1o-hah" id="IM0-Jv-WDI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -75,15 +76,15 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="z4N-vM-aA1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <color key="backgroundColor" red="0.41176470588235292" green="0.94117647058823528" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtN-Ki-v9g">
-                                <rect key="frame" x="40" y="30" width="295" height="46"/>
+                                <rect key="frame" x="40" y="30" width="587" height="46"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -101,7 +102,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hBc-Gq-8qH">
-                                <rect key="frame" x="120" y="540" width="135" height="35.5"/>
+                                <rect key="frame" x="120" y="248" width="427" height="35.5"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Quên Mật Khẩu?">
@@ -118,7 +119,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZ7-5t-E1q" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="369.5" width="305" height="50"/>
+                                <rect key="frame" x="35" y="77.5" width="597" height="50"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -141,7 +142,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZW-KG-Vnn" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="489.5" width="305" height="40"/>
+                                <rect key="frame" x="35" y="197.5" width="597" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GtD-BK-d91"/>
@@ -169,7 +170,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3G9-lJ-OEW" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="429.5" width="305" height="50"/>
+                                <rect key="frame" x="35" y="137.5" width="597" height="50"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -192,7 +193,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVe-I5-S9k" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="617" width="305" height="40"/>
+                                <rect key="frame" x="35" y="325" width="597" height="40"/>
                                 <color key="backgroundColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ovM-Yg-JhA"/>
@@ -211,7 +212,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn Đã Có Tài Khoản Chưa?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYm-b3-rgg">
-                                <rect key="frame" x="55" y="585.5" width="265" height="21.5"/>
+                                <rect key="frame" x="55" y="293.5" width="557" height="21.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -267,31 +268,42 @@
                         <viewControllerLayoutGuide type="bottom" id="brI-cr-iaU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z6R-7U-AnV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="osX-Nd-MDN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="osX-Nd-MDN">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kd5-GU-Fi4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="hby-Z1-xxa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kd5-GU-Fi4">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hby-Z1-xxa">
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forget Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-KJ-5pP">
-                                            <rect key="frame" x="40" y="33" width="295" height="46"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-KJ-5pP">
+                                            <rect key="frame" x="40" y="33" width="587" height="36.5"/>
                                             <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="32"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oj9-DN-Mbm" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="40" y="525" width="305" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSm-Uf-OGk" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="36" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="U5U-mE-ZcQ"/>
+                                                <constraint firstAttribute="height" constant="30" id="ln5-kV-oT7"/>
+                                            </constraints>
+                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" image="close"/>
+                                            <connections>
+                                                <action selector="btnClose:" destination="pmx-0N-kma" eventType="touchUpInside" id="N0L-4t-gFE"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oj9-DN-Mbm" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="315" width="597" height="40"/>
                                             <color key="backgroundColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="mhK-hm-KOW"/>
+                                            </constraints>
                                             <state key="normal">
                                                 <attributedString key="attributedTitle">
                                                     <fragment content="Lấy Lại Mật Khẩu">
@@ -312,20 +324,13 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSm-Uf-OGk" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="41" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" image="close"/>
-                                            <connections>
-                                                <action selector="btnClose:" destination="pmx-0N-kma" eventType="touchUpInside" id="N0L-4t-gFE"/>
-                                            </connections>
-                                        </button>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsg-zm-1sI" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="40" y="447" width="305" height="50"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsg-zm-1sI" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="165" width="597" height="50"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="FB2-NK-Ah7"/>
+                                            </constraints>
                                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -338,18 +343,47 @@
                                                     <real key="value" value="15"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="pmx-0N-kma" id="7FK-6j-ARr"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Gsg-zm-1sI" secondAttribute="trailing" constant="35" id="3LP-K5-1sU"/>
+                                        <constraint firstItem="aSm-Uf-OGk" firstAttribute="leading" secondItem="hby-Z1-xxa" secondAttribute="leading" constant="8" id="ADi-KF-iU8"/>
+                                        <constraint firstItem="Oj9-DN-Mbm" firstAttribute="leading" secondItem="hby-Z1-xxa" secondAttribute="leading" constant="35" id="ELx-pf-3r3"/>
+                                        <constraint firstItem="iNF-KJ-5pP" firstAttribute="leading" secondItem="aSm-Uf-OGk" secondAttribute="trailing" constant="2" id="MW7-fn-GfY"/>
+                                        <constraint firstItem="Gsg-zm-1sI" firstAttribute="leading" secondItem="hby-Z1-xxa" secondAttribute="leading" constant="35" id="TmA-h3-ZhY"/>
+                                        <constraint firstItem="iNF-KJ-5pP" firstAttribute="top" secondItem="hby-Z1-xxa" secondAttribute="top" constant="33" id="XAK-bd-myy"/>
+                                        <constraint firstItem="Oj9-DN-Mbm" firstAttribute="top" secondItem="Gsg-zm-1sI" secondAttribute="bottom" constant="100" id="ZcL-am-Th6"/>
+                                        <constraint firstAttribute="trailing" secondItem="Oj9-DN-Mbm" secondAttribute="trailing" constant="35" id="dCe-jJ-reK"/>
+                                        <constraint firstItem="aSm-Uf-OGk" firstAttribute="top" secondItem="hby-Z1-xxa" secondAttribute="top" constant="36" id="iJv-1l-sTG"/>
+                                        <constraint firstAttribute="bottom" secondItem="Oj9-DN-Mbm" secondAttribute="bottom" constant="20" id="nzy-ow-PtE"/>
+                                        <constraint firstAttribute="trailing" secondItem="iNF-KJ-5pP" secondAttribute="trailing" constant="40" id="yms-6W-Sy8"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="brI-cr-iaU" firstAttribute="top" secondItem="osX-Nd-MDN" secondAttribute="bottom" id="K4s-E7-wx5"/>
+                            <constraint firstItem="Kd5-GU-Fi4" firstAttribute="leading" secondItem="z6R-7U-AnV" secondAttribute="leading" id="KWr-2P-pdi"/>
+                            <constraint firstItem="brI-cr-iaU" firstAttribute="top" secondItem="Kd5-GU-Fi4" secondAttribute="bottom" id="Okn-Y2-zmE"/>
+                            <constraint firstAttribute="trailing" secondItem="Kd5-GU-Fi4" secondAttribute="trailing" id="VAX-eB-AWt"/>
+                            <constraint firstItem="Kd5-GU-Fi4" firstAttribute="top" secondItem="z6R-7U-AnV" secondAttribute="top" id="X4H-wj-48l"/>
+                            <constraint firstItem="osX-Nd-MDN" firstAttribute="top" secondItem="z6R-7U-AnV" secondAttribute="top" id="bDb-LC-D7V"/>
+                            <constraint firstItem="osX-Nd-MDN" firstAttribute="leading" secondItem="z6R-7U-AnV" secondAttribute="leading" id="l03-lO-hPe"/>
+                            <constraint firstAttribute="trailing" secondItem="osX-Nd-MDN" secondAttribute="trailing" id="t4Y-fZ-jKv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtForgetEmail" destination="Gsg-zm-1sI" id="rY5-Sk-PFz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t84-Bv-DMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4073" y="188"/>
+            <point key="canvasLocation" x="4072.8000000000002" y="187.55622188905548"/>
         </scene>
         <!--User Info View Controller-->
         <scene sceneID="OcQ-0e-WUG">
@@ -360,22 +394,14 @@
                         <viewControllerLayoutGuide type="bottom" id="me3-PI-K0B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XqM-XV-Eu5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user info" translatesAutoresizingMaskIntoConstraints="NO" id="1zp-ur-d4S">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thông Tin Cá Nhân" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sc-4A-eZz">
-                                <rect key="frame" x="40" y="20" width="295" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtL-hU-iRG" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="199" y="562" width="150" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtL-hU-iRG" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="398.5" y="287" width="247.5" height="36"/>
                                 <color key="backgroundColor" red="0.88126586294416243" green="0.10404776460844972" blue="0.033539686087899187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                 <state key="normal" title="Đăng Xuất">
@@ -390,31 +416,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-KW-Wb6" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="16" y="562" width="150" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
-                                <state key="normal" title="Home">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="btnHome:" destination="eFY-c0-1ge" eventType="touchUpInside" id="cis-vP-0AD"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnZ-r5-J1Z" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="97" y="324" width="252" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnZ-r5-J1Z" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="201.5" y="134" width="444.5" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IiH-MW-NqB"/>
+                                </constraints>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -430,11 +438,13 @@
                                     <outlet property="delegate" destination="qby-DW-SPe" id="FbS-PY-caN"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Địa Chỉ" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLM-AI-HBD" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="97" y="382" width="252" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Địa Chỉ" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLM-AI-HBD" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="201.5" y="172" width="444.5" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cVG-o0-9pQ"/>
+                                </constraints>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -450,11 +460,13 @@
                                     <outlet property="delegate" destination="qby-DW-SPe" id="DhF-E4-GCr"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Điện Thoại" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owe-Y1-iTB" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="97" y="448" width="252" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Điện Thoại" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owe-Y1-iTB" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="201.5" y="210" width="444.5" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dpf-lc-ePY"/>
+                                </constraints>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -470,11 +482,13 @@
                                     <outlet property="delegate" destination="qby-DW-SPe" id="XkV-rV-DjM"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7W-Es-sHE" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="97" y="264" width="252" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7W-Es-sHE" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="201.5" y="96" width="444.5" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4r4-3e-U7m"/>
+                                </constraints>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -490,11 +504,13 @@
                                     <outlet property="delegate" destination="qby-DW-SPe" id="NVb-sf-IpW"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Dư Tài Khoản" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-9J-fwB" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="97" y="507" width="252" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Dư Tài Khoản" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-9J-fwB" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="201.5" y="248" width="444.5" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="z25-W7-eZp"/>
+                                </constraints>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -510,44 +526,26 @@
                                     <outlet property="delegate" destination="qby-DW-SPe" id="WwA-hH-sJr"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tiền:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-7R-IAP">
-                                <rect key="frame" x="25" y="515" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa Chỉ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQD-2r-O73">
+                                <rect key="frame" x="21" y="174" width="59.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Địa Chỉ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQD-2r-O73">
-                                <rect key="frame" x="25" y="384" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9F-Pj-PKh">
+                                <rect key="frame" x="21" y="136" width="45.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9F-Pj-PKh">
-                                <rect key="frame" x="25" y="321" width="49" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SĐT:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvF-1k-66O">
+                                <rect key="frame" x="21" y="212" width="36.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SĐT:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvF-1k-66O">
-                                <rect key="frame" x="27" y="452" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Họ Tên:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM1-LY-L3f">
-                                <rect key="frame" x="27" y="271" width="62" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAb-c9-zwA" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="21" y="610" width="333" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAb-c9-zwA" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="21" y="331" width="625" height="36"/>
                                 <color key="backgroundColor" red="0.34564505779999999" green="0.68379254869999995" blue="0.78481942419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                 <state key="normal" title="Đổi Mật Khẩu">
@@ -565,12 +563,86 @@
                                     <action selector="btnChangePass:" destination="eFY-c0-1ge" eventType="touchUpInside" id="deU-cr-psU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-KW-Wb6" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="21" y="287" width="247.5" height="36"/>
+                                <color key="backgroundColor" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnHome:" destination="eFY-c0-1ge" eventType="touchUpInside" id="cis-vP-0AD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiền:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-7R-IAP">
+                                <rect key="frame" x="21" y="253" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ Tên:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM1-LY-L3f">
+                                <rect key="frame" x="21" y="98" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông Tin Cá Nhân" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sc-4A-eZz">
+                                <rect key="frame" x="44" y="30" width="579" height="32"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eAb-c9-zwA" firstAttribute="leading" secondItem="XqM-XV-Eu5" secondAttribute="leading" constant="21" id="4z7-fs-7At"/>
+                            <constraint firstItem="eAb-c9-zwA" firstAttribute="top" secondItem="ZtL-hU-iRG" secondAttribute="bottom" constant="8" id="6Hj-EJ-gfi"/>
+                            <constraint firstItem="Owe-Y1-iTB" firstAttribute="top" secondItem="rLM-AI-HBD" secondAttribute="bottom" constant="8" id="D3x-3l-0Y6"/>
+                            <constraint firstItem="hpo-KW-Wb6" firstAttribute="width" secondItem="1zp-ur-d4S" secondAttribute="width" multiplier="1/3" constant="25" id="El3-ds-wV1"/>
+                            <constraint firstItem="eAb-c9-zwA" firstAttribute="top" secondItem="hpo-KW-Wb6" secondAttribute="bottom" constant="8" id="FQw-hs-lu0"/>
+                            <constraint firstItem="7Sc-4A-eZz" firstAttribute="top" secondItem="BhK-UN-1gS" secondAttribute="bottom" constant="10" id="GYM-CM-01B"/>
+                            <constraint firstItem="yQD-2r-O73" firstAttribute="leading" secondItem="XqM-XV-Eu5" secondAttribute="leading" constant="21" id="Ilu-rf-ebp"/>
+                            <constraint firstAttribute="trailing" secondItem="Owe-Y1-iTB" secondAttribute="trailing" constant="21" id="Izs-cd-Gok"/>
+                            <constraint firstItem="gaI-7R-IAP" firstAttribute="leading" secondItem="XqM-XV-Eu5" secondAttribute="leading" constant="21" id="KLt-Ro-BEa"/>
+                            <constraint firstItem="h9F-Pj-PKh" firstAttribute="top" secondItem="zM1-LY-L3f" secondAttribute="bottom" constant="17" id="LMy-3w-4E3"/>
+                            <constraint firstItem="CvF-1k-66O" firstAttribute="top" secondItem="yQD-2r-O73" secondAttribute="bottom" constant="17" id="LXQ-mo-vR1"/>
+                            <constraint firstItem="Oaj-9J-fwB" firstAttribute="width" secondItem="1zp-ur-d4S" secondAttribute="width" multiplier="2/3" id="O3u-JA-Z5Z"/>
+                            <constraint firstItem="rLM-AI-HBD" firstAttribute="top" secondItem="wnZ-r5-J1Z" secondAttribute="bottom" constant="8" id="Obu-1H-6X2"/>
+                            <constraint firstItem="Oaj-9J-fwB" firstAttribute="top" secondItem="Owe-Y1-iTB" secondAttribute="bottom" constant="8" id="Qr0-Pz-Ovc"/>
+                            <constraint firstItem="hpo-KW-Wb6" firstAttribute="top" secondItem="Oaj-9J-fwB" secondAttribute="bottom" constant="9" id="Rat-Mm-y3h"/>
+                            <constraint firstItem="hpo-KW-Wb6" firstAttribute="top" secondItem="gaI-7R-IAP" secondAttribute="bottom" constant="13" id="SN8-tU-o9V"/>
+                            <constraint firstItem="yQD-2r-O73" firstAttribute="top" secondItem="h9F-Pj-PKh" secondAttribute="bottom" constant="17" id="UxO-vG-10d"/>
+                            <constraint firstItem="me3-PI-K0B" firstAttribute="top" secondItem="eAb-c9-zwA" secondAttribute="bottom" constant="8" id="WS4-Kc-TFT"/>
+                            <constraint firstItem="wnZ-r5-J1Z" firstAttribute="width" secondItem="rLM-AI-HBD" secondAttribute="width" id="XKx-te-nrj"/>
+                            <constraint firstAttribute="trailing" secondItem="rLM-AI-HBD" secondAttribute="trailing" constant="21" id="Xr9-qq-HbL"/>
                             <constraint firstAttribute="trailing" secondItem="1zp-ur-d4S" secondAttribute="trailing" id="YOo-c0-Dbc"/>
+                            <constraint firstItem="CvF-1k-66O" firstAttribute="leading" secondItem="XqM-XV-Eu5" secondAttribute="leading" constant="21" id="Yu8-ay-bhg"/>
+                            <constraint firstItem="Owe-Y1-iTB" firstAttribute="width" secondItem="Oaj-9J-fwB" secondAttribute="width" id="ZWh-eb-tae"/>
+                            <constraint firstAttribute="trailing" secondItem="eAb-c9-zwA" secondAttribute="trailing" constant="21" id="aYw-0D-RXb"/>
+                            <constraint firstItem="k7W-Es-sHE" firstAttribute="width" secondItem="wnZ-r5-J1Z" secondAttribute="width" id="aoK-Dp-F3o"/>
                             <constraint firstItem="1zp-ur-d4S" firstAttribute="leading" secondItem="XqM-XV-Eu5" secondAttribute="leading" id="bKo-cD-4uE"/>
+                            <constraint firstAttribute="trailing" secondItem="wnZ-r5-J1Z" secondAttribute="trailing" constant="21" id="d03-NQ-sxk"/>
+                            <constraint firstAttribute="trailing" secondItem="k7W-Es-sHE" secondAttribute="trailing" constant="21" id="dbp-Ra-wgZ"/>
+                            <constraint firstItem="zM1-LY-L3f" firstAttribute="leading" secondItem="XqM-XV-Eu5" secondAttribute="leading" constant="21" id="dfy-mF-QQS"/>
+                            <constraint firstItem="wnZ-r5-J1Z" firstAttribute="top" secondItem="k7W-Es-sHE" secondAttribute="bottom" constant="8" id="hPO-Ui-Gwm"/>
                             <constraint firstItem="1zp-ur-d4S" firstAttribute="top" secondItem="XqM-XV-Eu5" secondAttribute="top" id="igo-Yj-fUc"/>
+                            <constraint firstItem="gaI-7R-IAP" firstAttribute="top" secondItem="CvF-1k-66O" secondAttribute="bottom" constant="20" id="mNI-Bs-FiX"/>
+                            <constraint firstItem="hpo-KW-Wb6" firstAttribute="leading" secondItem="XqM-XV-Eu5" secondAttribute="leading" constant="21" id="mX5-vV-45g"/>
+                            <constraint firstItem="ZtL-hU-iRG" firstAttribute="width" secondItem="hpo-KW-Wb6" secondAttribute="width" id="mtj-t5-cLi"/>
+                            <constraint firstItem="7Sc-4A-eZz" firstAttribute="leading" secondItem="XqM-XV-Eu5" secondAttribute="leading" constant="44" id="qX1-Ul-3ce"/>
+                            <constraint firstAttribute="trailing" secondItem="7Sc-4A-eZz" secondAttribute="trailing" constant="44" id="rf4-bG-Vx4"/>
+                            <constraint firstAttribute="trailing" secondItem="ZtL-hU-iRG" secondAttribute="trailing" constant="21" id="t3Z-dr-dVf"/>
+                            <constraint firstItem="h9F-Pj-PKh" firstAttribute="leading" secondItem="XqM-XV-Eu5" secondAttribute="leading" constant="21" id="tes-2T-el2"/>
+                            <constraint firstAttribute="trailing" secondItem="Oaj-9J-fwB" secondAttribute="trailing" constant="21" id="v16-7M-3cz"/>
+                            <constraint firstItem="rLM-AI-HBD" firstAttribute="width" secondItem="Owe-Y1-iTB" secondAttribute="width" id="yji-dz-DDZ"/>
                             <constraint firstItem="me3-PI-K0B" firstAttribute="top" secondItem="1zp-ur-d4S" secondAttribute="bottom" id="zXM-AU-T95"/>
                         </constraints>
                     </view>
@@ -595,41 +667,43 @@
                         <viewControllerLayoutGuide type="bottom" id="hXp-jW-BfT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i8V-ta-ZMr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="Ugg-08-Xz3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="Ugg-08-Xz3">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iuy-Vf-JmD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Zka-0o-zja">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuy-Vf-JmD">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Zka-0o-zja">
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đăng Ký Miễn Phí" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROq-fL-CpH">
-                                            <rect key="frame" x="63" y="20" width="288.5" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng Ký Miễn Phí" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROq-fL-CpH">
+                                            <rect key="frame" x="63" y="20" width="580.5" height="34"/>
                                             <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="30"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maN-Q6-vOP" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maN-Q6-vOP" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                             <rect key="frame" x="8" y="22" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Xa1-rz-OD7"/>
+                                                <constraint firstAttribute="width" constant="30" id="cYX-Nq-BXd"/>
+                                            </constraints>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" image="close"/>
                                             <connections>
                                                 <action selector="btnClose:" destination="qby-DW-SPe" eventType="touchUpInside" id="7g0-Xj-KHC"/>
                                             </connections>
                                         </button>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="knV-kT-brE" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="384" width="305" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="knV-kT-brE" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="200" width="597" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="HWs-Hb-Tpn"/>
+                                            </constraints>
                                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -646,32 +720,13 @@
                                                 <outlet property="delegate" destination="qby-DW-SPe" id="6vp-Y6-uih"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zal-a8-tqW" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="187.5" y="427" width="152.5" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42N-6G-fFU" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="235" width="267" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="pass"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                    <real key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="15"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <outlet property="delegate" destination="qby-DW-SPe" id="VRq-Yn-7Jx"/>
-                                            </connections>
-                                        </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42N-6G-fFU" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="427" width="152.5" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="FoN-9k-VLL"/>
+                                            </constraints>
                                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -688,11 +743,13 @@
                                                 <outlet property="delegate" destination="qby-DW-SPe" id="jOx-Pf-dY2"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Địa Chỉ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2q-np-AF9" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="470" width="305" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Địa Chỉ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2q-np-AF9" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="270" width="597" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Cnt-Gq-bP7"/>
+                                            </constraints>
                                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -709,11 +766,13 @@
                                                 <outlet property="delegate" destination="qby-DW-SPe" id="RjK-km-tGx"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Điện Thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6Q-Bo-28l" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="515" width="305" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Điện Thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6Q-Bo-28l" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="305" width="597" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="tQ4-fM-JNp"/>
+                                            </constraints>
                                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -730,10 +789,12 @@
                                                 <outlet property="delegate" destination="qby-DW-SPe" id="zDm-P1-APg"/>
                                             </connections>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j57-HI-OrW" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="558" width="305" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j57-HI-OrW" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="340" width="597" height="30"/>
                                             <color key="backgroundColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Icj-Zy-yHk"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                             <state key="normal" title="Đăng Ký">
                                                 <color key="titleColor" white="1" alpha="0.90750749139999998" colorSpace="calibratedWhite"/>
@@ -747,11 +808,13 @@
                                                 <action selector="btnRegister:" destination="qby-DW-SPe" eventType="touchUpInside" id="CM6-1d-j3Z"/>
                                             </connections>
                                         </button>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6t-p9-PLu" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="341" width="305" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6t-p9-PLu" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="165" width="597" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="uUa-4x-Rcs"/>
+                                            </constraints>
                                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -765,15 +828,80 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <outlet property="delegate" destination="qby-DW-SPe" id="Svy-L1-aRm"/>
+                                                <outlet property="delegate" destination="qby-DW-SPe" id="Jz2-pP-oSD"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zal-a8-tqW" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="365" y="235" width="267" height="30"/>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Pku-wQ-Evg"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="pass"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="qby-DW-SPe" id="VRq-Yn-7Jx"/>
                                             </connections>
                                         </textField>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="b6Q-Bo-28l" secondAttribute="trailing" constant="35" id="1JN-kA-rhL"/>
+                                        <constraint firstItem="knV-kT-brE" firstAttribute="leading" secondItem="Zka-0o-zja" secondAttribute="leading" constant="35" id="1Lv-PL-itK"/>
+                                        <constraint firstItem="D2q-np-AF9" firstAttribute="leading" secondItem="Zka-0o-zja" secondAttribute="leading" constant="35" id="5DQ-ne-h7n"/>
+                                        <constraint firstItem="ROq-fL-CpH" firstAttribute="top" secondItem="Zka-0o-zja" secondAttribute="top" constant="20" id="8bW-Pj-jSl"/>
+                                        <constraint firstItem="D2q-np-AF9" firstAttribute="top" secondItem="42N-6G-fFU" secondAttribute="bottom" constant="5" id="8jp-Ny-4wG"/>
+                                        <constraint firstItem="maN-Q6-vOP" firstAttribute="top" secondItem="Zka-0o-zja" secondAttribute="top" constant="22" id="9KO-JS-usJ"/>
+                                        <constraint firstItem="ROq-fL-CpH" firstAttribute="leading" secondItem="maN-Q6-vOP" secondAttribute="trailing" constant="25" id="DQn-va-kDb"/>
+                                        <constraint firstAttribute="trailing" secondItem="zal-a8-tqW" secondAttribute="trailing" constant="35" id="KYE-xD-HA2"/>
+                                        <constraint firstItem="zal-a8-tqW" firstAttribute="width" secondItem="42N-6G-fFU" secondAttribute="width" id="VF9-g0-4zy"/>
+                                        <constraint firstItem="b6Q-Bo-28l" firstAttribute="leading" secondItem="Zka-0o-zja" secondAttribute="leading" constant="35" id="WIi-bh-nCv"/>
+                                        <constraint firstItem="j57-HI-OrW" firstAttribute="top" secondItem="b6Q-Bo-28l" secondAttribute="bottom" constant="5" id="WQr-HJ-Z8a"/>
+                                        <constraint firstItem="42N-6G-fFU" firstAttribute="top" secondItem="knV-kT-brE" secondAttribute="bottom" constant="5" id="XdI-zb-PD9"/>
+                                        <constraint firstItem="42N-6G-fFU" firstAttribute="width" secondItem="Zka-0o-zja" secondAttribute="width" multiplier="2/5" id="XtC-IV-bgv"/>
+                                        <constraint firstAttribute="trailing" secondItem="j57-HI-OrW" secondAttribute="trailing" constant="35" id="dLH-Ck-o3l"/>
+                                        <constraint firstAttribute="trailing" secondItem="ROq-fL-CpH" secondAttribute="trailing" constant="23.5" id="ds6-aA-eBD"/>
+                                        <constraint firstAttribute="bottom" secondItem="j57-HI-OrW" secondAttribute="bottom" constant="5" id="ezT-qr-unc"/>
+                                        <constraint firstItem="maN-Q6-vOP" firstAttribute="leading" secondItem="Zka-0o-zja" secondAttribute="leading" constant="8" id="l05-78-x3Z"/>
+                                        <constraint firstItem="42N-6G-fFU" firstAttribute="leading" secondItem="Zka-0o-zja" secondAttribute="leading" constant="35" id="m1A-AH-Gpv"/>
+                                        <constraint firstAttribute="trailing" secondItem="D2q-np-AF9" secondAttribute="trailing" constant="35" id="nU9-My-nRF"/>
+                                        <constraint firstItem="D2q-np-AF9" firstAttribute="top" secondItem="zal-a8-tqW" secondAttribute="bottom" constant="5" id="nd7-DS-J6g"/>
+                                        <constraint firstItem="b6Q-Bo-28l" firstAttribute="top" secondItem="D2q-np-AF9" secondAttribute="bottom" constant="5" id="s2z-I1-24Y"/>
+                                        <constraint firstAttribute="trailing" secondItem="e6t-p9-PLu" secondAttribute="trailing" constant="35" id="udF-SG-3Rj"/>
+                                        <constraint firstItem="j57-HI-OrW" firstAttribute="leading" secondItem="Zka-0o-zja" secondAttribute="leading" constant="35" id="ue9-ZX-F06"/>
+                                        <constraint firstItem="e6t-p9-PLu" firstAttribute="leading" secondItem="Zka-0o-zja" secondAttribute="leading" constant="35" id="wSU-rq-Kzm"/>
+                                        <constraint firstAttribute="trailing" secondItem="knV-kT-brE" secondAttribute="trailing" constant="35" id="xBt-ml-FuB"/>
+                                        <constraint firstItem="knV-kT-brE" firstAttribute="top" secondItem="e6t-p9-PLu" secondAttribute="bottom" constant="5" id="xID-XB-hRh"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iuy-Vf-JmD" firstAttribute="leading" secondItem="i8V-ta-ZMr" secondAttribute="leading" id="381-7U-LPb"/>
+                            <constraint firstAttribute="bottom" secondItem="Ugg-08-Xz3" secondAttribute="bottom" id="60g-BI-4Cf"/>
+                            <constraint firstItem="Ugg-08-Xz3" firstAttribute="leading" secondItem="i8V-ta-ZMr" secondAttribute="leading" id="Lgw-dc-AsK"/>
+                            <constraint firstAttribute="trailing" secondItem="iuy-Vf-JmD" secondAttribute="trailing" id="MLq-kh-qEa"/>
+                            <constraint firstItem="iuy-Vf-JmD" firstAttribute="leading" secondItem="i8V-ta-ZMr" secondAttribute="leading" id="NQN-Pr-XmH"/>
+                            <constraint firstItem="iuy-Vf-JmD" firstAttribute="top" secondItem="i8V-ta-ZMr" secondAttribute="top" id="QVE-Wh-1BA"/>
+                            <constraint firstItem="iuy-Vf-JmD" firstAttribute="top" secondItem="i8V-ta-ZMr" secondAttribute="top" id="U5w-pA-h4e"/>
+                            <constraint firstAttribute="bottom" secondItem="iuy-Vf-JmD" secondAttribute="bottom" id="bsU-34-YY3"/>
+                            <constraint firstItem="Ugg-08-Xz3" firstAttribute="top" secondItem="i8V-ta-ZMr" secondAttribute="top" id="di4-Uw-6xQ"/>
+                            <constraint firstAttribute="bottom" secondItem="iuy-Vf-JmD" secondAttribute="bottom" id="f0x-ki-AbB"/>
+                            <constraint firstAttribute="trailing" secondItem="Ugg-08-Xz3" secondAttribute="trailing" id="fje-hy-oZi"/>
+                            <constraint firstAttribute="trailing" secondItem="iuy-Vf-JmD" secondAttribute="trailing" id="zrw-8D-kLx"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="txtAddressSignUp" destination="D2q-np-AF9" id="lYn-9d-xLv"/>
@@ -814,19 +942,19 @@
             <objects>
                 <tableViewController id="KJo-Ql-iMZ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5nw-9s-Zjn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fithcmute" id="Ftq-2K-Zn3">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+                            <rect key="frame" x="0.0" y="0.0" width="667" height="117"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="Jsr-ap-Wk7">
-                                <rect key="frame" x="0.0" y="145" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="145" width="667" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jsr-ap-Wk7" id="JAK-fU-zsp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -849,19 +977,19 @@
             <objects>
                 <tableViewController id="aEO-qh-I6q" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kdd-qY-m5A">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fithcmute" id="Uzt-oc-UvB">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+                            <rect key="frame" x="0.0" y="0.0" width="667" height="117"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="Gfz-hy-1RL">
-                                <rect key="frame" x="0.0" y="145" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="145" width="667" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gfz-hy-1RL" id="fNs-Ls-e5e">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -926,30 +1054,31 @@
                         <viewControllerLayoutGuide type="bottom" id="PO5-Hx-R1W"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5V8-aO-htT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user info" translatesAutoresizingMaskIntoConstraints="NO" id="5fO-ki-Gfa">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6A-Sv-ebS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xfq-g9-YwB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đổi Mật Khẩu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hE-gV-NeC">
-                                            <rect key="frame" x="40" y="28" width="295" height="46"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đổi Mật Khẩu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hE-gV-NeC">
+                                            <rect key="frame" x="40" y="30" width="587" height="32"/>
                                             <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Mới" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zjg-rK-WiG" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="294" width="300" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Mới" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zjg-rK-WiG" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="37" y="217" width="593" height="40"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="kuy-tv-UK3"/>
+                                            </constraints>
                                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -962,47 +1091,16 @@
                                                     <real key="value" value="15"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="4Xa-4X-XeR" id="en6-9x-GEk"/>
+                                            </connections>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VcL-wg-xxw" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="37" y="358" width="300" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="pass"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                    <real key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="15"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Hiện Tại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVI-4y-v1a" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="235" width="300" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="pass"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                    <real key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="15"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRc-SX-Lcb" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="192" y="424" width="153" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRc-SX-Lcb" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="389.5" y="327" width="242.5" height="40"/>
                                             <color key="backgroundColor" red="0.34564505779999999" green="0.68379254869999995" blue="0.78481942419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="B2R-Vz-hdC"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                             <state key="normal" title="Đồng Ý">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1019,10 +1117,12 @@
                                                 <action selector="btnOk:" destination="4Xa-4X-XeR" eventType="touchUpInside" id="aDb-aM-ugO"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsq-0k-wRB" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="31" y="424" width="153" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsq-0k-wRB" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="34" y="327" width="242.5" height="40"/>
                                             <color key="backgroundColor" red="0.78481942419999995" green="0.3088352385" blue="0.17911139179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Q4k-HD-mYs"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                             <state key="normal" title="Trở Lại">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1039,7 +1139,73 @@
                                                 <action selector="btnBack:" destination="4Xa-4X-XeR" eventType="touchUpInside" id="LZx-a2-VV9"/>
                                             </connections>
                                         </button>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VcL-wg-xxw" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="37" y="272" width="593" height="40"/>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="HP8-bV-57Q"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="pass"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="4Xa-4X-XeR" id="6uk-aD-owj"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Hiện Tại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVI-4y-v1a" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
+                                            <rect key="frame" x="37" y="162" width="593" height="40"/>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="v4q-oD-2Id"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="pass"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="4Xa-4X-XeR" id="GKX-1P-79Z"/>
+                                            </connections>
+                                        </textField>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="VcL-wg-xxw" firstAttribute="top" secondItem="Zjg-rK-WiG" secondAttribute="bottom" constant="15" id="2ih-rl-5aE"/>
+                                        <constraint firstItem="Zjg-rK-WiG" firstAttribute="top" secondItem="UVI-4y-v1a" secondAttribute="bottom" constant="15" id="KVP-3U-xTY"/>
+                                        <constraint firstAttribute="bottom" secondItem="gsq-0k-wRB" secondAttribute="bottom" constant="8" id="L7Q-nh-CWd"/>
+                                        <constraint firstAttribute="trailing" secondItem="VcL-wg-xxw" secondAttribute="trailing" constant="37" id="Ll3-BP-NDb"/>
+                                        <constraint firstAttribute="trailing" secondItem="UVI-4y-v1a" secondAttribute="trailing" constant="37" id="NNq-Bn-5VT"/>
+                                        <constraint firstItem="aRc-SX-Lcb" firstAttribute="width" secondItem="gsq-0k-wRB" secondAttribute="width" id="OSo-jO-A5g"/>
+                                        <constraint firstAttribute="trailing" secondItem="7hE-gV-NeC" secondAttribute="trailing" constant="40" id="Q5X-KP-WTn"/>
+                                        <constraint firstItem="Zjg-rK-WiG" firstAttribute="leading" secondItem="xfq-g9-YwB" secondAttribute="leading" constant="37" id="VBI-eh-ps9"/>
+                                        <constraint firstItem="VcL-wg-xxw" firstAttribute="leading" secondItem="xfq-g9-YwB" secondAttribute="leading" constant="37" id="aqf-17-CIn"/>
+                                        <constraint firstItem="7hE-gV-NeC" firstAttribute="leading" secondItem="xfq-g9-YwB" secondAttribute="leading" constant="40" id="cXk-8G-D6r"/>
+                                        <constraint firstItem="gsq-0k-wRB" firstAttribute="top" secondItem="VcL-wg-xxw" secondAttribute="bottom" constant="15" id="k3w-85-CyH"/>
+                                        <constraint firstAttribute="trailing" secondItem="aRc-SX-Lcb" secondAttribute="trailing" constant="35" id="kaO-H6-Y5e"/>
+                                        <constraint firstItem="UVI-4y-v1a" firstAttribute="leading" secondItem="xfq-g9-YwB" secondAttribute="leading" constant="37" id="ksG-6b-SwZ"/>
+                                        <constraint firstItem="7hE-gV-NeC" firstAttribute="top" secondItem="xfq-g9-YwB" secondAttribute="top" constant="30" id="o2a-7y-5QD"/>
+                                        <constraint firstAttribute="trailing" secondItem="Zjg-rK-WiG" secondAttribute="trailing" constant="37" id="rC7-MN-Jlf"/>
+                                        <constraint firstItem="gsq-0k-wRB" firstAttribute="width" secondItem="xfq-g9-YwB" secondAttribute="width" multiplier="1/3" constant="20" id="tkV-2G-x1t"/>
+                                        <constraint firstAttribute="bottom" secondItem="aRc-SX-Lcb" secondAttribute="bottom" constant="8" id="vaK-mV-YdQ"/>
+                                        <constraint firstItem="gsq-0k-wRB" firstAttribute="leading" secondItem="xfq-g9-YwB" secondAttribute="leading" constant="34" id="ylF-vd-Asq"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -1064,7 +1230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRb-MB-nhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5495" y="188"/>
+            <point key="canvasLocation" x="5549.6000000000004" y="187.55622188905548"/>
         </scene>
     </scenes>
     <resources>
