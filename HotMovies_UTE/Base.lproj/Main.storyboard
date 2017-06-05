@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -33,19 +33,19 @@
             <objects>
                 <tableViewController id="uru-Kp-b76" customClass="CommingSoonTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="nR9-UG-lX7">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fithcmute" id="oBa-y7-EW5">
-                            <rect key="frame" x="0.0" y="0.0" width="667" height="117"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmRow" rowHeight="150" id="R8c-1o-hah" customClass="DesignTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="145" width="667" height="150"/>
+                                <rect key="frame" x="0.0" y="145" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8c-1o-hah" id="IM0-Jv-WDI">
-                                    <rect key="frame" x="0.0" y="0.0" width="667" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -56,6 +56,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="QET-E2-0Xk">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="RVC-78-JUL"/>
                         <barButtonItem key="rightBarButtonItem" image="user" id="Vjn-3o-CQV">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="showDetail" id="KcI-Bp-b1W"/>
@@ -76,15 +77,15 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="z4N-vM-aA1">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.41176470588235292" green="0.94117647058823528" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtN-Ki-v9g">
-                                <rect key="frame" x="40" y="30" width="587" height="46"/>
+                                <rect key="frame" x="40" y="30" width="295" height="46"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -102,7 +103,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hBc-Gq-8qH">
-                                <rect key="frame" x="120" y="248" width="427" height="35.5"/>
+                                <rect key="frame" x="120" y="540" width="135" height="35.5"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Quên Mật Khẩu?">
@@ -119,7 +120,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZ7-5t-E1q" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="77.5" width="597" height="50"/>
+                                <rect key="frame" x="35" y="369.5" width="305" height="50"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -142,7 +143,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZW-KG-Vnn" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="197.5" width="597" height="40"/>
+                                <rect key="frame" x="35" y="489.5" width="305" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GtD-BK-d91"/>
@@ -170,7 +171,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3G9-lJ-OEW" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="137.5" width="597" height="50"/>
+                                <rect key="frame" x="35" y="429.5" width="305" height="50"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -193,7 +194,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVe-I5-S9k" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="35" y="325" width="597" height="40"/>
+                                <rect key="frame" x="35" y="617" width="305" height="40"/>
                                 <color key="backgroundColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ovM-Yg-JhA"/>
@@ -212,7 +213,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn Đã Có Tài Khoản Chưa?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYm-b3-rgg">
-                                <rect key="frame" x="55" y="293.5" width="557" height="21.5"/>
+                                <rect key="frame" x="55" y="585.5" width="265" height="21.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -259,6 +260,166 @@
             </objects>
             <point key="canvasLocation" x="4072.8000000000002" y="-529.38530734632684"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="asJ-tZ-ik7">
+            <objects>
+                <tableViewController id="Vav-3x-eBc" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="UKd-SB-0GF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="osU-17-yMC">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no image" translatesAutoresizingMaskIntoConstraints="NO" id="jzK-Dc-Rtf">
+                                    <rect key="frame" x="8" y="8" width="105" height="184"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re9-Dx-88S">
+                                    <rect key="frame" x="121" y="8" width="226" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Khởi Chiếu:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BT-Fo-h02">
+                                    <rect key="frame" x="121" y="60" width="69" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thể Loại:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m23-IV-Nv0">
+                                    <rect key="frame" x="121" y="88" width="69" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diễn Viên:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-bX-M1E">
+                                    <rect key="frame" x="121" y="116" width="69" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đạo Diễn:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Em7-7k-nl2">
+                                    <rect key="frame" x="121" y="144" width="69" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnM-Fu-0ZD" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <rect key="frame" x="45" y="75" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button" image="playvideo"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Day" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOl-FT-zHr">
+                                    <rect key="frame" x="198" y="60" width="169" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBu-qk-EB4">
+                                    <rect key="frame" x="198" y="88" width="169" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Actor" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbr-if-khX">
+                                    <rect key="frame" x="198" y="116" width="169" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Director" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85U-wa-uxG">
+                                    <rect key="frame" x="198" y="144" width="169" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Film Type" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KX4-Pa-yBH">
+                                    <rect key="frame" x="198" y="172" width="169" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tình Trạng:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gsn-qk-FG8">
+                                    <rect key="frame" x="121" y="172" width="69" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.63888736229999998" blue="0.16412794429999999" alpha="0.91901220034246578" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="ju3-LK-4lm">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="147" id="s2K-wK-vv8">
+                                        <rect key="frame" x="0.0" y="200" width="375" height="147"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s2K-wK-vv8" id="1C4-pI-MI4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Movie Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kx8-ah-Aed">
+                                                    <rect key="frame" x="5" y="37" width="365" height="104"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới Thiệu Phim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-dQ-XAD">
+                                                    <rect key="frame" x="75" y="8" width="222" height="24"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="kx8-ah-Aed" secondAttribute="trailing" constant="5" id="1HT-V2-nDJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="kx8-ah-Aed" secondAttribute="bottom" constant="5" id="8Em-0s-8ls"/>
+                                                <constraint firstItem="zHg-dQ-XAD" firstAttribute="leading" secondItem="1C4-pI-MI4" secondAttribute="leading" constant="75" id="gtT-5L-CWQ"/>
+                                                <constraint firstItem="kx8-ah-Aed" firstAttribute="leading" secondItem="1C4-pI-MI4" secondAttribute="leading" constant="5" id="k6L-Aa-rB4"/>
+                                                <constraint firstItem="zHg-dQ-XAD" firstAttribute="top" secondItem="1C4-pI-MI4" secondAttribute="top" constant="8" id="m6i-ey-r8d"/>
+                                                <constraint firstAttribute="trailing" secondItem="zHg-dQ-XAD" secondAttribute="trailing" constant="78" id="mXW-3s-xt8"/>
+                                                <constraint firstItem="kx8-ah-Aed" firstAttribute="top" secondItem="zHg-dQ-XAD" secondAttribute="bottom" constant="5" id="pyT-Wi-AxM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="QuM-vC-jH2">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="46Y-s9-USs">
+                                        <rect key="frame" x="0.0" y="383" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="46Y-s9-USs" id="idx-8l-Jta">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Vav-3x-eBc" id="tHs-c5-CJ2"/>
+                            <outlet property="delegate" destination="Vav-3x-eBc" id="U8Y-JR-U8T"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJu-Km-EeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3192.8000000000002" y="187.55622188905548"/>
+        </scene>
         <!--Forget Pass View Controller-->
         <scene sceneID="psJ-HG-H5V">
             <objects>
@@ -268,20 +429,20 @@
                         <viewControllerLayoutGuide type="bottom" id="brI-cr-iaU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z6R-7U-AnV">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="osX-Nd-MDN">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kd5-GU-Fi4">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hby-Z1-xxa">
-                                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-KJ-5pP">
-                                            <rect key="frame" x="40" y="33" width="587" height="36.5"/>
+                                            <rect key="frame" x="40" y="33" width="295" height="36.5"/>
                                             <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="32"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -299,7 +460,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oj9-DN-Mbm" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="315" width="597" height="40"/>
+                                            <rect key="frame" x="35" y="607" width="305" height="40"/>
                                             <color key="backgroundColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="mhK-hm-KOW"/>
@@ -325,7 +486,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsg-zm-1sI" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="165" width="597" height="50"/>
+                                            <rect key="frame" x="35" y="457" width="305" height="50"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -394,14 +555,14 @@
                         <viewControllerLayoutGuide type="bottom" id="me3-PI-K0B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XqM-XV-Eu5">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user info" translatesAutoresizingMaskIntoConstraints="NO" id="1zp-ur-d4S">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtL-hU-iRG" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="398.5" y="287" width="247.5" height="36"/>
+                                <rect key="frame" x="204" y="579" width="150" height="36"/>
                                 <color key="backgroundColor" red="0.88126586294416243" green="0.10404776460844972" blue="0.033539686087899187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                 <state key="normal" title="Đăng Xuất">
@@ -417,7 +578,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnZ-r5-J1Z" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="201.5" y="134" width="444.5" height="30"/>
+                                <rect key="frame" x="104" y="426" width="250" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -439,7 +600,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Địa Chỉ" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLM-AI-HBD" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="201.5" y="172" width="444.5" height="30"/>
+                                <rect key="frame" x="104" y="464" width="250" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -461,7 +622,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Điện Thoại" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owe-Y1-iTB" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="201.5" y="210" width="444.5" height="30"/>
+                                <rect key="frame" x="104" y="502" width="250" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -483,7 +644,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7W-Es-sHE" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="201.5" y="96" width="444.5" height="30"/>
+                                <rect key="frame" x="104" y="388" width="250" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -505,7 +666,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Dư Tài Khoản" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-9J-fwB" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="201.5" y="248" width="444.5" height="30"/>
+                                <rect key="frame" x="104" y="540" width="250" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -527,25 +688,25 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa Chỉ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQD-2r-O73">
-                                <rect key="frame" x="21" y="174" width="59.5" height="21"/>
+                                <rect key="frame" x="21" y="466" width="59.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9F-Pj-PKh">
-                                <rect key="frame" x="21" y="136" width="45.5" height="21"/>
+                                <rect key="frame" x="21" y="428" width="45.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SĐT:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvF-1k-66O">
-                                <rect key="frame" x="21" y="212" width="36.5" height="21"/>
+                                <rect key="frame" x="21" y="504" width="36.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAb-c9-zwA" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="21" y="331" width="625" height="36"/>
+                                <rect key="frame" x="21" y="623" width="333" height="36"/>
                                 <color key="backgroundColor" red="0.34564505779999999" green="0.68379254869999995" blue="0.78481942419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                 <state key="normal" title="Đổi Mật Khẩu">
@@ -564,7 +725,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-KW-Wb6" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="21" y="287" width="247.5" height="36"/>
+                                <rect key="frame" x="21" y="579" width="150" height="36"/>
                                 <color key="backgroundColor" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                 <state key="normal" title="Home">
@@ -583,19 +744,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiền:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-7R-IAP">
-                                <rect key="frame" x="21" y="253" width="38" height="21"/>
+                                <rect key="frame" x="21" y="545" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ Tên:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM1-LY-L3f">
-                                <rect key="frame" x="21" y="98" width="59" height="21"/>
+                                <rect key="frame" x="21" y="390" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông Tin Cá Nhân" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sc-4A-eZz">
-                                <rect key="frame" x="44" y="30" width="579" height="32"/>
+                                <rect key="frame" x="44" y="30" width="287" height="32"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -667,20 +828,20 @@
                         <viewControllerLayoutGuide type="bottom" id="hXp-jW-BfT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i8V-ta-ZMr">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="Ugg-08-Xz3">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuy-Vf-JmD">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Zka-0o-zja">
-                                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng Ký Miễn Phí" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROq-fL-CpH">
-                                            <rect key="frame" x="63" y="20" width="580.5" height="34"/>
+                                            <rect key="frame" x="63" y="20" width="288.5" height="34"/>
                                             <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="30"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -698,7 +859,7 @@
                                             </connections>
                                         </button>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="knV-kT-brE" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="200" width="597" height="30"/>
+                                            <rect key="frame" x="35" y="492" width="305" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -721,7 +882,7 @@
                                             </connections>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42N-6G-fFU" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="235" width="267" height="30"/>
+                                            <rect key="frame" x="35" y="527" width="150" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -744,7 +905,7 @@
                                             </connections>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Địa Chỉ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2q-np-AF9" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="270" width="597" height="30"/>
+                                            <rect key="frame" x="35" y="562" width="305" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -767,7 +928,7 @@
                                             </connections>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số Điện Thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6Q-Bo-28l" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="305" width="597" height="30"/>
+                                            <rect key="frame" x="35" y="597" width="305" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -790,7 +951,7 @@
                                             </connections>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j57-HI-OrW" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="340" width="597" height="30"/>
+                                            <rect key="frame" x="35" y="632" width="305" height="30"/>
                                             <color key="backgroundColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Icj-Zy-yHk"/>
@@ -809,7 +970,7 @@
                                             </connections>
                                         </button>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6t-p9-PLu" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="35" y="165" width="597" height="30"/>
+                                            <rect key="frame" x="35" y="457" width="305" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -832,7 +993,7 @@
                                             </connections>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zal-a8-tqW" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="365" y="235" width="267" height="30"/>
+                                            <rect key="frame" x="190" y="527" width="150" height="30"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -942,19 +1103,19 @@
             <objects>
                 <tableViewController id="KJo-Ql-iMZ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5nw-9s-Zjn">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fithcmute" id="Ftq-2K-Zn3">
-                            <rect key="frame" x="0.0" y="0.0" width="667" height="117"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="Jsr-ap-Wk7">
-                                <rect key="frame" x="0.0" y="145" width="667" height="150"/>
+                                <rect key="frame" x="0.0" y="145" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jsr-ap-Wk7" id="JAK-fU-zsp">
-                                    <rect key="frame" x="0.0" y="0.0" width="667" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -977,19 +1138,19 @@
             <objects>
                 <tableViewController id="aEO-qh-I6q" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kdd-qY-m5A">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fithcmute" id="Uzt-oc-UvB">
-                            <rect key="frame" x="0.0" y="0.0" width="667" height="117"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="Gfz-hy-1RL">
-                                <rect key="frame" x="0.0" y="145" width="667" height="150"/>
+                                <rect key="frame" x="0.0" y="145" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gfz-hy-1RL" id="fNs-Ls-e5e">
-                                    <rect key="frame" x="0.0" y="0.0" width="667" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1054,26 +1215,26 @@
                         <viewControllerLayoutGuide type="bottom" id="PO5-Hx-R1W"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5V8-aO-htT">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user info" translatesAutoresizingMaskIntoConstraints="NO" id="5fO-ki-Gfa">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6A-Sv-ebS">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xfq-g9-YwB">
-                                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đổi Mật Khẩu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hE-gV-NeC">
-                                            <rect key="frame" x="40" y="30" width="587" height="32"/>
+                                            <rect key="frame" x="40" y="30" width="295" height="32"/>
                                             <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Mới" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zjg-rK-WiG" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="37" y="217" width="593" height="40"/>
+                                            <rect key="frame" x="37" y="509" width="301" height="40"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -1096,7 +1257,7 @@
                                             </connections>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRc-SX-Lcb" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="389.5" y="327" width="242.5" height="40"/>
+                                            <rect key="frame" x="195" y="619" width="145" height="40"/>
                                             <color key="backgroundColor" red="0.34564505779999999" green="0.68379254869999995" blue="0.78481942419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="B2R-Vz-hdC"/>
@@ -1118,7 +1279,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsq-0k-wRB" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="34" y="327" width="242.5" height="40"/>
+                                            <rect key="frame" x="34" y="619" width="145" height="40"/>
                                             <color key="backgroundColor" red="0.78481942419999995" green="0.3088352385" blue="0.17911139179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Q4k-HD-mYs"/>
@@ -1140,7 +1301,7 @@
                                             </connections>
                                         </button>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VcL-wg-xxw" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="37" y="272" width="593" height="40"/>
+                                            <rect key="frame" x="37" y="564" width="301" height="40"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -1163,7 +1324,7 @@
                                             </connections>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Hiện Tại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVI-4y-v1a" customClass="LoginTextField" customModule="HotMovies_UTE" customModuleProvider="target">
-                                            <rect key="frame" x="37" y="162" width="593" height="40"/>
+                                            <rect key="frame" x="37" y="454" width="301" height="40"/>
                                             <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.86758623580000005" green="0.87377224350000005" blue="0.89233026650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -1239,8 +1400,10 @@
         <image name="close" width="128" height="128"/>
         <image name="fithcmute" width="577" height="142"/>
         <image name="mail" width="512" height="512"/>
+        <image name="no image" width="300" height="300"/>
         <image name="pass" width="60" height="60"/>
         <image name="phone" width="256" height="256"/>
+        <image name="playvideo" width="400" height="400"/>
         <image name="user" width="28" height="28"/>
         <image name="user info" width="750" height="1334"/>
     </resources>

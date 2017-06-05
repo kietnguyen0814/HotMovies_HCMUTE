@@ -23,13 +23,20 @@
                             <constraint firstAttribute="width" constant="100" id="5JX-tW-OR7"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Movie Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0i-Mi-ItK">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0i-Mi-ItK">
                         <rect key="frame" x="116" y="8" width="226" height="55"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="55" id="1Kz-Kh-RMI"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Bold" family="Kohinoor Devanagari" pointSize="16"/>
-                        <color key="textColor" red="1" green="0.63888736234101684" blue="0.1641279442884398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <attributedString key="attributedText">
+                            <fragment content="No Movie Title">
+                                <attributes>
+                                    <color key="NSColor" red="1" green="0.63888736234101684" blue="0.1641279442884398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name="KohinoorDevanagari-Semibold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Movie Content" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaf-aY-CVM">
