@@ -91,7 +91,7 @@
                 <outlet property="txtContent" destination="uaf-aY-CVM" id="4td-OA-gKG"/>
                 <outlet property="txtTitle" destination="r0i-Mi-ItK" id="xci-5j-ZMh"/>
             </connections>
-            <point key="canvasLocation" x="25" y="-20"/>
+            <point key="canvasLocation" x="-43" y="-208"/>
         </tableViewCell>
     </objects>
     <resources>
