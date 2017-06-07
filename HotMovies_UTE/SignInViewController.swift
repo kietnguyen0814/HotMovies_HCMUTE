@@ -15,12 +15,18 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     /*@IBOutlet weak var imgBackground: UIImageView!
     @IBOutlet weak var btnSignIn: UIButton!*/
     @IBOutlet weak var txtEmailSignIn: LoginTextField!
+    
     @IBOutlet weak var txtPassSignIn: LoginTextField!
+    
+    
     var loadingNotification: MBProgressHUD!
+    
+    var mDatabase: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        mDatabase = Database.database().reference()
         let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.DismissKeyboard))
         view.addGestureRecognizer(dismiss)
         observerKeyboard()
@@ -55,6 +61,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             else {
                 //show progress
                 self.showProgress()
+                if Constants.isResetPassword == true
+                {
+                    //update new pass
+                    let dataUpdatePass = ["password": password];
+                    self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
+                }
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                     //hide progress
                     self.hideProgress()
@@ -68,6 +80,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+    }
+    
+    func getUid() -> String {
+        return (Auth.auth().currentUser?.uid)!;
     }
     
     func showAlertDialog(message: String) {

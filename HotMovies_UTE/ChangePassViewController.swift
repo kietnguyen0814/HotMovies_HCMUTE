@@ -82,6 +82,8 @@ class ChangePassViewController: UIViewController {
                         //update new pass
                         let dataUpdatePass = ["password": newPass];
                         self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
+                        // update pass for user
+                        self.user.password = newPass
                         //show alert
                         let alertView = UIAlertController(title: "Thông Báo", message: "Đổi mật khẩu thành công", preferredStyle: .alert)
                         let action = UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
@@ -89,7 +91,6 @@ class ChangePassViewController: UIViewController {
                         })
                         alertView.addAction(action)
                         self.present(alertView, animated: true, completion: nil)
-
                     }
                     else {
                         self.showAlertDialog(message: "Đổi mật khẩu không thành công")

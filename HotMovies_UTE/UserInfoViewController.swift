@@ -60,6 +60,17 @@ class UserInfoViewController: UIViewController {
         }
     }
     
+    @IBAction func btnSignOut(_ sender: Any) {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            dismiss(animated: true, completion: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
     //event click change pass
     
     @IBAction func btnChangePass(_ sender: Any) {

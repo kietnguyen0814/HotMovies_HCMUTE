@@ -30,6 +30,7 @@
 		305995681EDF0C35009C1DD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */; };
 		3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059956A1EDF12AD009C1DD4 /* Validate.swift */; };
 		30F1498D1EE070D500E284D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1498C1EE070D500E284D5 /* User.swift */; };
+		76782B7A1EE7E2060069F859 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76782B791EE7E2060069F859 /* Constants.swift */; };
 		D918AD2EC2649B046662092D /* Pods_HotMovies_UTETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0670A8C1FC023A34059B8F29 /* Pods_HotMovies_UTETests.framework */; };
 		E9F453DA69FB2B446778A480 /* Pods_HotMovies_UTEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892EAE197E577950B4558738 /* Pods_HotMovies_UTEUITests.framework */; };
 		F72C1D631EE29E2000FE5306 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C1D621EE29E2000FE5306 /* ChangePassViewController.swift */; };
@@ -92,6 +93,7 @@
 		305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3059956A1EDF12AD009C1DD4 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		30F1498C1EE070D500E284D5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		76782B791EE7E2060069F859 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7C1E44AB87E8DA8127F12EB8 /* Pods-HotMovies_UTETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTETests/Pods-HotMovies_UTETests.debug.xcconfig"; sourceTree = "<group>"; };
 		892EAE197E577950B4558738 /* Pods_HotMovies_UTEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotMovies_UTEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A13522311E62ACF1DADC27 /* Pods-HotMovies_UTEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTEUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTEUITests/Pods-HotMovies_UTEUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				F72C1D6C1EE2B4A300FE5306 /* Seat.swift */,
 				F72C1D6E1EE2B4DE00FE5306 /* ShowTimeInfo.swift */,
 				F7609A071EE2C08900B0FB61 /* ShowTime.swift */,
+				76782B791EE7E2060069F859 /* Constants.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				304F4F641EE6FC5E006B36BE /* IsShowingTableViewController.swift in Sources */,
 				2E3D61E01ED98C0500883EB4 /* LoginTextField.swift in Sources */,
 				2EECD3021EE1E27500080789 /* DesignTableViewCell.swift in Sources */,
+				76782B7A1EE7E2060069F859 /* Constants.swift in Sources */,
 				3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */,
 				2EE078B51ED95A0400B619C3 /* SignInViewController.swift in Sources */,
 				2E407B091EE04C5900208130 /* UserInfoViewController.swift in Sources */,
