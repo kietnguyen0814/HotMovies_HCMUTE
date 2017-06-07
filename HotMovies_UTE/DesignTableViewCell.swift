@@ -13,6 +13,7 @@ class DesignTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imgPoster: UIImageView!
 
+    @IBOutlet weak var imgYoutobe: DesignButton!
     @IBOutlet weak var txtContent: UILabel!
     @IBOutlet weak var txtType: UILabel!
     @IBOutlet weak var txtTitle: UILabel!
@@ -22,8 +23,12 @@ class DesignTableViewCell: UITableViewCell {
         txtTitle.text = filmInfo.filmName
         txtContent.text! = filmInfo.content
         imgPoster.image = Downloader.downloadImageWithURL(filmInfo.posterUrl)
+        
     }
     
+    @IBAction func playYoutobe(_ sender: Any) {
+        
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -10,10 +10,16 @@ import UIKit
 
 class YoutobeViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+    
+    var videoUrl: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(videoUrl)
         // Do any additional setup after loading the view.
+        webView.loadHTMLString("<iframe width =\"\(webView.frame.width)\" height =\"\(webView.frame.height)\" src = \"\(videoUrl)\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,3 +28,4 @@ class YoutobeViewController: UIViewController {
     }
 
 }
+	

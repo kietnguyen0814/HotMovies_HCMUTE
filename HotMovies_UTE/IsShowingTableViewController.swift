@@ -109,6 +109,7 @@ class IsShowingTableViewController: UITableViewController {
         else {
             filmInfo = films[indexPath.row]
         }
+
         cell.configWithCell(filmInfo: filmInfo)
         
         return cell

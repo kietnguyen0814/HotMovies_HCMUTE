@@ -59,6 +59,9 @@ class FilmDetailTableViewController: UITableViewController {
     
     
     @IBAction func imgPlay(_ sender: Any) {
+        let srcYoutobe = self.storyboard?.instantiateViewController(withIdentifier: "youtobeId") as! YoutobeViewController
+        srcYoutobe.videoUrl = filmInfo.videoUrl
+        self.navigationController?.pushViewController(srcYoutobe, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,7 +84,7 @@ class FilmDetailTableViewController: UITableViewController {
     @IBAction func btn850(_ sender: Any) {
         let srcBuyTicket = self.storyboard?.instantiateViewController(withIdentifier: "buyTicketId") as! BuyTicketViewController
         srcBuyTicket.filmInfo = filmInfo
-        srcBuyTicket.time = "8:50"
+        srcBuyTicket.time = "850"
         navigationController?.pushViewController(srcBuyTicket, animated: true)
     }
     
