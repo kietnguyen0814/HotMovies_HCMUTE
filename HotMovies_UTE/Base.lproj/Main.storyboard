@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -448,6 +449,36 @@
             </objects>
             <point key="canvasLocation" x="3192.8000000000002" y="187.55622188905548"/>
         </scene>
+        <!--Youtobe View Controller-->
+        <scene sceneID="syb-nf-0wK">
+            <objects>
+                <viewController id="gGH-9x-kS9" customClass="YoutobeViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bm3-bq-b9c"/>
+                        <viewControllerLayoutGuide type="bottom" id="tt0-dt-8va"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hux-gy-gyy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0t-8S-oHD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tt0-dt-8va" firstAttribute="top" secondItem="n0t-8S-oHD" secondAttribute="bottom" id="3cP-xM-kH7"/>
+                            <constraint firstItem="n0t-8S-oHD" firstAttribute="top" secondItem="Bm3-bq-b9c" secondAttribute="bottom" id="IKK-0E-Dgi"/>
+                            <constraint firstAttribute="trailing" secondItem="n0t-8S-oHD" secondAttribute="trailing" id="mLt-gZ-0wK"/>
+                            <constraint firstItem="n0t-8S-oHD" firstAttribute="leading" secondItem="hux-gy-gyy" secondAttribute="leading" id="xGh-TN-VKu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPm-ix-yhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2242" y="911"/>
+        </scene>
         <!--Buy Ticket View Controller-->
         <scene sceneID="lYI-TL-OdR">
             <objects>
@@ -520,24 +551,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vu-ar-DZ1" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
-                                <rect key="frame" x="265" y="241" width="50" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="lZ8-Rw-5Tw"/>
-                                </constraints>
-                                <state key="normal" title="0"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYb-em-2xV" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                 <rect key="frame" x="220" y="241" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -605,10 +618,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4M-6q-bHY" customClass="BorderLabel" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="265" y="241" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1LK-ed-bWW"/>
+                                    <constraint firstAttribute="width" constant="50" id="auh-bt-U33"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4Vu-ar-DZ1" firstAttribute="leading" secondItem="MYb-em-2xV" secondAttribute="trailing" constant="15" id="0Si-ZK-9M3"/>
+                            <constraint firstItem="g4M-6q-bHY" firstAttribute="leading" secondItem="MYb-em-2xV" secondAttribute="trailing" constant="15" id="3qC-ex-EI0"/>
                             <constraint firstAttribute="trailing" secondItem="7rC-6a-qvc" secondAttribute="trailing" id="5c6-Fb-tl3"/>
                             <constraint firstItem="Sof-c7-A57" firstAttribute="top" secondItem="Plv-G6-ZYg" secondAttribute="bottom" id="63p-M5-seS"/>
                             <constraint firstAttribute="trailing" secondItem="bvG-vc-Ygt" secondAttribute="trailing" id="6ow-Hf-qQQ"/>
@@ -621,16 +655,16 @@
                             <constraint firstAttribute="trailing" secondItem="tgE-hE-1Tx" secondAttribute="trailing" constant="15" id="IsV-7G-Tqs"/>
                             <constraint firstAttribute="trailing" secondItem="M9b-fd-xnj" secondAttribute="trailing" constant="10" id="Jlx-x6-vaf"/>
                             <constraint firstItem="oKr-wo-aXj" firstAttribute="leading" secondItem="gek-uU-Rdy" secondAttribute="trailing" constant="10" id="MCf-ld-XRN"/>
-                            <constraint firstItem="tgE-hE-1Tx" firstAttribute="leading" secondItem="4Vu-ar-DZ1" secondAttribute="trailing" constant="15" id="OdE-nr-9Si"/>
                             <constraint firstItem="XJO-M5-diZ" firstAttribute="leading" secondItem="6SI-wV-494" secondAttribute="leading" constant="15" id="PZg-2e-XkY"/>
                             <constraint firstItem="oKr-wo-aXj" firstAttribute="top" secondItem="M9b-fd-xnj" secondAttribute="bottom" constant="10" id="Rmg-Gt-mxd"/>
                             <constraint firstItem="TGn-Xn-3u9" firstAttribute="width" secondItem="6SI-wV-494" secondAttribute="width" multiplier="1/2" id="TYj-nW-3YO"/>
                             <constraint firstItem="XJO-M5-diZ" firstAttribute="top" secondItem="jqk-q9-eLp" secondAttribute="bottom" constant="20" id="Tcd-hA-6Hd"/>
                             <constraint firstAttribute="trailing" secondItem="TGn-Xn-3u9" secondAttribute="trailing" id="W6i-Vi-LV2"/>
                             <constraint firstAttribute="trailing" secondItem="Wwz-RR-AEQ" secondAttribute="trailing" constant="15" id="Z3h-Rk-jc0"/>
-                            <constraint firstItem="MYb-em-2xV" firstAttribute="baseline" secondItem="4Vu-ar-DZ1" secondAttribute="baseline" id="cPY-he-GHV"/>
+                            <constraint firstItem="tgE-hE-1Tx" firstAttribute="leading" secondItem="g4M-6q-bHY" secondAttribute="trailing" constant="15" id="aKv-X6-kUW"/>
                             <constraint firstItem="Plv-G6-ZYg" firstAttribute="top" secondItem="7rC-6a-qvc" secondAttribute="bottom" id="dMl-ux-NTc"/>
                             <constraint firstItem="Wwz-RR-AEQ" firstAttribute="leading" secondItem="jqk-q9-eLp" secondAttribute="trailing" constant="29" id="dSq-Up-wac"/>
+                            <constraint firstItem="g4M-6q-bHY" firstAttribute="top" secondItem="Wwz-RR-AEQ" secondAttribute="bottom" constant="20" id="e3I-nE-1ry"/>
                             <constraint firstItem="jqk-q9-eLp" firstAttribute="leading" secondItem="6SI-wV-494" secondAttribute="leading" constant="15" id="gSZ-55-sf7"/>
                             <constraint firstItem="obV-an-nRo" firstAttribute="top" secondItem="RI5-xu-h5f" secondAttribute="bottom" constant="15" id="hJ1-ZH-MR7"/>
                             <constraint firstItem="M9b-fd-xnj" firstAttribute="leading" secondItem="gek-uU-Rdy" secondAttribute="trailing" constant="10" id="j3G-3h-h94"/>
@@ -648,10 +682,10 @@
                     </view>
                     <connections>
                         <outlet property="btnMoney" destination="Plv-G6-ZYg" id="shG-l6-Eeg"/>
-                        <outlet property="btnNumberTicket" destination="4Vu-ar-DZ1" id="Y1I-MR-5va"/>
                         <outlet property="imgPoster" destination="gek-uU-Rdy" id="Xot-TH-7MN"/>
                         <outlet property="txtActor" destination="M9b-fd-xnj" id="Vsr-FQ-Sl0"/>
                         <outlet property="txtFilmName" destination="obV-an-nRo" id="ySK-hb-Ofh"/>
+                        <outlet property="txtNumberTicket" destination="g4M-6q-bHY" id="Y8D-tD-jht"/>
                         <outlet property="txtTime" destination="oKr-wo-aXj" id="cvd-LF-UiC"/>
                     </connections>
                 </viewController>

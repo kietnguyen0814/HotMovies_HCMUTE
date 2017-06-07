@@ -16,7 +16,8 @@ class BuyTicketViewController: UIViewController {
     @IBOutlet weak var txtActor: UILabel!
     @IBOutlet weak var btnMoney: UIButton!
     @IBOutlet weak var txtTime: UILabel!
-    @IBOutlet weak var btnNumberTicket: DesignButton!
+    @IBOutlet weak var txtNumberTicket: BorderLabel!
+    
     
     var filmInfo: FilmInfo!
     var time: String = ""
@@ -43,11 +44,14 @@ class BuyTicketViewController: UIViewController {
     
     @IBAction func btnMinus(_ sender: Any) {
         if (ticketNumber > 0) {
-            
+            ticketNumber = ticketNumber - 1;
+            txtNumberTicket.text = String(ticketNumber)
         }
     }
 
     @IBAction func btnAdd(_ sender: Any) {
+        ticketNumber = ticketNumber + 1;
+        txtNumberTicket.text = String(ticketNumber)
     }
     
     @IBAction func btnNext(_ sender: Any) {
