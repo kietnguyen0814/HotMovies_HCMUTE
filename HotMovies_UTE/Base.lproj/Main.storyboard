@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="1098" y="-595"/>
         </scene>
-        <!--Comming Soon Table View Controller-->
+        <!--Is Showing Table View Controller-->
         <scene sceneID="ulh-jL-gvd">
             <objects>
-                <tableViewController id="uru-Kp-b76" customClass="CommingSoonTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="uru-Kp-b76" customClass="IsShowingTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="nR9-UG-lX7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8c-1o-hah" id="IM0-Jv-WDI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -260,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="4072.8000000000002" y="-529.38530734632684"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Film Detail Table View Controller-->
         <scene sceneID="asJ-tZ-ik7">
             <objects>
-                <tableViewController id="Vav-3x-eBc" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="filmDetailId" id="Vav-3x-eBc" customClass="FilmDetailTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="UKd-SB-0GF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,6 +315,9 @@
                                     <rect key="frame" x="45" y="75" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button" image="playvideo"/>
+                                    <connections>
+                                        <action selector="imgPlay:" destination="Vav-3x-eBc" eventType="touchUpInside" id="BfT-0X-9rA"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Day" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOl-FT-zHr">
                                     <rect key="frame" x="198" y="60" width="169" height="20"/>
@@ -368,7 +371,7 @@
                                         <rect key="frame" x="0.0" y="200" width="375" height="147"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s2K-wK-vv8" id="1C4-pI-MI4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Movie Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kx8-ah-Aed">
@@ -403,7 +406,7 @@
                                         <rect key="frame" x="0.0" y="383" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="46Y-s9-USs" id="idx-8l-Jta">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -415,6 +418,16 @@
                             <outlet property="delegate" destination="Vav-3x-eBc" id="U8Y-JR-U8T"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="imgPoster" destination="jzK-Dc-Rtf" id="47y-3y-0WN"/>
+                        <outlet property="txtActor" destination="Dbr-if-khX" id="0mB-p5-w1c"/>
+                        <outlet property="txtContent" destination="kx8-ah-Aed" id="Bsf-C3-KUF"/>
+                        <outlet property="txtDirector" destination="85U-wa-uxG" id="r0J-6M-8zr"/>
+                        <outlet property="txtFilmType" destination="KX4-Pa-yBH" id="1ou-PC-yEE"/>
+                        <outlet property="txtMovieTitle" destination="re9-Dx-88S" id="hvy-Q8-4Is"/>
+                        <outlet property="txtReleaseDay" destination="EOl-FT-zHr" id="Ke3-nM-7nj"/>
+                        <outlet property="txtType" destination="EBu-qk-EB4" id="5WR-sL-278"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJu-Km-EeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1648,10 +1661,10 @@
             </objects>
             <point key="canvasLocation" x="2405.5999999999999" y="-529.38530734632684"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Has Been Screened Table View Controller-->
         <scene sceneID="2mu-QE-Rva">
             <objects>
-                <tableViewController id="KJo-Ql-iMZ" sceneMemberID="viewController">
+                <tableViewController id="KJo-Ql-iMZ" customClass="HasBeenScreenedTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5nw-9s-Zjn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1661,11 +1674,11 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="Jsr-ap-Wk7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmRow" rowHeight="150" id="Jsr-ap-Wk7" customClass="DesignTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="145" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jsr-ap-Wk7" id="JAK-fU-zsp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1683,10 +1696,10 @@
             </objects>
             <point key="canvasLocation" x="494" y="1019"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Comming Soon Table View Controller-->
         <scene sceneID="qCa-iw-Ooa">
             <objects>
-                <tableViewController id="aEO-qh-I6q" sceneMemberID="viewController">
+                <tableViewController id="aEO-qh-I6q" customClass="CommingSoonTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kdd-qY-m5A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1696,11 +1709,11 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="Gfz-hy-1RL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmRow" rowHeight="150" id="Gfz-hy-1RL" customClass="DesignTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="145" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gfz-hy-1RL" id="fNs-Ls-e5e">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1942,6 +1955,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRb-MB-nhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5549.6000000000004" y="187.55622188905548"/>
+        </scene>
+        <!--Is Showing Table View Controller-->
+        <scene sceneID="gMD-Yf-Hln">
+            <objects>
+                <tableViewController id="gmx-UB-15p" customClass="IsShowingTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="rzH-ue-9PY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fithcmute" id="BCI-Yz-oAK">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmRow" rowHeight="150" id="hw6-Wi-G7I" customClass="DesignTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="145" width="375" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hw6-Wi-G7I" id="d6K-YP-ZCw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gmx-UB-15p" id="4v4-a5-T8A"/>
+                            <outlet property="delegate" destination="gmx-UB-15p" id="6k9-Hh-h8U"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="L9p-6N-7Ro">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="s56-7x-RtL"/>
+                        <barButtonItem key="rightBarButtonItem" image="user" id="Q7q-I0-yyt"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FtU-Ve-ai8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3192.8000000000002" y="-529.38530734632684"/>
         </scene>
     </scenes>
     <resources>

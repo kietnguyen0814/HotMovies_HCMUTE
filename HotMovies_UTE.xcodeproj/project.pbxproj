@@ -24,6 +24,9 @@
 		2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA61EDA988A003060A3 /* DesignView.swift */; };
 		2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */; };
 		301F53E01EE4591C0032AD66 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301F53DF1EE4591C0032AD66 /* Downloader.swift */; };
+		304F4F641EE6FC5E006B36BE /* IsShowingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F4F631EE6FC5E006B36BE /* IsShowingTableViewController.swift */; };
+		304F4F661EE6FC70006B36BE /* HasBeenScreenedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F4F651EE6FC70006B36BE /* HasBeenScreenedTableViewController.swift */; };
+		304F4F6A1EE70441006B36BE /* FilmDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F4F691EE70441006B36BE /* FilmDetailTableViewController.swift */; };
 		305995681EDF0C35009C1DD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */; };
 		3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059956A1EDF12AD009C1DD4 /* Validate.swift */; };
 		30F1498D1EE070D500E284D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1498C1EE070D500E284D5 /* User.swift */; };
@@ -83,6 +86,9 @@
 		2EEE8FA61EDA988A003060A3 /* DesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		2EEE8FA81EDA991E003060A3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		301F53DF1EE4591C0032AD66 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		304F4F631EE6FC5E006B36BE /* IsShowingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsShowingTableViewController.swift; sourceTree = "<group>"; };
+		304F4F651EE6FC70006B36BE /* HasBeenScreenedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasBeenScreenedTableViewController.swift; sourceTree = "<group>"; };
+		304F4F691EE70441006B36BE /* FilmDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmDetailTableViewController.swift; sourceTree = "<group>"; };
 		305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3059956A1EDF12AD009C1DD4 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		30F1498C1EE070D500E284D5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -150,6 +156,9 @@
 				2E407B081EE04C5900208130 /* UserInfoViewController.swift */,
 				F72C1D621EE29E2000FE5306 /* ChangePassViewController.swift */,
 				F72C1D641EE2AFF800FE5306 /* CommingSoonTableViewController.swift */,
+				304F4F631EE6FC5E006B36BE /* IsShowingTableViewController.swift */,
+				304F4F651EE6FC70006B36BE /* HasBeenScreenedTableViewController.swift */,
+				304F4F691EE70441006B36BE /* FilmDetailTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -540,6 +549,7 @@
 				2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */,
 				F72C1D691EE2B22800FE5306 /* FilmInfo.swift in Sources */,
 				F72C1D6D1EE2B4A300FE5306 /* Seat.swift in Sources */,
+				304F4F641EE6FC5E006B36BE /* IsShowingTableViewController.swift in Sources */,
 				2E3D61E01ED98C0500883EB4 /* LoginTextField.swift in Sources */,
 				2EECD3021EE1E27500080789 /* DesignTableViewCell.swift in Sources */,
 				3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */,
@@ -548,6 +558,7 @@
 				2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */,
 				F7609A081EE2C08900B0FB61 /* ShowTime.swift in Sources */,
 				301F53E01EE4591C0032AD66 /* Downloader.swift in Sources */,
+				304F4F6A1EE70441006B36BE /* FilmDetailTableViewController.swift in Sources */,
 				2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */,
 				2E407B071EE0462A00208130 /* ForgetPassViewController.swift in Sources */,
 				F72C1D6B1EE2B46800FE5306 /* Film.swift in Sources */,
@@ -556,6 +567,7 @@
 				30F1498D1EE070D500E284D5 /* User.swift in Sources */,
 				2E3D61E31ED9AF5600883EB4 /* DesignButton.swift in Sources */,
 				F72C1D651EE2AFF800FE5306 /* CommingSoonTableViewController.swift in Sources */,
+				304F4F661EE6FC70006B36BE /* HasBeenScreenedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

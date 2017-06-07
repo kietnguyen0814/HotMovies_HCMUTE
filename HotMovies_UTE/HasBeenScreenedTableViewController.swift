@@ -1,40 +1,37 @@
 //
-//  CommingSoonTableViewController.swift
+//  HasBeenScreenedTableViewController.swift
 //  HotMovies_UTE
 //
-//  Created by Cntt03 on 6/3/17.
+//  Created by Duy Bùi on 6/6/17.
 //  Copyright © 2017 Kiet Nguyen. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
+class HasBeenScreenedTableViewController: UITableViewController {
 
-class CommingSoonTableViewController: UITableViewController {
-
-    
     var mDatabase: DatabaseReference!
     var films = [FilmInfo]()
-  
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mDatabase = Database.database().reference()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        mDatabase = Database.database().reference()
-        getAllMoviesCommningSoon()
+        
+        getAllMoviesHasBeenScreened()
+        
         //register xib file
         tableView.register(UINib(nibName: "DesignTableViewCell", bundle: nil), forCellReuseIdentifier: "FilmRow")
-        tableView.estimatedRowHeight = tableView.rowHeight
-        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
-    func getAllMoviesCommningSoon() {
-        mDatabase.child("films").child("commingSoon").observe(.childAdded, with: { (snapshot) -> Void in
+    func getAllMoviesHasBeenScreened() {
+        mDatabase.child("films").child("hasBeenScreened").observe(.childAdded, with: { (snapshot) -> Void in
             var film: [String: AnyObject] = (snapshot.value as? [String: AnyObject])!
             var filmInfo = film["filmInfo"] as? [String: AnyObject]
             //get data filmInfo
@@ -75,15 +72,15 @@ class CommingSoonTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return films.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = Bundle.main.loadNibNamed("DesignTableViewCell", owner: self, options: nil)?.first as! DesignTableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilmRow", for: indexPath) as! DesignTableViewCell
-
-        //let cell = Bundle.main.loadNibNamed("DesignTableViewCell", owner: self, options: nil) as! DesignTableViewCell
         let filmInfo = films[indexPath.row]
         
         cell.configWithCell(filmInfo: filmInfo)
         
         return cell
     }
+
 }

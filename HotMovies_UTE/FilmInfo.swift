@@ -20,9 +20,10 @@ class FilmInfo {
     var posterUrl: String
     var type: String
     var videoUrl: String
+    var filmType: String
     
     init(actor: String, content: String, director: String, duration: Int, filmId: String, filmName: String,
-         openningDay: String, posterUrl: String, type: String, videoUrl: String) {
+         openningDay: String, posterUrl: String, type: String, videoUrl: String, filmType: String) {
         self.actor = actor
         self.content = content
         self.director = director
@@ -33,6 +34,7 @@ class FilmInfo {
         self.posterUrl = posterUrl
         self.type = type
         self.videoUrl = videoUrl
+        self.filmType = filmType
     }
     
 }
