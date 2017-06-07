@@ -8,11 +8,15 @@
 
 import UIKit
 import Firebase
+import MBProgressHUD
 
 class HasBeenScreenedTableViewController: UITableViewController {
 
     var mDatabase: DatabaseReference!
     var films = [FilmInfo]()
+    var progressDialog: MBProgressHUD!
+    var searchFilms = [FilmInfo]()
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +26,24 @@ class HasBeenScreenedTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.leftBarButtonItem = editButtonItem
         
         getAllMoviesHasBeenScreened()
         
         //register xib file
         tableView.register(UINib(nibName: "DesignTableViewCell", bundle: nil), forCellReuseIdentifier: "FilmRow")
+        //setup searchcontroller
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false;
+        tableView.tableHeaderView = searchController.searchBar
+
     }
     
     func getAllMoviesHasBeenScreened() {
+        //show progress
+        showProgress()
         mDatabase.child("films").child("hasBeenScreened").observe(.childAdded, with: { (snapshot) -> Void in
             var film: [String: AnyObject] = (snapshot.value as? [String: AnyObject])!
             var filmInfo = film["filmInfo"] as? [String: AnyObject]
@@ -51,11 +64,22 @@ class HasBeenScreenedTableViewController: UITableViewController {
             self.films.append(filmInfoData)
             //show into main thread
             DispatchQueue.main.async {
+                self.hideProgress()
                 self.tableView.reloadData()
             }
         })
     }
 
+    func showProgress() {
+        progressDialog = MBProgressHUD.showAdded(to: self.view, animated: true)
+        progressDialog.mode = MBProgressHUDMode.indeterminate
+        progressDialog.label.text = "Đang tải..."
+    }
+    
+    func hideProgress() {
+        progressDialog.hide(animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -70,17 +94,82 @@ class HasBeenScreenedTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if (searchController.isActive && searchController.searchBar.text != "") {
+            return searchFilms.count
+        }
         return films.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = Bundle.main.loadNibNamed("DesignTableViewCell", owner: self, options: nil)?.first as! DesignTableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilmRow", for: indexPath) as! DesignTableViewCell
-        let filmInfo = films[indexPath.row]
-        
+        let filmInfo: FilmInfo
+        if (searchController.isActive && searchController.searchBar.text != "") {
+            filmInfo = searchFilms[indexPath.row]
+        }
+        else {
+            filmInfo = films[indexPath.row]
+        }
         cell.configWithCell(filmInfo: filmInfo)
         
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let srcDetailFilm = self.storyboard?.instantiateViewController(withIdentifier: "filmDetailId") as! FilmDetailTableViewController
+        let filmInfo: FilmInfo
+        if (searchController.isActive && searchController.searchBar.text! != "") {
+            filmInfo = searchFilms[indexPath.row]
+        }
+        else {
+            filmInfo = films[indexPath.row]
+        }
+        srcDetailFilm.filmInfo = filmInfo
+        navigationController?.pushViewController(srcDetailFilm, animated: true)
+        
+    }
+    
+    //delete film
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            let filmInfo = films[indexPath.row]
+            films.remove(at: indexPath.row)
+            //delete in database
+            mDatabase.child("films").child(filmInfo.filmType).child(filmInfo.filmId).removeValue()
+            //delete and update row
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        }
+    }
+    
+    
+    //drag and drop
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        //remove souce
+        let film = films[sourceIndexPath.row]
+        films.remove(at: sourceIndexPath.row)
+        //add to des
+        films.insert(film, at: destinationIndexPath.row)
+    }
+    
+    //search
+    func searchFilmByName(_ filmName: String) {
+        searchFilms = films.filter({ (filmInfo: FilmInfo) -> Bool in
+            return filmInfo.filmName.lowercased().contains(filmName.lowercased())
+        })
+        self.tableView.reloadData()
+    }
 }
+
+extension HasBeenScreenedTableViewController: UISearchBarDelegate {
+    // MARK: - UISearchBar Delegate
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        searchFilmByName(searchBar.text!)
+    }
+}
+
+extension HasBeenScreenedTableViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        searchFilmByName(searchController.searchBar.text!)
+    }
+}
+
