@@ -71,8 +71,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                     //hide progress
                     self.hideProgress()
                     if (error == nil) {
-                        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
-                        self.present(srcUserInfo, animated: true)
+                        //let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
+                        //self.present(srcUserInfo, animated: true)
+                        self.dismiss(animated: true)
                     }
                     else {
                         self.showAlertDialog(message: "Đăng nhập khong thành công")

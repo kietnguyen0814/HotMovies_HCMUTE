@@ -11,9 +11,11 @@ import Foundation
 class Seat {
     var bookBy: String
     var state: Bool
+    var seatName: String
     
-    init (bookBy: String, state: Bool) {
+    init (bookBy: String, state: Bool, seatName: String) {
         self.bookBy = bookBy
         self.state = state
+        self.seatName  = seatName
     }
 }

@@ -29,6 +29,7 @@
 		304F4F6A1EE70441006B36BE /* FilmDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F4F691EE70441006B36BE /* FilmDetailTableViewController.swift */; };
 		305995681EDF0C35009C1DD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */; };
 		3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059956A1EDF12AD009C1DD4 /* Validate.swift */; };
+		306B5FD81EEAADD200FACCFD /* ChoosePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B5FD71EEAADD200FACCFD /* ChoosePlacesViewController.swift */; };
 		30F1498D1EE070D500E284D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1498C1EE070D500E284D5 /* User.swift */; };
 		76782B7A1EE7E2060069F859 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76782B791EE7E2060069F859 /* Constants.swift */; };
 		D918AD2EC2649B046662092D /* Pods_HotMovies_UTETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0670A8C1FC023A34059B8F29 /* Pods_HotMovies_UTETests.framework */; };
@@ -95,6 +96,7 @@
 		304F4F691EE70441006B36BE /* FilmDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmDetailTableViewController.swift; sourceTree = "<group>"; };
 		305995671EDF0C35009C1DD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3059956A1EDF12AD009C1DD4 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
+		306B5FD71EEAADD200FACCFD /* ChoosePlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePlacesViewController.swift; sourceTree = "<group>"; };
 		30F1498C1EE070D500E284D5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		76782B791EE7E2060069F859 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7C1E44AB87E8DA8127F12EB8 /* Pods-HotMovies_UTETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTETests/Pods-HotMovies_UTETests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				304F4F691EE70441006B36BE /* FilmDetailTableViewController.swift */,
 				F7656EED1EE7E67300196F93 /* BuyTicketViewController.swift */,
 				F7656EF11EE7FB0C00196F93 /* YoutobeViewController.swift */,
+				306B5FD71EEAADD200FACCFD /* ChoosePlacesViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				2E407B071EE0462A00208130 /* ForgetPassViewController.swift in Sources */,
 				F72C1D6B1EE2B46800FE5306 /* Film.swift in Sources */,
 				F72C1D631EE29E2000FE5306 /* ChangePassViewController.swift in Sources */,
+				306B5FD81EEAADD200FACCFD /* ChoosePlacesViewController.swift in Sources */,
 				F72C1D6F1EE2B4DE00FE5306 /* ShowTimeInfo.swift in Sources */,
 				30F1498D1EE070D500E284D5 /* User.swift in Sources */,
 				2E3D61E31ED9AF5600883EB4 /* DesignButton.swift in Sources */,

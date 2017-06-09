@@ -40,6 +40,18 @@ class IsShowingTableViewController: UITableViewController {
         tableView.tableHeaderView = searchController.searchBar
     }
     
+    
+    @IBAction func btnUserInfo(_ sender: Any) {
+        if Auth.auth().currentUser != nil {
+            let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
+            navigationController?.pushViewController(srcUserInfo, animated: true)
+        } else {
+            let srcSignIn = self.storyboard?.instantiateViewController(withIdentifier: "signInId") as! SignInViewController
+            present(srcSignIn, animated: true, completion: nil)
+            //navigationController?.pushViewController(srcSignIn, animated: true)
+        }
+    }
+    
     func showProgress() {
         progressDialog = MBProgressHUD.showAdded(to: self.view, animated: true)
         progressDialog.mode = MBProgressHUDMode.indeterminate

@@ -70,6 +70,9 @@ class HasBeenScreenedTableViewController: UITableViewController {
         })
     }
 
+    @IBAction func btnUserInfoClick(_ sender: Any) {
+    }
+    
     func showProgress() {
         progressDialog = MBProgressHUD.showAdded(to: self.view, animated: true)
         progressDialog.mode = MBProgressHUDMode.indeterminate

@@ -31,6 +31,8 @@ class BuyTicketViewController: UIViewController {
     var priceFilm: Int64 = 0
     var money: Int64 = 0
     
+    var userInfo: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mDatabase = Database.database().reference()
@@ -95,6 +97,63 @@ class BuyTicketViewController: UIViewController {
     }
     
     @IBAction func btnNext(_ sender: Any) {
+        if (ticketNumber > 0) {
+            if Auth.auth().currentUser != nil {
+                if (userInfo != nil) {
+                    if (Int64(userInfo.balance) < money) {
+                        showAlertDialog(message: "Số tiền trong tài khoản của bạn không đủ")
+                    }
+                    else {
+                        let src = self.storyboard?.instantiateViewController(withIdentifier: "choosePlacesId") as! ChoosePlacesViewController
+                        src.filmInfo = filmInfo
+                        src.time = "850"
+                        navigationController?.pushViewController(src, animated: true)
+                    }
+                }
+                else {
+                    mDatabase.child("users").child(getUid()).observeSingleEvent(of: .value, with: { (snapshot) in
+                        if let user = snapshot.value as? [String: AnyObject] {
+                            let fullName = user["fullName"] as? String ?? ""
+                            let email = user["email"] as? String ?? ""
+                            let address = user["address"] as? String ?? ""
+                            let phone = user["phone"] as? String ?? ""
+                            let balance = user["balance"] as? Double ?? 0
+                            let password = user["password"] as? String ?? ""
+                            
+                            self.userInfo = User.init(fullName: fullName, email: email, address: address, balance: balance, password: password, phone: phone, uid: self.getUid())
+                            
+                            if (Int64(self.userInfo.balance) < self.money) {
+                                self.showAlertDialog(message: "Số tiền trong tài khoản của bạn không đủ")
+                            }
+                            else {
+                                let src = self.storyboard?.instantiateViewController(withIdentifier: "choosePlacesId") as! ChoosePlacesViewController
+                                src.filmInfo = self.filmInfo
+                                src.time = "850"
+                                self.navigationController?.pushViewController(src, animated: true)
+                            }
+                            
+                        }
+                    })
+                }
+            }
+            else {
+                showAlertDialog(message: "Hãy đăng nhập trước khi sử dụng tính năng này")
+            }
+        }
+        else {
+            showAlertDialog(message: "Hãy chọn ít nhất 1 vé")
+        }
+    }
+    
+    func showAlertDialog(message: String) {
+        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertView.addAction(action)
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
+    func getUid() -> String {
+        return (Auth.auth().currentUser?.uid)!
     }
     
 }
