@@ -107,6 +107,7 @@ class BuyTicketViewController: UIViewController {
                         let src = self.storyboard?.instantiateViewController(withIdentifier: "choosePlacesId") as! ChoosePlacesViewController
                         src.filmInfo = filmInfo
                         src.time = "850"
+                        src.ticket = Int(self.ticketNumber)
                         navigationController?.pushViewController(src, animated: true)
                     }
                 }
@@ -157,4 +158,8 @@ class BuyTicketViewController: UIViewController {
         return (Auth.auth().currentUser?.uid)!
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        print(String(ticketNumber))
+        super.viewDidAppear(true)
+    }
 }

@@ -11,9 +11,9 @@ import Firebase
 import MBProgressHUD
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
-
+    
     /*@IBOutlet weak var imgBackground: UIImageView!
-    @IBOutlet weak var btnSignIn: UIButton!*/
+     @IBOutlet weak var btnSignIn: UIButton!*/
     @IBOutlet weak var txtEmailSignIn: LoginTextField!
     
     @IBOutlet weak var txtPassSignIn: LoginTextField!
@@ -31,12 +31,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(dismiss)
         observerKeyboard()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func showProgress() {
         loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
@@ -61,16 +61,16 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             else {
                 //show progress
                 self.showProgress()
-                if Constants.isResetPassword == true
-                {
-                    //update new pass
-                    let dataUpdatePass = ["password": password];
-                    self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
-                }
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                     //hide progress
                     self.hideProgress()
                     if (error == nil) {
+                        
+                        //update new pass
+                        let dataUpdatePass = ["password": password];
+                        self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
+                        
+                        
                         //let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
                         //self.present(srcUserInfo, animated: true)
                         self.dismiss(animated: true)
@@ -129,7 +129,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         }, completion: nil)
     }
-
+    
     
 }
 

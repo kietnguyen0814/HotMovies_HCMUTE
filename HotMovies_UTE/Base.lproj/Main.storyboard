@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -783,7 +783,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGn-Xn-3u9">
                                 <rect key="frame" x="187.5" y="617" width="187.5" height="50"/>
-                                <color key="backgroundColor" red="0.12343440503208325" green="0.51199644225809915" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.12404980510473251" green="0.5125042200088501" blue="0.99862521886825562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="80X-tS-4P7"/>
                                 </constraints>
@@ -929,7 +929,7 @@
                                 <rect key="frame" x="8" y="231" width="358" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrt-rW-B7c" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrt-rW-B7c" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="30" y="7" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="1"/>
@@ -944,8 +944,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="lLV-Tu-sEg"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRv-lj-Wb5" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRv-lj-Wb5" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="94" y="7" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="3"/>
@@ -961,10 +964,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnB3Click:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="Jd3-Tk-Xai"/>
+                                            <action selector="btnBActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="eUc-Pv-37P"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhR-mn-Nd8" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhR-mn-Nd8" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="127" y="7" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="4"/>
@@ -979,8 +982,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="7Ed-ql-BM5"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIZ-VR-cMI" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIZ-VR-cMI" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="160" y="7" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="5"/>
@@ -995,8 +1001,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="Y5Z-oa-Bow"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04W-FD-ZuW" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04W-FD-ZuW" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="193" y="7" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="6"/>
@@ -1011,8 +1020,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="Rwb-NG-1mh"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65C-Pq-QjH" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65C-Pq-QjH" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="259" y="7" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="8"/>
@@ -1027,8 +1039,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="MFJ-rR-PY6"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXi-FE-CFf" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXi-FE-CFf" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="226" y="7" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="7"/>
@@ -1043,8 +1058,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="Poi-qq-AVY"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1h-GH-UHt" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1h-GH-UHt" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="292" y="7" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="9"/>
@@ -1059,6 +1077,9 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="xS1-fD-9yV"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uki-DB-Aiv">
                                         <rect key="frame" x="8" y="6" width="14" height="27"/>
@@ -1067,7 +1088,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2Z-Ah-NyK" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2Z-Ah-NyK" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="63" y="7" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="2"/>
@@ -1082,8 +1103,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="c8O-G3-N0J"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugz-9i-BFN" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugz-9i-BFN" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="325" y="7" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="10"/>
@@ -1098,6 +1122,9 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="CGW-c3-kBO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.63888736229999998" blue="0.16412794429999999" alpha="0.91901220029999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1306,16 +1333,25 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.63888736229999998" blue="0.16412794429999999" alpha="0.91901220029999997" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-Bc-Uob">
-                                <rect key="frame" x="174" y="623" width="116" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Thanh Toán"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-Bc-Uob">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.12404980510473251" green="0.5125042200088501" blue="0.99862521886825562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qLi-RF-FFh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Xác Nhận">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPayClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="2na-7B-WVT"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7L8-Bv-0qM">
                                 <rect key="frame" x="8" y="163" width="359" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKh-TH-rMZ" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKh-TH-rMZ" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="29" y="6" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="1"/>
@@ -1331,10 +1367,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnA1Click:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="NKe-vf-hgj"/>
+                                            <action selector="btnAActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="b4c-au-fXj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dH-mf-z2X" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dH-mf-z2X" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="95" y="6" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="3"/>
@@ -1349,8 +1385,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnAActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="Lgo-T6-9uE"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUe-eX-x12" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUe-eX-x12" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="62" y="6" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="2"/>
@@ -1366,10 +1405,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnA2Click:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="nDT-09-mrc"/>
+                                            <action selector="btnAActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="zMP-wS-8r6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofO-hi-Jzq" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofO-hi-Jzq" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="128" y="6" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="4"/>
@@ -1384,8 +1423,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnAActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="jMf-8o-osP"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVB-Dn-IuB" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVB-Dn-IuB" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="161" y="6" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="5"/>
@@ -1400,8 +1442,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnAActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="PiS-Yd-uRB"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4f-7c-Wdi" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4f-7c-Wdi" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="194" y="6" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="6"/>
@@ -1416,8 +1461,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnAActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="aST-Ij-JlS"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aed-LA-jo2" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aed-LA-jo2" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="260" y="6" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="8"/>
@@ -1432,8 +1480,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnAActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="OLe-DS-VQE"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09E-lR-LhJ" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09E-lR-LhJ" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="227" y="6" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="7"/>
@@ -1448,8 +1499,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnAActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="tfm-U1-RVl"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2y-32-9m7" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2y-32-9m7" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="293" y="6" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="9"/>
@@ -1464,8 +1518,11 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnAActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="Q0Y-4G-l5o"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z11-Qf-AgS" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z11-Qf-AgS" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
                                         <rect key="frame" x="326" y="6" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="10"/>
@@ -1480,6 +1537,9 @@
                                                 <color key="value" red="0.1389717399" green="0.48673562120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnAActionClick:" destination="3GZ-oK-lcd" eventType="touchUpInside" id="ZUd-tE-nje"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9G-ML-gIi">
                                         <rect key="frame" x="8" y="8" width="13" height="21"/>
@@ -1493,6 +1553,11 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4dh-Bc-Uob" firstAttribute="width" secondItem="bIT-N0-XrH" secondAttribute="width" id="UcP-Hr-S4l"/>
+                            <constraint firstItem="ZDT-k9-ECl" firstAttribute="top" secondItem="4dh-Bc-Uob" secondAttribute="bottom" id="ejr-zw-fQz"/>
+                            <constraint firstAttribute="trailing" secondItem="4dh-Bc-Uob" secondAttribute="trailing" id="iXb-TG-lc3"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="btnA1" destination="RKh-TH-rMZ" id="8tB-UK-5T6"/>
@@ -1522,7 +1587,6 @@
                         <outlet property="btnC4" destination="RfA-p0-1j9" id="rVp-S5-799"/>
                         <outlet property="btnC5" destination="POU-GW-ttY" id="xKP-Y6-Oiu"/>
                         <outlet property="btnC6" destination="Kys-hk-kdX" id="miU-NW-TNf"/>
-                        <outlet property="btnC6Click" destination="Kys-hk-kdX" id="SOq-kh-gxc"/>
                         <outlet property="btnC7" destination="NIc-uJ-t2C" id="rDg-vO-Rlh"/>
                         <outlet property="btnC8" destination="KGd-U5-eXg" id="Ofn-vQ-Hgr"/>
                         <outlet property="btnC9" destination="XdN-S5-IaA" id="d1X-Qy-xhq"/>

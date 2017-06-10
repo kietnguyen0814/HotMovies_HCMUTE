@@ -12,7 +12,7 @@ import MBProgressHUD
 
 
 class ChangePassViewController: UIViewController {
-
+    
     @IBOutlet weak var txtCurrentPass: LoginTextField!
     
     @IBOutlet weak var txtNewPass: LoginTextField!
@@ -22,17 +22,19 @@ class ChangePassViewController: UIViewController {
     var user: User! = nil
     var loadingNotification: MBProgressHUD! = nil
     var mDatabase: DatabaseReference!
+    var credential: AuthCredential!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         mDatabase = Database.database().reference()
+        
         let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.DismissKeyboard))
         view.addGestureRecognizer(dismiss)
         observerKeyboard()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,27 +77,38 @@ class ChangePassViewController: UIViewController {
             
             if (result) {
                 self.showProgress()
-                //change pass
-                Auth.auth().currentUser?.updatePassword(to: newPass) { (error) in
-                    self.hideProgress()
-                    if error == nil {
-                        //update new pass
-                        let dataUpdatePass = ["password": newPass];
-                        self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
-                        // update pass for user
-                        self.user.password = newPass
-                        //show alert
-                        let alertView = UIAlertController(title: "Thông Báo", message: "Đổi mật khẩu thành công", preferredStyle: .alert)
-                        let action = UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
-                            self.dismiss(animated: true, completion: nil)
-                        })
-                        alertView.addAction(action)
-                        self.present(alertView, animated: true, completion: nil)
-                    }
-                    else {
-                        self.showAlertDialog(message: "Đổi mật khẩu không thành công")
+                credential = EmailAuthProvider.credential(withEmail: user.email, password: user.password)
+                Auth.auth().currentUser?.reauthenticate(with: credential) { error in
+                    if let error = error {
+                        // An error happened.
+                        print(error)
+                    } else {
+                        // User re-authenticated.
+                        //change pass
+                        Auth.auth().currentUser?.updatePassword(to: newPass) { (error) in
+                            self.hideProgress()
+                            if error == nil {
+                                //update new pass
+                                let dataUpdatePass = ["password": newPass];
+                                self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
+                                // update pass for user
+                                self.user.password = newPass
+                                //show alert
+                                let alertView = UIAlertController(title: "Thông Báo", message: "Đổi mật khẩu thành công", preferredStyle: .alert)
+                                let action = UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
+                                    self.dismiss(animated: true, completion: nil)
+                                })
+                                alertView.addAction(action)
+                                self.present(alertView, animated: true, completion: nil)
+                            }
+                            else {
+                                print(error)
+                                self.showAlertDialog(message: "Đổi mật khẩu không thành công")
+                            }
+                        }
                     }
                 }
+                
             }
         }
         

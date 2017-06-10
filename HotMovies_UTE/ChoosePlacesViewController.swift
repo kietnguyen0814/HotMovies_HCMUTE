@@ -51,14 +51,16 @@ class ChoosePlacesViewController: UIViewController {
     var filmInfo: FilmInfo!
     var time: String = ""
     var seats = [Seat]()
-    var ticket = 0
+    var ticket: Int = 0
     var progressDialog: MBProgressHUD!
+    var listPlaces = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mDatabase = Database.database().reference()
         // Do any additional setup after loading the view.
         loadData()
+        print(time + "/"+String(ticket))
     }
     
     func loadData() {
@@ -340,108 +342,783 @@ class ChoosePlacesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //event click hàng ghê A, từ A1 dến A10 có tag từ 1 đến 10
     
-    @IBAction func btnA1Click(_ sender: Any) {
-        self.btnA1.backgroundColor = UIColor.green
-        self.btnA1.setTitleColor(UIColor.white, for: UIControlState.normal)
+    @IBAction func btnAActionClick(_ sender: DesignButton) {
+        if (sender.tag == 1) {
+            if ticket > 0 || btnA1.backgroundColor == UIColor.green
+            {
+                if btnA1.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "A1") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    //add ticket
+                    ticket += 1
+                    btnA1.backgroundColor = UIColor.clear
+                    self.btnA1.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("A1");
+                    //remove ticket
+                    ticket -= 1
+                    self.btnA1.backgroundColor = UIColor.green
+                    self.btnA1.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 2) {
+            if ticket > 0 || btnA2.backgroundColor == UIColor.green {
+                if btnA2.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "A2") {
+                        listPlaces.remove(at: index)
+                    }
+                    ticket += 1
+                    btnA2.backgroundColor = UIColor.clear
+                    self.btnA2.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("A2");
+
+                    
+                    ticket -= 1
+                    self.btnA2.backgroundColor = UIColor.green
+                    self.btnA2.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 3) {
+            if ticket > 0 || btnA3.backgroundColor == UIColor.green
+            {
+                if btnA3.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "A3") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    
+                    ticket += 1
+                    btnA3.backgroundColor = UIColor.clear
+                    self.btnA3.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("A3");
+                    
+                    ticket -= 1
+                    self.btnA3.backgroundColor = UIColor.green
+                    self.btnA3.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 4) {
+            if ticket > 0 || btnA4.backgroundColor == UIColor.green
+            {
+                if btnA4.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "A4") {
+                        listPlaces.remove(at: index)
+                    }
+                    ticket += 1
+                    btnA4.backgroundColor = UIColor.clear
+                    self.btnA4.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("A4");
+                    
+                    ticket -= 1
+                    self.btnA4.backgroundColor = UIColor.green
+                    self.btnA4.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 5) {
+            if ticket > 0 || btnA5.backgroundColor == UIColor.green
+            {
+                if btnA5.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "A5") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnA5.backgroundColor = UIColor.clear
+                    self.btnA5.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("A5");
+                    
+                    ticket -= 1
+                    self.btnA5.backgroundColor = UIColor.green
+                    self.btnA5.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 6) {
+            if ticket > 0 || btnA6.backgroundColor == UIColor.green
+            {
+                if btnA6.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "A6") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnA6.backgroundColor = UIColor.clear
+                    self.btnA6.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("A6");
+                    
+                    ticket -= 1
+                    self.btnA6.backgroundColor = UIColor.green
+                    self.btnA6.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 7) {
+            if ticket > 0 || btnA7.backgroundColor == UIColor.green {
+                if btnA7.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "A7") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnA7.backgroundColor = UIColor.clear
+                    self.btnA7.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("A7");
+                    
+                    ticket -= 1
+                    self.btnA7.backgroundColor = UIColor.green
+                    self.btnA7.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+            
+        }
+        else if (sender.tag == 8) {
+            if ticket > 0 || btnA8.backgroundColor == UIColor.green {
+                if btnA8.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "A8") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnA8.backgroundColor = UIColor.clear
+                    self.btnA8.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("A8");
+                    
+                    ticket -= 1
+                    self.btnA8.backgroundColor = UIColor.green
+                    self.btnA8.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+            
+        }
+        else if (sender.tag == 9) {
+            if ticket > 0 || btnA9.backgroundColor == UIColor.green {
+                if btnA9.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "A9") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnA9.backgroundColor = UIColor.clear
+                    self.btnA9.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("A9");
+                    
+                    ticket -= 1
+                    self.btnA9.backgroundColor = UIColor.green
+                    self.btnA9.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 10) {
+            if ticket > 0 || btnA10.backgroundColor == UIColor.green {
+                if btnA10.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "A10") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnA10.backgroundColor = UIColor.clear
+                    self.btnA10.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("A10");
+                    
+                    ticket -= 1
+                    self.btnA10.backgroundColor = UIColor.green
+                    self.btnA10.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
     }
     
-    @IBAction func btnA2Click(_ sender: Any) {
-    }
+    //event click hàng ghê B, từ B1 dến B10 có tag từ 11 đến 20
     
-    @IBAction func btnB3Click(_ sender: Any) {
-        self.btnB3.backgroundColor = UIColor.green
-        self.btnB3.setTitleColor(UIColor.white, for: UIControlState.normal)
+    @IBAction func btnBActionClick(_ sender: DesignButton) {
+        if (sender.tag == 11) {
+            if ticket > 0 || btnB1.backgroundColor == UIColor.green
+            {
+                if btnB1.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "B1") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnB1.backgroundColor = UIColor.clear
+                    self.btnB1.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("B1");
+                    
+                    ticket -= 1
+                    self.btnB1.backgroundColor = UIColor.green
+                    self.btnB1.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 12) {
+            if ticket > 0 || btnB2.backgroundColor == UIColor.green {
+                if btnB2.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "B2") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnB2.backgroundColor = UIColor.clear
+                    self.btnB2.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("B1");
+                    
+                    ticket -= 1
+                    self.btnB2.backgroundColor = UIColor.green
+                    self.btnB2.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 13) {
+            if ticket > 0 || btnB3.backgroundColor == UIColor.green
+            {
+                if btnB3.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "B3") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnB3.backgroundColor = UIColor.clear
+                    self.btnB3.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("B3");
+                    
+                    ticket -= 1
+                    self.btnB3.backgroundColor = UIColor.green
+                    self.btnB3.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 24) {
+            if ticket > 0 || btnB4.backgroundColor == UIColor.green
+            {
+                if btnB4.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "B4") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnB4.backgroundColor = UIColor.clear
+                    self.btnB4.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("B4");
+                    
+                    ticket -= 1
+                    self.btnB4.backgroundColor = UIColor.green
+                    self.btnB4.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 15) {
+            if ticket > 0 || btnB5.backgroundColor == UIColor.green
+            {
+                if btnB5.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "B5") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnB5.backgroundColor = UIColor.clear
+                    self.btnB5.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("B5");
+                    
+                    ticket -= 1
+                    self.btnB5.backgroundColor = UIColor.green
+                    self.btnB5.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 16) {
+            if ticket > 0 || btnB6.backgroundColor == UIColor.green
+            {
+                if btnB6.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "B6") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnB6.backgroundColor = UIColor.clear
+                    self.btnB6.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("B6");
+                    
+                    ticket -= 1
+                    self.btnB6.backgroundColor = UIColor.green
+                    self.btnB6.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 17) {
+            if ticket > 0 || btnB7.backgroundColor == UIColor.green {
+                if btnB7.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "B7") {
+                        listPlaces.remove(at: index)
+                    }
+
+                    
+                    ticket += 1
+                    btnB7.backgroundColor = UIColor.clear
+                    self.btnB7.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("B7");
+                    
+                    ticket -= 1
+                    self.btnB7.backgroundColor = UIColor.green
+                    self.btnB7.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+            
+        }
+        else if (sender.tag == 18) {
+            if ticket > 0 || btnB8.backgroundColor == UIColor.green {
+                if btnB8.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "B8") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnB8.backgroundColor = UIColor.clear
+                    self.btnB8.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("B8");
+
+                    
+                    ticket -= 1
+                    self.btnB8.backgroundColor = UIColor.green
+                    self.btnB8.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+            
+        }
+        else if (sender.tag == 19) {
+            if ticket > 0 || btnB9.backgroundColor == UIColor.green {
+                if btnB9.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "B9") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnB9.backgroundColor = UIColor.clear
+                    self.btnB9.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("B9");
+                    
+                    ticket -= 1
+                    self.btnB9.backgroundColor = UIColor.green
+                    self.btnB9.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
+        else if (sender.tag == 20) {
+            if ticket > 0 || btnB10.backgroundColor == UIColor.green {
+                if btnB10.backgroundColor == UIColor.green
+                {
+                    
+                    //remove places from list
+                    if let index = listPlaces.index(of: "B10") {
+                        listPlaces.remove(at: index)
+                    }
+                    ticket += 1
+                    btnB10.backgroundColor = UIColor.clear
+                    self.btnB10.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("B10");
+                    
+                    ticket -= 1
+                    self.btnB10.backgroundColor = UIColor.green
+                    self.btnB10.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
+        }
     }
     
     //event click hàng ghê C, từ C1 dến C10 có tag từ 21 đến 30
     @IBAction func btnCActionClick(_ sender: DesignButton) {
-        if (sender.tag == 21){
-            if btnC1.backgroundColor == UIColor.green
+        if (sender.tag == 21) {
+            if ticket > 0 || btnC1.backgroundColor == UIColor.green
             {
-                btnC1.backgroundColor = UIColor.clear
+                if btnC1.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "C1") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnC1.backgroundColor = UIColor.clear
+                    self.btnC1.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("C1");
+                    
+                    ticket -= 1
+                    self.btnC1.backgroundColor = UIColor.green
+                    self.btnC1.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
             }
-            else
-            {
-                self.btnC1.backgroundColor = UIColor.green
-                self.btnC1.setTitleColor(UIColor.white, for: UIControlState.normal)
-            }
-            self.btnC1.backgroundColor = UIColor.green
-            self.btnC1.setTitleColor(UIColor.white, for: UIControlState.normal)
-            let updateSeat = ["bookBy":self.getUid(),"state":true] as [String : Any]
-            mDatabase.child("films").child(filmInfo.filmType).child(filmInfo.filmId).child("showTimes").child(time).child("seat").child("C1").updateChildValues(updateSeat)
         }
         else if (sender.tag == 22) {
+            if ticket > 0 || btnC2.backgroundColor == UIColor.green {
+                if btnC2.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "C2") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnC2.backgroundColor = UIColor.clear
+                    self.btnC2.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("C2");
+                    
+                    ticket -= 1
+                    self.btnC2.backgroundColor = UIColor.green
+                    self.btnC2.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
         }
         else if (sender.tag == 23) {
-            self.btnC3.backgroundColor = UIColor.green
-            self.btnC3.setTitleColor(UIColor.white, for: UIControlState.normal)
+            if ticket > 0 || btnC3.backgroundColor == UIColor.green
+            {
+                if btnC3.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "C3") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnC3.backgroundColor = UIColor.clear
+                    self.btnC3.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("C3");
+                    
+                    ticket -= 1
+                    self.btnC3.backgroundColor = UIColor.green
+                    self.btnC3.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
         }
         else if (sender.tag == 24) {
             if ticket > 0 || btnC4.backgroundColor == UIColor.green
             {
-            if btnC4.backgroundColor == UIColor.green
-            {
-                ticket += 1
-                btnC4.backgroundColor = UIColor.clear
-                self.btnC4.setTitleColor(UIColor.blue, for: UIControlState.normal)
-            }
-            else
-            {
-                ticket -= 1
-                self.btnC4.backgroundColor = UIColor.green
-                self.btnC4.setTitleColor(UIColor.white, for: UIControlState.normal)
-            }
+                if btnC4.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "C4") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnC4.backgroundColor = UIColor.clear
+                    self.btnC4.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("C4");
+                    
+                    ticket -= 1
+                    self.btnC4.backgroundColor = UIColor.green
+                    self.btnC4.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
             }
         }
         else if (sender.tag == 25) {
             if ticket > 0 || btnC5.backgroundColor == UIColor.green
             {
-            if btnC5.backgroundColor == UIColor.green
-            {
-                ticket += 1
-                btnC5.backgroundColor = UIColor.clear
-                self.btnC5.setTitleColor(UIColor.blue, for: UIControlState.normal)
-            }
-            else
-            {
-                ticket -= 1
-                self.btnC5.backgroundColor = UIColor.green
-                self.btnC5.setTitleColor(UIColor.white, for: UIControlState.normal)
-            }
+                if btnC5.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "C5") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnC5.backgroundColor = UIColor.clear
+                    self.btnC5.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("C5");
+                    
+                    ticket -= 1
+                    self.btnC5.backgroundColor = UIColor.green
+                    self.btnC5.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
             }
         }
         else if (sender.tag == 26) {
             if ticket > 0 || btnC6.backgroundColor == UIColor.green
             {
-            if btnC6.backgroundColor == UIColor.green
-            {
-                ticket += 1
-                btnC6.backgroundColor = UIColor.clear
-                self.btnC6.setTitleColor(UIColor.blue, for: UIControlState.normal)
-            }
-            else
-            {
-                ticket -= 1
-                self.btnC6.backgroundColor = UIColor.green
-                self.btnC6.setTitleColor(UIColor.white, for: UIControlState.normal)
-            }
+                if btnC6.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "C6") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnC6.backgroundColor = UIColor.clear
+                    self.btnC6.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("C6");
+                    
+                    ticket -= 1
+                    self.btnC6.backgroundColor = UIColor.green
+                    self.btnC6.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
             }
         }
         else if (sender.tag == 27) {
+            if ticket > 0 || btnC7.backgroundColor == UIColor.green {
+                if btnC7.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "C7") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnC7.backgroundColor = UIColor.clear
+                    self.btnC7.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("C7");
+                    
+                    ticket -= 1
+                    self.btnC7.backgroundColor = UIColor.green
+                    self.btnC7.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
             
         }
         else if (sender.tag == 28) {
+            if ticket > 0 || btnC8.backgroundColor == UIColor.green {
+                if btnC8.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "C8") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnC8.backgroundColor = UIColor.clear
+                    self.btnC8.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("C8");
+                    
+                    ticket -= 1
+                    self.btnC8.backgroundColor = UIColor.green
+                    self.btnC8.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
             
         }
         else if (sender.tag == 29) {
-            
+            if ticket > 0 || btnC9.backgroundColor == UIColor.green {
+                if btnC9.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "C9") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnC9.backgroundColor = UIColor.clear
+                    self.btnC9.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("C9");
+                    
+                    ticket -= 1
+                    self.btnC9.backgroundColor = UIColor.green
+                    self.btnC9.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
         }
         else if (sender.tag == 30) {
-            
+            if ticket > 0 || btnC10.backgroundColor == UIColor.green {
+                if btnC10.backgroundColor == UIColor.green
+                {
+                    //remove places from list
+                    if let index = listPlaces.index(of: "C10") {
+                        listPlaces.remove(at: index)
+                    }
+                    
+                    ticket += 1
+                    btnC10.backgroundColor = UIColor.clear
+                    self.btnC10.setTitleColor(UIColor.blue, for: UIControlState.normal)
+                }
+                else
+                {
+                    //save places into list
+                    listPlaces.append("C10");
+                    
+                    ticket -= 1
+                    self.btnC10.backgroundColor = UIColor.green
+                    self.btnC10.setTitleColor(UIColor.white, for: UIControlState.normal)
+                }
+            }
         }
     }
-    @IBOutlet weak var btnC6Click: DesignButton!
+    //event click "Pay"
+    
+    @IBAction func btnPayClick(_ sender: Any) {
+        if (ticket > 0) {
+            showAlertDialog(message: "Bạn chọn chưa đủ số ghế. Vui lòng chọn thêm")
+        }
+        else {
+            for place in listPlaces {
+                print(place + "\n")
+            }
+        }
+    }
+    
+    func showAlertDialog(message: String) {
+        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertView.addAction(action)
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
     func getUid() -> String {
         return (Auth.auth().currentUser?.uid)!;
     }

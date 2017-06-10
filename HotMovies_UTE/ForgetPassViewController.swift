@@ -47,7 +47,7 @@ class ForgetPassViewController: UIViewController {
             {
                 self.showProgress()
                 Auth.auth().sendPasswordReset(withEmail: email) { (error) in
-                    self.showProgress()
+                    self.hideProgress()
                     if error == nil
                     {
                         Constants.isResetPassword = true
@@ -91,6 +91,10 @@ class ForgetPassViewController: UIViewController {
         loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Đang tải..."
+    }
+    
+    func hideProgress() {
+        loadingNotification.hide(animated: true)
     }
     //MARK: - Show, Hide Keyboard
     
