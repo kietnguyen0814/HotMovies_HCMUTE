@@ -65,7 +65,8 @@ class UserInfoViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            dismiss(animated: true, completion: nil)
+            navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }

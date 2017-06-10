@@ -45,10 +45,13 @@ class ChoosePlacesViewController: UIViewController {
     @IBOutlet weak var btnB3: DesignButton!
     @IBOutlet weak var btnA2: DesignButton!
     
+    
+    
     var mDatabase: DatabaseReference!
     var filmInfo: FilmInfo!
     var time: String = ""
     var seats = [Seat]()
+    var ticket = 0
     var progressDialog: MBProgressHUD!
     
     override func viewDidLoad() {
@@ -354,22 +357,76 @@ class ChoosePlacesViewController: UIViewController {
     //event click hàng ghê C, từ C1 dến C10 có tag từ 21 đến 30
     @IBAction func btnCActionClick(_ sender: DesignButton) {
         if (sender.tag == 21){
-            print("C1")
+            if btnC1.backgroundColor == UIColor.green
+            {
+                btnC1.backgroundColor = UIColor.clear
+            }
+            else
+            {
+                self.btnC1.backgroundColor = UIColor.green
+                self.btnC1.setTitleColor(UIColor.white, for: UIControlState.normal)
+            }
+            self.btnC1.backgroundColor = UIColor.green
+            self.btnC1.setTitleColor(UIColor.white, for: UIControlState.normal)
+            let updateSeat = ["bookBy":self.getUid(),"state":true] as [String : Any]
+            mDatabase.child("films").child(filmInfo.filmType).child(filmInfo.filmId).child("showTimes").child(time).child("seat").child("C1").updateChildValues(updateSeat)
         }
         else if (sender.tag == 22) {
-            
         }
         else if (sender.tag == 23) {
-            print("C3")
+            self.btnC3.backgroundColor = UIColor.green
+            self.btnC3.setTitleColor(UIColor.white, for: UIControlState.normal)
         }
         else if (sender.tag == 24) {
-            
+            if ticket > 0 || btnC4.backgroundColor == UIColor.green
+            {
+            if btnC4.backgroundColor == UIColor.green
+            {
+                ticket += 1
+                btnC4.backgroundColor = UIColor.clear
+                self.btnC4.setTitleColor(UIColor.blue, for: UIControlState.normal)
+            }
+            else
+            {
+                ticket -= 1
+                self.btnC4.backgroundColor = UIColor.green
+                self.btnC4.setTitleColor(UIColor.white, for: UIControlState.normal)
+            }
+            }
         }
         else if (sender.tag == 25) {
-            
+            if ticket > 0 || btnC5.backgroundColor == UIColor.green
+            {
+            if btnC5.backgroundColor == UIColor.green
+            {
+                ticket += 1
+                btnC5.backgroundColor = UIColor.clear
+                self.btnC5.setTitleColor(UIColor.blue, for: UIControlState.normal)
+            }
+            else
+            {
+                ticket -= 1
+                self.btnC5.backgroundColor = UIColor.green
+                self.btnC5.setTitleColor(UIColor.white, for: UIControlState.normal)
+            }
+            }
         }
         else if (sender.tag == 26) {
-            
+            if ticket > 0 || btnC6.backgroundColor == UIColor.green
+            {
+            if btnC6.backgroundColor == UIColor.green
+            {
+                ticket += 1
+                btnC6.backgroundColor = UIColor.clear
+                self.btnC6.setTitleColor(UIColor.blue, for: UIControlState.normal)
+            }
+            else
+            {
+                ticket -= 1
+                self.btnC6.backgroundColor = UIColor.green
+                self.btnC6.setTitleColor(UIColor.white, for: UIControlState.normal)
+            }
+            }
         }
         else if (sender.tag == 27) {
             
@@ -385,5 +442,8 @@ class ChoosePlacesViewController: UIViewController {
         }
     }
     @IBOutlet weak var btnC6Click: DesignButton!
+    func getUid() -> String {
+        return (Auth.auth().currentUser?.uid)!;
+    }
     
 }

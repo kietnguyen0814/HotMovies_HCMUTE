@@ -129,6 +129,7 @@ class BuyTicketViewController: UIViewController {
                                 let src = self.storyboard?.instantiateViewController(withIdentifier: "choosePlacesId") as! ChoosePlacesViewController
                                 src.filmInfo = self.filmInfo
                                 src.time = "850"
+                                src.ticket = Int(self.ticketNumber)
                                 self.navigationController?.pushViewController(src, animated: true)
                             }
                             
