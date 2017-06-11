@@ -43,7 +43,7 @@
 		F7609A081EE2C08900B0FB61 /* ShowTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7609A071EE2C08900B0FB61 /* ShowTime.swift */; };
 		F7656EEE1EE7E67300196F93 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7656EED1EE7E67300196F93 /* BuyTicketViewController.swift */; };
 		F7656EF01EE7F63E00196F93 /* BorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7656EEF1EE7F63E00196F93 /* BorderLabel.swift */; };
-		F7656EF21EE7FB0C00196F93 /* YoutobeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7656EF11EE7FB0C00196F93 /* YoutobeViewController.swift */; };
+		F7656EF21EE7FB0C00196F93 /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7656EF11EE7FB0C00196F93 /* YoutubeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +111,7 @@
 		F7609A071EE2C08900B0FB61 /* ShowTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTime.swift; sourceTree = "<group>"; };
 		F7656EED1EE7E67300196F93 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
 		F7656EEF1EE7F63E00196F93 /* BorderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderLabel.swift; sourceTree = "<group>"; };
-		F7656EF11EE7FB0C00196F93 /* YoutobeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutobeViewController.swift; sourceTree = "<group>"; };
+		F7656EF11EE7FB0C00196F93 /* YoutubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
 		FE289ABB0419C727692DE54F /* Pods-HotMovies_UTEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTEUITests/Pods-HotMovies_UTEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,7 +171,7 @@
 				304F4F651EE6FC70006B36BE /* HasBeenScreenedTableViewController.swift */,
 				304F4F691EE70441006B36BE /* FilmDetailTableViewController.swift */,
 				F7656EED1EE7E67300196F93 /* BuyTicketViewController.swift */,
-				F7656EF11EE7FB0C00196F93 /* YoutobeViewController.swift */,
+				F7656EF11EE7FB0C00196F93 /* YoutubeViewController.swift */,
 				306B5FD71EEAADD200FACCFD /* ChoosePlacesViewController.swift */,
 			);
 			name = Controller;
@@ -584,7 +584,7 @@
 				F72C1D6F1EE2B4DE00FE5306 /* ShowTimeInfo.swift in Sources */,
 				30F1498D1EE070D500E284D5 /* User.swift in Sources */,
 				2E3D61E31ED9AF5600883EB4 /* DesignButton.swift in Sources */,
-				F7656EF21EE7FB0C00196F93 /* YoutobeViewController.swift in Sources */,
+				F7656EF21EE7FB0C00196F93 /* YoutubeViewController.swift in Sources */,
 				F7656EEE1EE7E67300196F93 /* BuyTicketViewController.swift in Sources */,
 				F72C1D651EE2AFF800FE5306 /* CommingSoonTableViewController.swift in Sources */,
 				304F4F661EE6FC70006B36BE /* HasBeenScreenedTableViewController.swift in Sources */,

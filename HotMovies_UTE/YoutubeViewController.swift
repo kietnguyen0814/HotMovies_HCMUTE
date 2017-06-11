@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YoutobeViewController: UIViewController {
+class YoutubeViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     

@@ -76,7 +76,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                         self.dismiss(animated: true)
                     }
                     else {
-                        self.showAlertDialog(message: "Đăng nhập khong thành công")
+                        self.showAlertDialog(message: "Đăng nhập không thành công")
                     }
                 }
             }
