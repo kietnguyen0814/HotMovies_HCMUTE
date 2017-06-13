@@ -100,5 +100,8 @@ class UserInfoViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func btnCloseUserInfo(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }

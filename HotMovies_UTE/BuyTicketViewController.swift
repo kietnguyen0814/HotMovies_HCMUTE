@@ -72,7 +72,7 @@ class BuyTicketViewController: UIViewController {
     func loadData() {
         imgPoster.image = Downloader.downloadImageWithURL(filmInfo.posterUrl)
         txtFilmName.text = filmInfo.filmName
-        txtActor.text = filmInfo.actor
+        //txtActor.text = filmInfo.actor
     }
 
     override func didReceiveMemoryWarning() {
