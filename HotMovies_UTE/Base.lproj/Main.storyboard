@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-6y-UT7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="265"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zRX-o6-AXf" id="zk0-lR-cOa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="264.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR0-ji-qMa">
@@ -202,7 +202,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8c-1o-hah" id="IM0-Jv-WDI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -570,7 +570,7 @@
                                         <rect key="frame" x="0.0" y="250" width="375" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s2K-wK-vv8" id="1C4-pI-MI4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Movie Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kx8-ah-Aed">
@@ -605,7 +605,7 @@
                                         <rect key="frame" x="0.0" y="476" width="375" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="46Y-s9-USs" id="idx-8l-Jta">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="108.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ln-Ua-RlC" customClass="DesignButton" customModule="HotMovies_UTE" customModuleProvider="target">
@@ -823,10 +823,10 @@
             </objects>
             <point key="canvasLocation" x="2137" y="161"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Film Detail2 Table View Controller-->
         <scene sceneID="euN-N6-fs4">
             <objects>
-                <tableViewController id="Pc6-yw-pZn" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="detail2Id" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pc6-yw-pZn" customClass="FilmDetail2TableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="osv-v8-U7C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -881,6 +881,7 @@
                                     <state key="normal" title="Button" image="playvideo"/>
                                     <connections>
                                         <action selector="imgPlay:" destination="Vav-3x-eBc" eventType="touchUpInside" id="t9l-eS-JM6"/>
+                                        <action selector="imgPlay:" destination="Pc6-yw-pZn" eventType="touchUpInside" id="xbJ-hh-9g7"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkA-S2-FgK">
@@ -970,16 +971,13 @@
                             </constraints>
                         </view>
                         <sections>
-                            <tableViewSection id="bOk-t8-BMt">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection id="fy8-Ul-xCa">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="G6v-sm-TsE">
-                                        <rect key="frame" x="0.0" y="286" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="250" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G6v-sm-TsE" id="9An-Yd-b7z">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No Movie Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L33-t3-nPy">
@@ -1010,10 +1008,20 @@
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="Pc6-yw-pZn" id="bCQ-ZR-vPn"/>
+                            <outlet property="dataSource" destination="Pc6-yw-pZn" id="9wz-w2-kLX"/>
                             <outlet property="delegate" destination="Pc6-yw-pZn" id="ZLP-Q9-fdO"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="imgPoster" destination="GpQ-zx-SBX" id="yhk-pT-G9S"/>
+                        <outlet property="txtActor" destination="asx-qM-D38" id="BFv-GT-uo4"/>
+                        <outlet property="txtContent" destination="L33-t3-nPy" id="V46-ky-84r"/>
+                        <outlet property="txtDirector" destination="tSa-aN-aiG" id="ZuG-wd-rP3"/>
+                        <outlet property="txtFilmType" destination="Jhr-2R-Tzr" id="O5U-fs-2QG"/>
+                        <outlet property="txtMovieTitle" destination="BpN-Ea-kBq" id="3oY-vp-ix2"/>
+                        <outlet property="txtReleaseDay" destination="JbV-gY-f9E" id="es8-Ra-qR2"/>
+                        <outlet property="txtType" destination="rkA-S2-FgK" id="v7U-QI-2F1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpx-jQ-zWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2614,7 +2622,6 @@
         <!--Đang Chiếu-->
         <scene sceneID="ZdX-B9-9zt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JUs-nT-Q6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9mQ-On-oUQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Đang Chiếu" image="now" id="ltU-sf-cnc">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
@@ -2634,6 +2641,7 @@
                         <segue destination="uru-Kp-b76" kind="relationship" relationship="rootViewController" id="udW-Bs-nJE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUs-nT-Q6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2405.5999999999999" y="-529.38530734632684"/>
         </scene>
@@ -2654,7 +2662,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jsr-ap-Wk7" id="JAK-fU-zsp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -2693,7 +2701,7 @@
                                 <rect key="frame" x="0.0" y="145" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gfz-hy-1RL" id="fNs-Ls-e5e">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

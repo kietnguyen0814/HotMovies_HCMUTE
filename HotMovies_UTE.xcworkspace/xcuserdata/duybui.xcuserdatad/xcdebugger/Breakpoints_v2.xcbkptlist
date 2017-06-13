@@ -57,62 +57,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HotMovies_UTE/IsShowingTableViewController.swift"
-            timestampString = "518876292.286541"
+            filePath = "HotMovies_UTE/FilmDetail2TableViewController.swift"
+            timestampString = "519061315.723432"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "getAllMoviesIsShowing()"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HotMovies_UTE/IsShowingTableViewController.swift"
-            timestampString = "518876335.50475"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "getAllMoviesIsShowing()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HotMovies_UTE.IsShowingTableViewController.getAllMoviesIsShowing () -&gt; ()"
-                  moduleName = "HotMovies_UTE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/duybui/Documents/HotMovies_HCMUTE/HotMovies_UTE/IsShowingTableViewController.swift"
-                  timestampString = "518876335.724182"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "45">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HotMovies_UTE.IsShowingTableViewController.(getAllMoviesIsShowing () -&gt; ()).(closure #1)"
-                  moduleName = "HotMovies_UTE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/duybui/Documents/HotMovies_HCMUTE/HotMovies_UTE/IsShowingTableViewController.swift"
-                  timestampString = "518876335.733138"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "39">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -126,6 +126,7 @@ class HasBeenScreenedTableViewController: UITableViewController {
         else {
             filmInfo = films[indexPath.row]
         }
+
         srcDetailFilm.filmInfo = filmInfo
         navigationController?.pushViewController(srcDetailFilm, animated: true)
         
