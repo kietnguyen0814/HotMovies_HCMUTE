@@ -54,6 +54,7 @@ class ChoosePlacesViewController: UIViewController {
     var ticket: Int = 0
     var progressDialog: MBProgressHUD!
     var listPlaces = [String]()
+    var money: Int64  = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -387,7 +388,7 @@ class ChoosePlacesViewController: UIViewController {
                 {
                     //save places into list
                     listPlaces.append("A2");
-
+                    
                     
                     ticket -= 1
                     self.btnA2.backgroundColor = UIColor.green
@@ -672,7 +673,7 @@ class ChoosePlacesViewController: UIViewController {
                 }
             }
         }
-        else if (sender.tag == 24) {
+        else if (sender.tag == 14) {
             if ticket > 0 || btnB4.backgroundColor == UIColor.green
             {
                 if btnB4.backgroundColor == UIColor.green
@@ -755,7 +756,7 @@ class ChoosePlacesViewController: UIViewController {
                     if let index = listPlaces.index(of: "B7") {
                         listPlaces.remove(at: index)
                     }
-
+                    
                     
                     ticket += 1
                     btnB7.backgroundColor = UIColor.clear
@@ -790,7 +791,7 @@ class ChoosePlacesViewController: UIViewController {
                 {
                     //save places into list
                     listPlaces.append("B8");
-
+                    
                     
                     ticket -= 1
                     self.btnB8.backgroundColor = UIColor.green
@@ -1106,10 +1107,51 @@ class ChoosePlacesViewController: UIViewController {
             showAlertDialog(message: "Bạn chọn chưa đủ số ghế. Vui lòng chọn thêm")
         }
         else {
+            //var count: Int = 0
+            //var statePlaces: Bool = true
+            //check xem ghế đó đã có ai book chưa
             for place in listPlaces {
-                print(place + "\n")
+                //save into film
+                let dataUpdates = ["state": true, "bookBy": getUid()] as [String: AnyObject]
+                mDatabase.child("films").child(filmInfo.filmType).child(filmInfo.filmId).child("showTimes").child(time).child("seat").child(place).updateChildValues(dataUpdates)
             }
+            //save into users
+            let dataFilms = [
+                "filmId": filmInfo.filmId,
+                "filmType": filmInfo.filmType,
+                "price": money,
+                "seat": listPlaces,
+                "showTime": time,
+                "timestamp": getTodayString()
+                ] as [String: AnyObject]
+            let key = mDatabase.child("users").child(getUid()).child("booked").childByAutoId().key
+            mDatabase.child("users").child(getUid()).child("booked").child(key).updateChildValues(dataFilms)
+            
+            let alertView = UIAlertController(title: "Thông Báo", message: "Đặt ghế thành công", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
+                self.navigationController?.popToRootViewController(animated: true)
+            })
+            alertView.addAction(action)
+            self.present(alertView, animated: true, completion: nil)
         }
+    }
+    
+    func getTodayString() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        
+        let year = components.year
+        let month = components.month
+        let day = components.day
+        let hour = components.hour
+        let minute = components.minute
+        let second = components.second
+        
+        let today_string = String(year!) + "-" + String(month!) + "-" + String(day!) + " " + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
+        
+        return today_string
     }
     
     func showAlertDialog(message: String) {
@@ -1122,5 +1164,4 @@ class ChoosePlacesViewController: UIViewController {
     func getUid() -> String {
         return (Auth.auth().currentUser?.uid)!;
     }
-    
 }
