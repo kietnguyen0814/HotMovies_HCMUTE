@@ -102,7 +102,7 @@ class ChangePassViewController: UIViewController {
                                 self.present(alertView, animated: true, completion: nil)
                             }
                             else {
-                                print(error)
+                               // print(error)
                                 self.showAlertDialog(message: "Đổi mật khẩu không thành công")
                             }
                         }

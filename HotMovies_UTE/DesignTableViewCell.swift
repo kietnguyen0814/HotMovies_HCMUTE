@@ -18,6 +18,8 @@ class DesignTableViewCell: UITableViewCell {
     @IBOutlet weak var txtType: UILabel!
     @IBOutlet weak var txtTitle: UILabel!
     
+    var onButtonTapped : (() -> Void)? = nil
+    
     func configWithCell(filmInfo: FilmInfo) {
         //txtType.text! = filmInfo.type
         txtTitle.text = filmInfo.filmName
@@ -26,8 +28,10 @@ class DesignTableViewCell: UITableViewCell {
         
     }
     
-    @IBAction func playYoutobe(_ sender: Any) {
-        
+    @IBAction func playYoutobe(_ sender: UIButton) {
+        if let onButtonTapped = self.onButtonTapped {
+            onButtonTapped()
+        }
     }
 
     override func awakeFromNib() {

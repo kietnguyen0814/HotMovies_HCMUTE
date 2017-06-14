@@ -71,6 +71,15 @@ class HasBeenScreenedTableViewController: UITableViewController {
     }
 
     @IBAction func btnUserInfoClick(_ sender: Any) {
+        if Auth.auth().currentUser != nil {
+            let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
+            //navigationController?.pushViewController(srcUserInfo, animated: true)
+            present(srcUserInfo, animated: true, completion: nil)
+        } else {
+            let srcSignIn = self.storyboard?.instantiateViewController(withIdentifier: "signInId") as! SignInViewController
+            present(srcSignIn, animated: true, completion: nil)
+            //navigationController?.pushViewController(srcSignIn, animated: true)
+        }
     }
     
     func showProgress() {
@@ -113,7 +122,11 @@ class HasBeenScreenedTableViewController: UITableViewController {
             filmInfo = films[indexPath.row]
         }
         cell.configWithCell(filmInfo: filmInfo)
-        
+        cell.onButtonTapped = {
+            let srcYoutobe = self.storyboard?.instantiateViewController(withIdentifier: "youtobeId") as! YoutubeViewController
+            srcYoutobe.videoUrl = filmInfo.videoUrl
+            self.navigationController?.pushViewController(srcYoutobe, animated: true)
+        }
         return cell
     }
     

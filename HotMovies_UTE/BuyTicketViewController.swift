@@ -106,7 +106,7 @@ class BuyTicketViewController: UIViewController {
                     else {
                         let src = self.storyboard?.instantiateViewController(withIdentifier: "choosePlacesId") as! ChoosePlacesViewController
                         src.filmInfo = filmInfo
-                        src.time = "850"
+                        src.time = time
                         src.ticket = Int(self.ticketNumber)
                         src.money = money
                         navigationController?.pushViewController(src, animated: true)
@@ -130,7 +130,7 @@ class BuyTicketViewController: UIViewController {
                             else {
                                 let src = self.storyboard?.instantiateViewController(withIdentifier: "choosePlacesId") as! ChoosePlacesViewController
                                 src.filmInfo = self.filmInfo
-                                src.time = "850"
+                                src.time = self.time
                                 src.ticket = Int(self.ticketNumber)
                                 src.money = self.money
                                 self.navigationController?.pushViewController(src, animated: true)
