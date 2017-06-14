@@ -109,6 +109,7 @@ class BuyTicketViewController: UIViewController {
                         src.time = time
                         src.ticket = Int(self.ticketNumber)
                         src.money = money
+                        src.userInfo = userInfo
                         navigationController?.pushViewController(src, animated: true)
                     }
                 }
@@ -133,6 +134,7 @@ class BuyTicketViewController: UIViewController {
                                 src.time = self.time
                                 src.ticket = Int(self.ticketNumber)
                                 src.money = self.money
+                                src.userInfo = self.userInfo
                                 self.navigationController?.pushViewController(src, animated: true)
                             }
                             

@@ -13,13 +13,13 @@
         <!--Lịch Sử Đặt Vé-->
         <scene sceneID="pLt-ja-BCT">
             <objects>
-                <tableViewController id="FBv-FE-Eta" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="historyId" hidesBottomBarWhenPushed="YES" id="FBv-FE-Eta" customClass="HistoryTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="265" sectionHeaderHeight="28" sectionFooterHeight="28" id="6AK-Nm-dr4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="265" id="zRX-o6-AXf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="History" selectionStyle="default" indentationWidth="10" rowHeight="265" id="zRX-o6-AXf" customClass="HistoryTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="265"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zRX-o6-AXf" id="zk0-lR-cOa">
@@ -150,6 +150,15 @@
                                         <constraint firstItem="giP-c3-fgQ" firstAttribute="top" secondItem="h2B-VK-20c" secondAttribute="bottom" constant="8" id="ynm-rj-wDY"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="txtBookDay" destination="FsV-89-yuu" id="LWr-cq-MCd"/>
+                                    <outlet property="txtLocation" destination="giP-c3-fgQ" id="PKn-v3-9fZ"/>
+                                    <outlet property="txtMoney" destination="vWM-7H-S7A" id="hF3-8g-J9I"/>
+                                    <outlet property="txtNumberOfChair" destination="h2B-VK-20c" id="wlm-PO-Yjb"/>
+                                    <outlet property="txtReleaseDay" destination="s73-an-9jz" id="IAb-Qd-feT"/>
+                                    <outlet property="txtShowTime" destination="8SS-q2-Gnr" id="oYx-az-2bZ"/>
+                                    <outlet property="txtTitle" destination="IR0-ji-qMa" id="32Q-iG-pKu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -808,7 +817,7 @@
         <!--Youtube View Controller-->
         <scene sceneID="syb-nf-0wK">
             <objects>
-                <viewController storyboardIdentifier="youtobeId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gGH-9x-kS9" customClass="YoutubeViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="youtobeId" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gGH-9x-kS9" customClass="YoutubeViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bm3-bq-b9c"/>
                         <viewControllerLayoutGuide type="bottom" id="tt0-dt-8va"/>

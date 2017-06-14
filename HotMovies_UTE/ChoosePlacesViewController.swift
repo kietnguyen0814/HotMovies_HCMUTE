@@ -55,6 +55,7 @@ class ChoosePlacesViewController: UIViewController {
     var progressDialog: MBProgressHUD!
     var listPlaces = [String]()
     var money: Int64  = 0
+    var userInfo: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -1115,6 +1116,9 @@ class ChoosePlacesViewController: UIViewController {
                 let dataUpdates = ["state": true, "bookBy": getUid()] as [String: AnyObject]
                 mDatabase.child("films").child(filmInfo.filmType).child(filmInfo.filmId).child("showTimes").child(time).child("seat").child(place).updateChildValues(dataUpdates)
             }
+            //update balance
+            let dataBalance = ["balance": Int64(userInfo.balance) - money]
+            mDatabase.child("users").child(getUid()).updateChildValues(dataBalance)
             //save into users
             let dataFilms = [
                 "filmId": filmInfo.filmId,
