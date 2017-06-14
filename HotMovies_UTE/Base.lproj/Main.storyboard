@@ -13,13 +13,13 @@
         <!--Lịch Sử Đặt Vé-->
         <scene sceneID="pLt-ja-BCT">
             <objects>
-                <tableViewController storyboardIdentifier="historyId" hidesBottomBarWhenPushed="YES" id="FBv-FE-Eta" customClass="HistoryTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="historyId" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FBv-FE-Eta" customClass="HistoryTableViewController" customModule="HotMovies_UTE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="265" sectionHeaderHeight="28" sectionFooterHeight="28" id="6AK-Nm-dr4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="History" selectionStyle="default" indentationWidth="10" rowHeight="265" id="zRX-o6-AXf" customClass="HistoryTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="History" selectionStyle="default" indentationWidth="10" reuseIdentifier="History" rowHeight="265" id="zRX-o6-AXf" customClass="HistoryTableViewCell" customModule="HotMovies_UTE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="265"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zRX-o6-AXf" id="zk0-lR-cOa">
@@ -151,13 +151,13 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="txtBookDay" destination="FsV-89-yuu" id="LWr-cq-MCd"/>
-                                    <outlet property="txtLocation" destination="giP-c3-fgQ" id="PKn-v3-9fZ"/>
-                                    <outlet property="txtMoney" destination="vWM-7H-S7A" id="hF3-8g-J9I"/>
-                                    <outlet property="txtNumberOfChair" destination="h2B-VK-20c" id="wlm-PO-Yjb"/>
-                                    <outlet property="txtReleaseDay" destination="s73-an-9jz" id="IAb-Qd-feT"/>
-                                    <outlet property="txtShowTime" destination="8SS-q2-Gnr" id="oYx-az-2bZ"/>
-                                    <outlet property="txtTitle" destination="IR0-ji-qMa" id="32Q-iG-pKu"/>
+                                    <outlet property="txtBookDay" destination="FsV-89-yuu" id="Gdr-K2-tP7"/>
+                                    <outlet property="txtLocation" destination="giP-c3-fgQ" id="hsP-Zg-j5V"/>
+                                    <outlet property="txtMoney" destination="vWM-7H-S7A" id="Boh-hA-3pG"/>
+                                    <outlet property="txtMovieTitle" destination="IR0-ji-qMa" id="fKg-JT-Hnd"/>
+                                    <outlet property="txtNumberOfChair" destination="h2B-VK-20c" id="G83-ge-XH0"/>
+                                    <outlet property="txtReleaseDay" destination="s73-an-9jz" id="HG9-fl-rl6"/>
+                                    <outlet property="txtShowTime" destination="8SS-q2-Gnr" id="fWX-ef-kOE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -167,12 +167,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lịch Sử Đặt Vé" id="Lwc-gr-DeX">
-                        <barButtonItem key="rightBarButtonItem" image="user" id="R3o-UM-Cc9"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="A17-fn-D7w">
+                            <connections>
+                                <action selector="closeClick:" destination="FBv-FE-Eta" id="6qO-5t-Oph"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQc-4E-r3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180" y="-1291"/>
+            <point key="canvasLocation" x="5217" y="999"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xpq-3B-QOc">
@@ -187,7 +191,6 @@
                         <segue destination="9mQ-On-oUQ" kind="relationship" relationship="viewControllers" id="PV6-h1-go3"/>
                         <segue destination="89E-U6-wCD" kind="relationship" relationship="viewControllers" id="r1f-zs-aoP"/>
                         <segue destination="1JV-5N-vfq" kind="relationship" relationship="viewControllers" id="pJv-Y6-NEA"/>
-                        <segue destination="aqB-z1-oHY" kind="relationship" relationship="viewControllers" id="Xtn-Bf-JEq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9Y-jA-AUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2100,7 +2103,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="btnHome:" destination="eFY-c0-1ge" eventType="touchUpInside" id="cis-vP-0AD"/>
+                                    <segue destination="3hU-PG-2Kc" kind="show" id="z8U-MM-TMy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tài Khoản:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-7R-IAP">
@@ -2779,28 +2782,23 @@
             <point key="canvasLocation" x="5549.6000000000004" y="187.55622188905548"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="inT-U1-6nf">
+        <scene sceneID="fbR-13-RKu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aqB-z1-oHY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="IOS-rJ-oZs"/>
+                <navigationController storyboardIdentifier="hisId" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3hU-PG-2Kc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UQk-wd-nTl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="tdP-0Z-RFm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.63888736229999998" blue="0.16412794429999999" alpha="0.91901220029999997" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
+                        <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="FBv-FE-Eta" kind="relationship" relationship="rootViewController" id="orF-AY-Ccc"/>
+                        <segue destination="FBv-FE-Eta" kind="relationship" relationship="rootViewController" id="isl-qZ-kAX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1ZQ-XF-OhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E71-Wn-zZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2406" y="-1291"/>
+            <point key="canvasLocation" x="6016.8000000000002" y="981.85907046476768"/>
         </scene>
     </scenes>
     <resources>

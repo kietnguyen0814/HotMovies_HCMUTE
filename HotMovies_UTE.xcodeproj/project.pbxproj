@@ -44,6 +44,9 @@
 		F7656EEE1EE7E67300196F93 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7656EED1EE7E67300196F93 /* BuyTicketViewController.swift */; };
 		F7656EF01EE7F63E00196F93 /* BorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7656EEF1EE7F63E00196F93 /* BorderLabel.swift */; };
 		F7656EF21EE7FB0C00196F93 /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7656EF11EE7FB0C00196F93 /* YoutubeViewController.swift */; };
+		F76DBF9F1EF10B9B00E9BFAD /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76DBF9E1EF10B9B00E9BFAD /* HistoryTableViewCell.swift */; };
+		F76DBFA11EF10BBE00E9BFAD /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76DBFA01EF10BBE00E9BFAD /* HistoryTableViewController.swift */; };
+		F76DBFA31EF10D3D00E9BFAD /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76DBFA21EF10D3D00E9BFAD /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,9 @@
 		F7656EED1EE7E67300196F93 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
 		F7656EEF1EE7F63E00196F93 /* BorderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderLabel.swift; sourceTree = "<group>"; };
 		F7656EF11EE7FB0C00196F93 /* YoutubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
+		F76DBF9E1EF10B9B00E9BFAD /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		F76DBFA01EF10BBE00E9BFAD /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		F76DBFA21EF10D3D00E9BFAD /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		FE289ABB0419C727692DE54F /* Pods-HotMovies_UTEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTEUITests/Pods-HotMovies_UTEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +160,7 @@
 				2E3D61E21ED9AF5600883EB4 /* DesignButton.swift */,
 				2EEE8FA61EDA988A003060A3 /* DesignView.swift */,
 				F7656EEF1EE7F63E00196F93 /* BorderLabel.swift */,
+				F76DBF9E1EF10B9B00E9BFAD /* HistoryTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 				F7656EED1EE7E67300196F93 /* BuyTicketViewController.swift */,
 				F7656EF11EE7FB0C00196F93 /* YoutubeViewController.swift */,
 				306B5FD71EEAADD200FACCFD /* ChoosePlacesViewController.swift */,
+				F76DBFA01EF10BBE00E9BFAD /* HistoryTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 				F72C1D6E1EE2B4DE00FE5306 /* ShowTimeInfo.swift */,
 				F7609A071EE2C08900B0FB61 /* ShowTime.swift */,
 				76782B791EE7E2060069F859 /* Constants.swift */,
+				F76DBFA21EF10D3D00E9BFAD /* History.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -563,9 +572,11 @@
 			files = (
 				2EEE8FA91EDA991E003060A3 /* SignUpViewController.swift in Sources */,
 				F72C1D691EE2B22800FE5306 /* FilmInfo.swift in Sources */,
+				F76DBF9F1EF10B9B00E9BFAD /* HistoryTableViewCell.swift in Sources */,
 				F72C1D6D1EE2B4A300FE5306 /* Seat.swift in Sources */,
 				304F4F641EE6FC5E006B36BE /* IsShowingTableViewController.swift in Sources */,
 				2E3D61E01ED98C0500883EB4 /* LoginTextField.swift in Sources */,
+				F76DBFA11EF10BBE00E9BFAD /* HistoryTableViewController.swift in Sources */,
 				2EECD3021EE1E27500080789 /* DesignTableViewCell.swift in Sources */,
 				76782B7A1EE7E2060069F859 /* Constants.swift in Sources */,
 				3059956B1EDF12AD009C1DD4 /* Validate.swift in Sources */,
@@ -583,6 +594,7 @@
 				306B5FD81EEAADD200FACCFD /* ChoosePlacesViewController.swift in Sources */,
 				F72C1D6F1EE2B4DE00FE5306 /* ShowTimeInfo.swift in Sources */,
 				30F1498D1EE070D500E284D5 /* User.swift in Sources */,
+				F76DBFA31EF10D3D00E9BFAD /* History.swift in Sources */,
 				2E3D61E31ED9AF5600883EB4 /* DesignButton.swift in Sources */,
 				F7656EF21EE7FB0C00196F93 /* YoutubeViewController.swift in Sources */,
 				F7656EEE1EE7E67300196F93 /* BuyTicketViewController.swift in Sources */,
