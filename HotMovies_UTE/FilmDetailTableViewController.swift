@@ -59,7 +59,7 @@ class FilmDetailTableViewController: UITableViewController {
     
     
     @IBAction func imgPlay(_ sender: Any) {
-        let srcYoutobe = self.storyboard?.instantiateViewController(withIdentifier: "youtobeId") as! YoutubeViewController
+        let srcYoutobe = self.storyboard?.instantiateViewController(withIdentifier: "youtubeId") as! YoutubeViewController
         srcYoutobe.videoUrl = filmInfo.videoUrl
         self.navigationController?.pushViewController(srcYoutobe, animated: true)
     }

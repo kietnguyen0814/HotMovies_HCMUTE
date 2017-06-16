@@ -147,7 +147,7 @@ class IsShowingTableViewController: UITableViewController {
 
         cell.configWithCell(filmInfo: filmInfo)
         cell.onButtonTapped = {
-            let srcYoutobe = self.storyboard?.instantiateViewController(withIdentifier: "youtobeId") as! YoutubeViewController
+            let srcYoutobe = self.storyboard?.instantiateViewController(withIdentifier: "youtubeId") as! YoutubeViewController
             srcYoutobe.videoUrl = filmInfo.videoUrl
             self.navigationController?.pushViewController(srcYoutobe, animated: true)
         }
