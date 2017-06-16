@@ -37,10 +37,18 @@ class BuyTicketViewController: UIViewController {
         super.viewDidLoad()
         mDatabase = Database.database().reference()
         // Do any additional setup after loading the view.
-        loadData()
-        loadDataFromDB()
+        initData()
     }
     
+    func initData() {
+        if (InternetConnection.isConnectedToNetwork()){
+            loadData()
+            loadDataFromDB()
+        }
+        else {
+            showAlertDialogWithHandler(message: "Không có kết nối internet")
+        }
+    }
     func loadDataFromDB() {
         //show progress
         showProgress()
@@ -57,6 +65,19 @@ class BuyTicketViewController: UIViewController {
                 
             }
         })
+    }
+    
+    func showAlertDialogWithHandler(message: String) {
+        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
+        
+        let tryAgainAction = UIAlertAction(title: "Thử lại", style: .default, handler: { (action: UIAlertAction) in
+            self.initData()
+        })
+        
+        alertView.addAction(cancelAction)
+        alertView.addAction(tryAgainAction)
+        present(alertView, animated: true, completion: nil)
     }
     
     func showProgress() {

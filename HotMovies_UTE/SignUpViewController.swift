@@ -37,69 +37,74 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func btnRegister(_ sender: Any) {
-        var result: Bool = true
-        let email: String = txtEmailSignUp.text!
-        let password: String = txtPassSignUp.text!
-        let phone: String = txtPhoneSignUp.text!
-        let confirmPass: String = txtConfirmSignUp.text!
-        let address: String = txtAddressSignUp.text!
-        let fullName: String = txtFullNameSignUp.text!
-        
-        if (email.isEmpty || password.isEmpty || phone.isEmpty || confirmPass.isEmpty || address.isEmpty || fullName.isEmpty){
-            showAlertDialog(message: "Hãy điền đầy đủ thông tin");
-            result = false
-        }
-        else{
-            if !(Validate.isValidEmail(testStr: email)) {
-                showAlertDialog(message: "Sai định dạng Email")
+        if (InternetConnection.isConnectedToNetwork()){
+            var result: Bool = true
+            let email: String = txtEmailSignUp.text!
+            let password: String = txtPassSignUp.text!
+            let phone: String = txtPhoneSignUp.text!
+            let confirmPass: String = txtConfirmSignUp.text!
+            let address: String = txtAddressSignUp.text!
+            let fullName: String = txtFullNameSignUp.text!
+            
+            if (email.isEmpty || password.isEmpty || phone.isEmpty || confirmPass.isEmpty || address.isEmpty || fullName.isEmpty){
+                showAlertDialog(message: "Hãy điền đầy đủ thông tin");
                 result = false
             }
-            
-            if (password.characters.count < 6 || confirmPass.characters.count < 6) {
-                showAlertDialog(message: "Mật khẩu phải có ít nhất 6 kí tự");
-                result = false;
-            }
-            else {
-                if (password != confirmPass) {
-                    showAlertDialog(message: "Mật khẩu không khớp")
+            else{
+                if !(Validate.isValidEmail(testStr: email)) {
+                    showAlertDialog(message: "Sai định dạng Email")
+                    result = false
+                }
+                
+                if (password.characters.count < 6 || confirmPass.characters.count < 6) {
+                    showAlertDialog(message: "Mật khẩu phải có ít nhất 6 kí tự");
                     result = false;
                 }
-            }
-            
-            if (result) {
-                //show progress
-                self.showProgress()
-                Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-                    //hide progress
-                    self.hideProgress()
-                    if error == nil {
-                        let dataUser = [
-                            "uid": user?.uid,
-                            "email": email,
-                            "phone": phone,
-                            "address": address,
-                            "password": password,
-                            "balance": 200000,
-                            "fullName": fullName
-                        ] as [String : Any]
-                        self.mDatabase.child("users").child((user?.uid)!).updateChildValues(dataUser)
-                        //move qua user info
-                        let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
-                        self.present(srcUserInfo, animated: true)
-                    } else {
-                        if let errCode = AuthErrorCode(rawValue: error!._code) {
-                            switch errCode {
-                            case .invalidEmail:
-                                self.showAlertDialog(message: "Sai định dạng Email")
-                            case .emailAlreadyInUse:
-                                self.showAlertDialog(message: "Email đã được sử dụng, vui lòng thử lại")
-                            default:
-                                self.showAlertDialog(message: "Không thể tạo tài khoản, vui lòng thử lại")
-                            }
-                        }                    }
+                else {
+                    if (password != confirmPass) {
+                        showAlertDialog(message: "Mật khẩu không khớp")
+                        result = false;
+                    }
                 }
+                
+                if (result) {
+                    //show progress
+                    self.showProgress()
+                    Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+                        //hide progress
+                        self.hideProgress()
+                        if error == nil {
+                            let dataUser = [
+                                "uid": user?.uid,
+                                "email": email,
+                                "phone": phone,
+                                "address": address,
+                                "password": password,
+                                "balance": 200000,
+                                "fullName": fullName
+                                ] as [String : Any]
+                            self.mDatabase.child("users").child((user?.uid)!).updateChildValues(dataUser)
+                            //move qua user info
+                            let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
+                            self.present(srcUserInfo, animated: true)
+                        } else {
+                            if let errCode = AuthErrorCode(rawValue: error!._code) {
+                                switch errCode {
+                                case .invalidEmail:
+                                    self.showAlertDialog(message: "Sai định dạng Email")
+                                case .emailAlreadyInUse:
+                                    self.showAlertDialog(message: "Email đã được sử dụng, vui lòng thử lại")
+                                default:
+                                    self.showAlertDialog(message: "Không thể tạo tài khoản, vui lòng thử lại")
+                                }
+                            }                    }
+                    }
+                }
+                
             }
-            
+        }
+        else {
+            showAlertDialog(message: "Không có kết nối Internet")
         }
         
     }

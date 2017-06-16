@@ -28,7 +28,7 @@ class HasBeenScreenedTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.leftBarButtonItem = editButtonItem
         
-        getAllMoviesHasBeenScreened()
+        loadData()
         
         //register xib file
         tableView.register(UINib(nibName: "DesignTableViewCell", bundle: nil), forCellReuseIdentifier: "FilmRow")
@@ -39,6 +39,15 @@ class HasBeenScreenedTableViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false;
         tableView.tableHeaderView = searchController.searchBar
 
+    }
+    
+    func loadData() {
+        if (InternetConnection.isConnectedToNetwork()) {
+            getAllMoviesHasBeenScreened()
+        }
+        else {
+            showAlertDialog(message: "Không có kết nối internet")
+        }
     }
     
     func getAllMoviesHasBeenScreened() {
@@ -90,6 +99,19 @@ class HasBeenScreenedTableViewController: UITableViewController {
     
     func hideProgress() {
         progressDialog.hide(animated: true)
+    }
+    
+    func showAlertDialog(message: String) {
+        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
+        
+        let tryAgainAction = UIAlertAction(title: "Thử lại", style: .default, handler: { (action: UIAlertAction) in
+            self.loadData()
+        })
+        
+        alertView.addAction(cancelAction)
+        alertView.addAction(tryAgainAction)
+        present(alertView, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

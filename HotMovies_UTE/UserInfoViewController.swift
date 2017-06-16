@@ -34,6 +34,32 @@ class UserInfoViewController: UIViewController {
         
         //load user info
         //show progress
+        loadData()
+    }
+    
+    func loadData() {
+        if (InternetConnection.isConnectedToNetwork()) {
+            getUserData()
+        }
+        else {
+            showAlertDialog(message: "Không có kết nối Internet")
+        }
+    }
+    
+    func showAlertDialog(message: String) {
+        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
+        
+        let tryAgainAction = UIAlertAction(title: "Thử lại", style: .default, handler: { (action: UIAlertAction) in
+            self.loadData()
+        })
+        
+        alertView.addAction(cancelAction)
+        alertView.addAction(tryAgainAction)
+        present(alertView, animated: true, completion: nil)
+    }
+    
+    func getUserData() {
         self.showProgress()
         if let uid = Auth.auth().currentUser?.uid {
             mDatabase.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -59,7 +85,6 @@ class UserInfoViewController: UIViewController {
             }
         }
     }
-    
     @IBAction func btnSignOut(_ sender: Any) {
         
         let firebaseAuth = Auth.auth()

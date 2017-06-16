@@ -28,8 +28,7 @@ class IsShowingTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
          self.navigationItem.leftBarButtonItem = editButtonItem
-        
-        getAllMoviesIsShowing()
+       loadData()
         //register xib file
         tableView.register(UINib(nibName: "DesignTableViewCell", bundle: nil), forCellReuseIdentifier: "FilmRow")
         //setup searchcontroller
@@ -38,6 +37,15 @@ class IsShowingTableViewController: UITableViewController {
         definesPresentationContext = true
         searchController.dimsBackgroundDuringPresentation = false;
         tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    func loadData() {
+        if (InternetConnection.isConnectedToNetwork()) {
+            getAllMoviesIsShowing()
+        }
+        else {
+            showAlertDialog(message: "Không có kết nối internet")
+        }
     }
     
     
@@ -62,6 +70,20 @@ class IsShowingTableViewController: UITableViewController {
     func hideProgress() {
         progressDialog.hide(animated: true)
     }
+    
+    func showAlertDialog(message: String) {
+        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
+        
+        let tryAgainAction = UIAlertAction(title: "Thử lại", style: .default, handler: { (action: UIAlertAction) in
+            self.loadData()
+        })
+        
+        alertView.addAction(cancelAction)
+        alertView.addAction(tryAgainAction)
+        present(alertView, animated: true, completion: nil)
+    }
+
     
     func getAllMoviesIsShowing() {
         //show progress dialog

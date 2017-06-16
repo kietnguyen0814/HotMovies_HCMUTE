@@ -12,7 +12,7 @@ import MBProgressHUD
 
 
 class CommingSoonTableViewController: UITableViewController {
-
+    
     
     var mDatabase: DatabaseReference!
     var films = [FilmInfo]()
@@ -22,25 +22,34 @@ class CommingSoonTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.leftBarButtonItem = editButtonItem
+        self.navigationItem.leftBarButtonItem = editButtonItem
         mDatabase = Database.database().reference()
-        getAllMoviesCommningSoon()
+        
         //register xib file
         tableView.register(UINib(nibName: "DesignTableViewCell", bundle: nil), forCellReuseIdentifier: "FilmRow")
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+        loadData()
         //setup searchcontroller
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         definesPresentationContext = true
         searchController.dimsBackgroundDuringPresentation = false;
         tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    func loadData() {
+        if (InternetConnection.isConnectedToNetwork()) {
+            getAllMoviesCommningSoon()
+        }
+        else {
+            showAlertDialog(message: "Không có kết nối internet")
+        }
     }
     
     func getAllMoviesCommningSoon() {
@@ -92,19 +101,32 @@ class CommingSoonTableViewController: UITableViewController {
     func hideProgress() {
         progressDialog.hide(animated: true)
     }
-
+    
+    func showAlertDialog(message: String) {
+        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
+        
+        let tryAgainAction = UIAlertAction(title: "Thử lại", style: .default, handler: { (action: UIAlertAction) in
+            self.loadData()
+        })
+        
+        alertView.addAction(cancelAction)
+        alertView.addAction(tryAgainAction)
+        present(alertView, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if (searchController.isActive && searchController.searchBar.text != "") {
@@ -112,7 +134,7 @@ class CommingSoonTableViewController: UITableViewController {
         }
         return films.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilmRow", for: indexPath) as! DesignTableViewCell
         let filmInfo: FilmInfo
@@ -144,7 +166,7 @@ class CommingSoonTableViewController: UITableViewController {
         navigationController?.pushViewController(srcDetailFilm, animated: true)
         
     }
-
+    
     
     //delete film
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -175,7 +197,7 @@ class CommingSoonTableViewController: UITableViewController {
         })
         self.tableView.reloadData()
     }
-
+    
 }
 
 extension CommingSoonTableViewController: UISearchBarDelegate {

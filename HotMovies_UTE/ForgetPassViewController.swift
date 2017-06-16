@@ -32,38 +32,43 @@ class ForgetPassViewController: UIViewController {
     }
     
     @IBAction func btnOK(_ sender: Any) {
-        let email: String = txtForgetEmail.text!
-        if email.isEmpty
-        {
-            showAlertDialog(message: "Hãy điền đầy đủ thông tin");
-        }
-        else
-        {
-            if !(Validate.isValidEmail(testStr: email))
+        if (InternetConnection.isConnectedToNetwork()){
+            let email: String = txtForgetEmail.text!
+            if email.isEmpty
             {
-                showAlertDialog(message: "Sai định dạng Email")
+                showAlertDialog(message: "Hãy điền đầy đủ thông tin");
             }
             else
             {
-                self.showProgress()
-                Auth.auth().sendPasswordReset(withEmail: email) { (error) in
-                    self.hideProgress()
-                    if error == nil
-                    {
-                        Constants.isResetPassword = true
-                        //show alert
-                        let alertView = UIAlertController(title: "Thông Báo", message: "Vui lòng vào email vừa cung cấp để xác nhận", preferredStyle: .alert)
-                        let action = UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
-                            self.dismiss(animated: true, completion: nil)
-                        })
-                        alertView.addAction(action)
-                        self.present(alertView, animated: true, completion: nil)
-                    }
-                    else {
-                        self.showAlertDialog(message: "Gửi email không thành công")
+                if !(Validate.isValidEmail(testStr: email))
+                {
+                    showAlertDialog(message: "Sai định dạng Email")
+                }
+                else
+                {
+                    self.showProgress()
+                    Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+                        self.hideProgress()
+                        if error == nil
+                        {
+                            Constants.isResetPassword = true
+                            //show alert
+                            let alertView = UIAlertController(title: "Thông Báo", message: "Vui lòng vào email vừa cung cấp để xác nhận", preferredStyle: .alert)
+                            let action = UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
+                                self.dismiss(animated: true, completion: nil)
+                            })
+                            alertView.addAction(action)
+                            self.present(alertView, animated: true, completion: nil)
+                        }
+                        else {
+                            self.showAlertDialog(message: "Gửi email không thành công")
+                        }
                     }
                 }
             }
+        }
+        else {
+            showAlertDialog(message: "Không có kết nối Internet")
         }
     }
     

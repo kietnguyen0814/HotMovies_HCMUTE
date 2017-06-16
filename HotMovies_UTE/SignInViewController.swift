@@ -48,38 +48,43 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func btnLogin(_ sender: Any) {
-        let email: String = txtEmailSignIn.text!
-        let password: String = txtPassSignIn.text!
-        
-        if (email.isEmpty || password.isEmpty) {
-            showAlertDialog(message: "Hãy điền đầy đủ thông tin");
-        }
-        else {
-            if !(Validate.isValidEmail(testStr: email)) {
-                self.showAlertDialog(message: "Sai định dạng Email")
+        if (InternetConnection.isConnectedToNetwork()) {
+            let email: String = txtEmailSignIn.text!
+            let password: String = txtPassSignIn.text!
+            
+            if (email.isEmpty || password.isEmpty) {
+                showAlertDialog(message: "Hãy điền đầy đủ thông tin");
             }
             else {
-                //show progress
-                self.showProgress()
-                Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                    //hide progress
-                    self.hideProgress()
-                    if (error == nil) {
-                        
-                        //update new pass
-                        let dataUpdatePass = ["password": password];
-                        self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
-                        
-                        
-                        //let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
-                        //self.present(srcUserInfo, animated: true)
-                        self.dismiss(animated: true)
-                    }
-                    else {
-                        self.showAlertDialog(message: "Đăng nhập không thành công")
+                if !(Validate.isValidEmail(testStr: email)) {
+                    self.showAlertDialog(message: "Sai định dạng Email")
+                }
+                else {
+                    //show progress
+                    self.showProgress()
+                    Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                        //hide progress
+                        self.hideProgress()
+                        if (error == nil) {
+                            
+                            //update new pass
+                            let dataUpdatePass = ["password": password];
+                            self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
+                            
+                            
+                            //let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
+                            //self.present(srcUserInfo, animated: true)
+                            self.dismiss(animated: true)
+                        }
+                        else {
+                            self.showAlertDialog(message: "Đăng nhập không thành công")
+                        }
                     }
                 }
             }
+        }
+        else {
+            showAlertDialog(message: "Không có kết nối Internet")
         }
     }
     

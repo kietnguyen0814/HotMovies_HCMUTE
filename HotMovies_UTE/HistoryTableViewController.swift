@@ -29,6 +29,28 @@ class HistoryTableViewController: UITableViewController {
     }
     
     func loadData() {
+        if (InternetConnection.isConnectedToNetwork()){
+            loadDataHistory()
+        }
+        else {
+            showAlertDialogWithHandler(message: "Không có kết nối Internet")
+        }
+    }
+    
+    func showAlertDialogWithHandler(message: String) {
+        let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
+        
+        let tryAgainAction = UIAlertAction(title: "Thử lại", style: .default, handler: { (action: UIAlertAction) in
+            self.loadData()
+        })
+        
+        alertView.addAction(cancelAction)
+        alertView.addAction(tryAgainAction)
+        present(alertView, animated: true, completion: nil)
+    }
+    
+    func loadDataHistory() {
         
         mDatabase.child("users").child(getUid()).child("booked").observeSingleEvent(of: .value, with: { (snap) in
             if (snap.exists()) {
