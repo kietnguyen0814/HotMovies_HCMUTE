@@ -49,6 +49,7 @@
 		F76DBF9F1EF10B9B00E9BFAD /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76DBF9E1EF10B9B00E9BFAD /* HistoryTableViewCell.swift */; };
 		F76DBFA11EF10BBE00E9BFAD /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76DBFA01EF10BBE00E9BFAD /* HistoryTableViewController.swift */; };
 		F76DBFA31EF10D3D00E9BFAD /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76DBFA21EF10D3D00E9BFAD /* History.swift */; };
+		F7EF628C1EF50EF50056F24B /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EF628B1EF50EF50056F24B /* AppUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		F76DBF9E1EF10B9B00E9BFAD /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		F76DBFA01EF10BBE00E9BFAD /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		F76DBFA21EF10D3D00E9BFAD /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		F7EF628B1EF50EF50056F24B /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		FE289ABB0419C727692DE54F /* Pods-HotMovies_UTEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMovies_UTEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMovies_UTEUITests/Pods-HotMovies_UTEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +253,7 @@
 				3059956A1EDF12AD009C1DD4 /* Validate.swift */,
 				301F53DF1EE4591C0032AD66 /* Downloader.swift */,
 				3052213F1EF380B200ACEB88 /* InternetConnection.swift */,
+				F7EF628B1EF50EF50056F24B /* AppUtility.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				2EE078B51ED95A0400B619C3 /* SignInViewController.swift in Sources */,
 				2E407B091EE04C5900208130 /* UserInfoViewController.swift in Sources */,
 				2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */,
+				F7EF628C1EF50EF50056F24B /* AppUtility.swift in Sources */,
 				F7609A081EE2C08900B0FB61 /* ShowTime.swift in Sources */,
 				301F53E01EE4591C0032AD66 /* Downloader.swift in Sources */,
 				304F4F6A1EE70441006B36BE /* FilmDetailTableViewController.swift in Sources */,

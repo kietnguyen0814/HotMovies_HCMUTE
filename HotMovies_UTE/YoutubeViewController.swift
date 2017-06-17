@@ -16,7 +16,6 @@ class YoutubeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(videoUrl)
         // Do any additional setup after loading the view.
         webView.loadHTMLString("<iframe width =\"\(webView.frame.width)\" height =\"\(webView.frame.height)\" src = \"\(videoUrl)\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
     

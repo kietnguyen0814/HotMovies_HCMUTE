@@ -32,10 +32,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         mDatabase = Database.database().reference()
     }
     
+    //close view
     @IBAction func btnClose(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 
+    /*
+     Đăng ký, nếu chưa có kết nôi internet thì sẽ thông báo
+     nguoc lại, nếu đã kết noi internet rồi thì tiến hành đăng nhập vào hệ thống
+     */
     @IBAction func btnRegister(_ sender: Any) {
         if (InternetConnection.isConnectedToNetwork()){
             var result: Bool = true
@@ -109,16 +114,20 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    //show progress
+    
     func showProgress() {
         loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Đang tải..."
     }
     
+    //hide progress
     func hideProgress() {
         loadingNotification.hide(animated: true)
     }
     
+    //show progress
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)

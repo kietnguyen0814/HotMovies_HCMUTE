@@ -40,12 +40,14 @@ class ChangePassViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //close view
     @IBAction func btnBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    
+    /*
+     sự kiện click ok, nếu đã có kết nối internet thì thực hiện đổi mật khẩu
+    */
     @IBAction func btnOk(_ sender: Any) {
         if (InternetConnection.isConnectedToNetwork()){
             let currentPass: String = txtCurrentPass.text!
@@ -119,10 +121,12 @@ class ChangePassViewController: UIViewController {
         
     }
     
+    //get currentId
     func getUid() -> String {
         return (Auth.auth().currentUser?.uid)!;
     }
     
+    //show alertView
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -130,12 +134,14 @@ class ChangePassViewController: UIViewController {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    //show progress dialog
     func showProgress() {
         loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Đang tải..."
     }
     
+    //hide progress dialog
     func hideProgress() {
         loadingNotification.hide(animated: true)
     }

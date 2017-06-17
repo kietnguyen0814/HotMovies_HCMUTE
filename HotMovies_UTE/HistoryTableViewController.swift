@@ -28,6 +28,7 @@ class HistoryTableViewController: UITableViewController {
         loadData()
     }
     
+    //load data from database
     func loadData() {
         if (InternetConnection.isConnectedToNetwork()){
             loadDataHistory()
@@ -37,6 +38,7 @@ class HistoryTableViewController: UITableViewController {
         }
     }
     
+    //show alertView
     func showAlertDialogWithHandler(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
@@ -98,6 +100,7 @@ class HistoryTableViewController: UITableViewController {
         
     }
     
+    //show alertView
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -105,12 +108,14 @@ class HistoryTableViewController: UITableViewController {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    //show progress dialog
     func showProgress() {
         progressDialog = MBProgressHUD.showAdded(to: view, animated: true)
         progressDialog.mode = MBProgressHUDMode.indeterminate
         progressDialog.label.text = "Đang tải..."
     }
     
+    //hide progress dialog
     func hideProgress() {
         progressDialog.hide(animated: true)
     }

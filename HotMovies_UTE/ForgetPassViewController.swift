@@ -31,6 +31,10 @@ class ForgetPassViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /*
+     Kiểm tra internet, nếu không có kết nối internet thì thông báo cho người dùng
+     Nếu có kết nối internet thì tiến hành xử lý
+     */
     @IBAction func btnOK(_ sender: Any) {
         if (InternetConnection.isConnectedToNetwork()){
             let email: String = txtForgetEmail.text!
@@ -46,6 +50,7 @@ class ForgetPassViewController: UIViewController {
                 }
                 else
                 {
+                    //gửi email reset password cho người dùng
                     self.showProgress()
                     Auth.auth().sendPasswordReset(withEmail: email) { (error) in
                         self.hideProgress()
@@ -72,6 +77,7 @@ class ForgetPassViewController: UIViewController {
         }
     }
     
+    //close view
     @IBAction func btnClose(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -85,6 +91,7 @@ class ForgetPassViewController: UIViewController {
     }
     */
     
+    //show alertView
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -92,12 +99,14 @@ class ForgetPassViewController: UIViewController {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    //show progres
     func showProgress() {
         loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Đang tải..."
     }
     
+    //hide progress
     func hideProgress() {
         loadingNotification.hide(animated: true)
     }

@@ -48,7 +48,7 @@ class IsShowingTableViewController: UITableViewController {
         }
     }
     
-    
+    //event click icon user
     @IBAction func btnUserInfo(_ sender: Any) {
         if Auth.auth().currentUser != nil {
             let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
@@ -61,16 +61,19 @@ class IsShowingTableViewController: UITableViewController {
         }
     }
     
+    //show progress dialog
     func showProgress() {
         progressDialog = MBProgressHUD.showAdded(to: self.view, animated: true)
         progressDialog.mode = MBProgressHUDMode.indeterminate
         progressDialog.label.text = "Đang tải..."
     }
     
+    //hide progress dialog
     func hideProgress() {
         progressDialog.hide(animated: true)
     }
     
+    //show alertView
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
@@ -84,7 +87,7 @@ class IsShowingTableViewController: UITableViewController {
         present(alertView, animated: true, completion: nil)
     }
 
-    
+    //get all commingSoon film from database
     func getAllMoviesIsShowing() {
         //show progress dialog
         showProgress()
@@ -135,6 +138,7 @@ class IsShowingTableViewController: UITableViewController {
         return films.count
     }
     
+    //load data into cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilmRow", for: indexPath) as! DesignTableViewCell
         let filmInfo: FilmInfo
@@ -154,6 +158,7 @@ class IsShowingTableViewController: UITableViewController {
         return cell
     }
     
+    //event click cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let srcDetailFilm = self.storyboard?.instantiateViewController(withIdentifier: "filmDetailId") as! FilmDetailTableViewController
         let filmInfo: FilmInfo

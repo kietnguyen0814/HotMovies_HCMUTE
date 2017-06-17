@@ -36,6 +36,7 @@ class FilmDetailTableViewController: UITableViewController {
         initData()
     }
     
+    //load Data
     func initData() {
         txtMovieTitle.text = filmInfo.filmName
         txtType.text = filmInfo.type
@@ -57,7 +58,7 @@ class FilmDetailTableViewController: UITableViewController {
 
     }
     
-    
+    //event click icon play
     @IBAction func imgPlay(_ sender: Any) {
         let srcYoutobe = self.storyboard?.instantiateViewController(withIdentifier: "youtubeId") as! YoutubeViewController
         srcYoutobe.videoUrl = filmInfo.videoUrl
@@ -84,6 +85,7 @@ class FilmDetailTableViewController: UITableViewController {
         return 1
     }
 
+    //event click showTime
     @IBAction func btn850(_ sender: Any) {
         let srcBuyTicket = self.storyboard?.instantiateViewController(withIdentifier: "buyTicketId") as! BuyTicketViewController
         srcBuyTicket.filmInfo = filmInfo

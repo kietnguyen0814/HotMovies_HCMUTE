@@ -37,6 +37,7 @@ class UserInfoViewController: UIViewController {
         loadData()
     }
     
+    //lấy thông tin cá nhân của người dùng và hiển thị lên view
     func loadData() {
         if (InternetConnection.isConnectedToNetwork()) {
             getUserData()
@@ -46,6 +47,7 @@ class UserInfoViewController: UIViewController {
         }
     }
     
+    //show alertView
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
@@ -59,6 +61,7 @@ class UserInfoViewController: UIViewController {
         present(alertView, animated: true, completion: nil)
     }
     
+    //lấy thông tin từ database
     func getUserData() {
         self.showProgress()
         if let uid = Auth.auth().currentUser?.uid {
@@ -85,6 +88,8 @@ class UserInfoViewController: UIViewController {
             }
         }
     }
+    
+    //đăng xuất khỏi ứng dụng
     @IBAction func btnSignOut(_ sender: Any) {
         
         let firebaseAuth = Auth.auth()
@@ -98,19 +103,20 @@ class UserInfoViewController: UIViewController {
     }
     
     //event click change pass
-    
     @IBAction func btnChangePass(_ sender: Any) {
         let srcChangePass = self.storyboard?.instantiateViewController(withIdentifier: "changePassId") as! ChangePassViewController
         srcChangePass.user = userToMove
         self.present(srcChangePass, animated: true)
     }
 
+    //show progress dialog
     func showProgress() {
         loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Đang tải..."
     }
     
+    //ẩn progress dialog
     func hideProgress() {
         loadingNotification.hide(animated: true)
     }

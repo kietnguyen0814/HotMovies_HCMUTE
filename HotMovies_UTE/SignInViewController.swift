@@ -37,16 +37,22 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //show progress
     func showProgress() {
         loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Đang tải..."
     }
     
+    //hide progress
     func hideProgress() {
         loadingNotification.hide(animated: true)
     }
     
+    /*
+     kiểm tra kết nối internet trước khi thực hiện
+     nếu đã có kết nối thì thực hiện đăng nhập, nếu không thì xuất ra thông báo
+     */
     @IBAction func btnLogin(_ sender: Any) {
         if (InternetConnection.isConnectedToNetwork()) {
             let email: String = txtEmailSignIn.text!
@@ -71,9 +77,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                             let dataUpdatePass = ["password": password];
                             self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
                             
-                            
-                            //let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
-                            //self.present(srcUserInfo, animated: true)
+                            //close view
                             self.dismiss(animated: true)
                         }
                         else {
@@ -88,10 +92,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //lấy uid mặc định của user
     func getUid() -> String {
         return (Auth.auth().currentUser?.uid)!;
     }
     
+    //xuất ra thông báo sử dụng alertView
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -99,6 +105,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    //close view
     @IBAction func btnClose(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

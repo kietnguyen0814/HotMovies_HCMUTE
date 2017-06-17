@@ -52,6 +52,7 @@ class CommingSoonTableViewController: UITableViewController {
         }
     }
     
+    //get list phim commingSoon from database
     func getAllMoviesCommningSoon() {
         showProgress()
         mDatabase.child("films").child("commingSoon").observe(.childAdded, with: { (snapshot) -> Void in
@@ -80,6 +81,7 @@ class CommingSoonTableViewController: UITableViewController {
         })
     }
     
+    //event click icon info
     @IBAction func btnUserInfoClick(_ sender: Any) {
         if Auth.auth().currentUser != nil {
             let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
@@ -92,16 +94,19 @@ class CommingSoonTableViewController: UITableViewController {
         }
     }
     
+    //show progress dialog
     func showProgress() {
         progressDialog = MBProgressHUD.showAdded(to: self.view, animated: true)
         progressDialog.mode = MBProgressHUDMode.indeterminate
         progressDialog.label.text = "Đang tải..."
     }
     
+    //hide progress dialog
     func hideProgress() {
         progressDialog.hide(animated: true)
     }
     
+    //show alertView
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
@@ -135,6 +140,7 @@ class CommingSoonTableViewController: UITableViewController {
         return films.count
     }
     
+    //load data into cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilmRow", for: indexPath) as! DesignTableViewCell
         let filmInfo: FilmInfo
@@ -153,6 +159,7 @@ class CommingSoonTableViewController: UITableViewController {
         return cell
     }
     
+    //event click cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let srcDetailFilm = self.storyboard?.instantiateViewController(withIdentifier: "filmDetailId") as! FilmDetailTableViewController
         let filmInfo: FilmInfo

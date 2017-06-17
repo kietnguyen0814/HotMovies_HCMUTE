@@ -11,7 +11,7 @@ import MBProgressHUD
 import Firebase
 
 class BuyTicketViewController: UIViewController {
-
+    
     
     @IBOutlet weak var imgPoster: UIImageView!
     @IBOutlet weak var txtFilmName: UILabel!
@@ -27,7 +27,7 @@ class BuyTicketViewController: UIViewController {
     
     var filmInfo: FilmInfo!
     var time: String = ""
-    var ticketNumber: Int64  = 0
+    var ticketNumber: Int64  = 1
     var priceFilm: Int64 = 0
     var money: Int64 = 0
     
@@ -49,6 +49,8 @@ class BuyTicketViewController: UIViewController {
             showAlertDialogWithHandler(message: "Không có kết nối internet")
         }
     }
+    
+    //load data from database
     func loadDataFromDB() {
         //show progress
         showProgress()
@@ -62,11 +64,15 @@ class BuyTicketViewController: UIViewController {
                 self.txtPrice.text = String(price) + "VND"
                 self.txtTime.text = type + " - " + timeShow
                 self.priceFilm = price
+                //load data price
+                self.money = self.priceFilm * self.ticketNumber
+                self.lblMoney.text = String(self.money) + "VND"
                 
             }
         })
     }
     
+    //show alertView
     func showAlertDialogWithHandler(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
@@ -80,12 +86,14 @@ class BuyTicketViewController: UIViewController {
         present(alertView, animated: true, completion: nil)
     }
     
+    //show progress dialog
     func showProgress() {
         progressDialog = MBProgressHUD.showAdded(to: self.view, animated: true)
         progressDialog.mode = MBProgressHUDMode.indeterminate
         progressDialog.label.text = "Đang tải..."
     }
     
+    //hide progress dialog
     func hideProgress() {
         progressDialog.hide(animated: true)
     }
@@ -93,14 +101,14 @@ class BuyTicketViewController: UIViewController {
     func loadData() {
         imgPoster.image = Downloader.downloadImageWithURL(filmInfo.posterUrl)
         txtFilmName.text = filmInfo.filmName
-        //txtActor.text = filmInfo.actor
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    //event click button minus
     @IBAction func btnMinus(_ sender: Any) {
         if (ticketNumber > 0) {
             ticketNumber = ticketNumber - 1;
@@ -109,7 +117,8 @@ class BuyTicketViewController: UIViewController {
             lblMoney.text = String(money) + "VND"
         }
     }
-
+    
+    //event click button add
     @IBAction func btnAdd(_ sender: Any) {
         ticketNumber = ticketNumber + 1;
         txtNumberTicket.text = String(ticketNumber)
@@ -117,6 +126,7 @@ class BuyTicketViewController: UIViewController {
         lblMoney.text = String(money) + " VND"
     }
     
+    //event click button next
     @IBAction func btnNext(_ sender: Any) {
         if (ticketNumber > 0) {
             if Auth.auth().currentUser != nil {
@@ -164,7 +174,16 @@ class BuyTicketViewController: UIViewController {
                 }
             }
             else {
-                showAlertDialog(message: "Hãy đăng nhập trước khi sử dụng tính năng này")
+                let alertView = UIAlertController(title: "Thông Báo", message: "Hãy đăng nhập trước khi sử dụng tính năng này", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                let actionLogin = UIAlertAction(title: "Đăng nhập", style: .default, handler: { (action: UIAlertAction) in
+                    let srcSignIn = self.storyboard?.instantiateViewController(withIdentifier: "signInId") as! SignInViewController
+                    self.present(srcSignIn, animated: true, completion: nil)
+                })
+                alertView.addAction(action)
+                alertView.addAction(actionLogin)
+                self.present(alertView, animated: true, completion: nil)
+                
             }
         }
         else {
@@ -172,6 +191,7 @@ class BuyTicketViewController: UIViewController {
         }
     }
     
+    //show alertView
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -179,6 +199,7 @@ class BuyTicketViewController: UIViewController {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    //get current id 
     func getUid() -> String {
         return (Auth.auth().currentUser?.uid)!
     }

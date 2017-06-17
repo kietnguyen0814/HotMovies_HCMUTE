@@ -65,6 +65,21 @@ class ChoosePlacesViewController: UIViewController {
         print(time + "/"+String(ticket))
     }
     
+    //set orientation is portrait
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //lock portrait
+        AppUtility.lockOrientation(.portrait)
+    }
+    
+    //reset orientation
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        //reset orientation
+        AppUtility.lockOrientation(.all)
+    }
+    
+    //load data from database
     func loadData() {
         //show progress
         showProgress()
@@ -1101,8 +1116,8 @@ class ChoosePlacesViewController: UIViewController {
             }
         }
     }
-    //event click "Pay"
     
+    //event click "Pay"
     @IBAction func btnPayClick(_ sender: Any) {
         if (ticket > 0) {
             showAlertDialog(message: "Bạn chọn chưa đủ số ghế. Vui lòng chọn thêm")
@@ -1140,6 +1155,7 @@ class ChoosePlacesViewController: UIViewController {
         }
     }
     
+    //get current day
     func getTodayString() -> String {
         let date = Date()
         let calendar = Calendar.current
@@ -1158,6 +1174,7 @@ class ChoosePlacesViewController: UIViewController {
         return today_string
     }
     
+    //show alertView
     func showAlertDialog(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -1165,6 +1182,7 @@ class ChoosePlacesViewController: UIViewController {
         self.present(alertView, animated: true, completion: nil)
     }
     
+    //get currentId
     func getUid() -> String {
         return (Auth.auth().currentUser?.uid)!;
     }
