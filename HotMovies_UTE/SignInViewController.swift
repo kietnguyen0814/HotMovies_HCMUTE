@@ -55,6 +55,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         loadingNotification.hide(animated: true)
     }
     
+    //get data from keychain
     func getDataFromKeyChain() {
         keychain = Keychain()
         let keys = keychain.allKeys()
@@ -95,6 +96,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                             //save password
                             if (self.isCheck){
                                 do {
+                                    //remove all keychain
                                     try self.keychain.removeAll()
                                     try self.keychain.set(password, key: email)
                                 }
@@ -129,6 +131,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //event click checkbox
     @IBAction func chkRememberClick(_ sender: Any) {
         if (isCheck){
             chkRemember.setImage(unCheck, for: UIControlState.normal)
