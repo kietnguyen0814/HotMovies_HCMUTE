@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import MBProgressHUD
+import KeychainAccess
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
@@ -16,11 +17,15 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
      @IBOutlet weak var btnSignIn: UIButton!*/
     @IBOutlet weak var txtEmailSignIn: LoginTextField!
     
+    @IBOutlet weak var chkRemember: DesignButton!
     @IBOutlet weak var txtPassSignIn: LoginTextField!
     
     
     var loadingNotification: MBProgressHUD!
-    
+    var checkbox = UIImage(named: "check")
+    var unCheck = UIImage(named: "uncheck")
+    var isCheck: Bool = false
+    var keychain: Keychain!
     var mDatabase: DatabaseReference!
     
     override func viewDidLoad() {
@@ -30,6 +35,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.DismissKeyboard))
         view.addGestureRecognizer(dismiss)
         observerKeyboard()
+        getDataFromKeyChain()
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,6 +53,20 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     //hide progress
     func hideProgress() {
         loadingNotification.hide(animated: true)
+    }
+    
+    func getDataFromKeyChain() {
+        keychain = Keychain()
+        let keys = keychain.allKeys()
+        for key in keys {
+            let password = try! keychain.get(key)
+            if (password != nil){
+                txtPassSignIn.text = password
+                txtEmailSignIn.text = key
+                chkRemember.setImage(checkbox, for: UIControlState.normal)
+                isCheck = true
+            }
+        }
     }
     
     /*
@@ -72,7 +92,24 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                         //hide progress
                         self.hideProgress()
                         if (error == nil) {
-                            
+                            //save password
+                            if (self.isCheck){
+                                do {
+                                    try self.keychain.removeAll()
+                                    try self.keychain.set(password, key: email)
+                                }
+                                catch let errorKeyChain {
+                                    print(errorKeyChain)
+                                }
+                            }
+                            else {
+                                do {
+                                    try self.keychain.removeAll()
+                                }
+                                catch let errorKeyChain {
+                                    print(errorKeyChain)
+                                }
+                            }
                             //update new pass
                             let dataUpdatePass = ["password": password];
                             self.mDatabase.child("users").child(self.getUid()).updateChildValues(dataUpdatePass)
@@ -92,6 +129,16 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func chkRememberClick(_ sender: Any) {
+        if (isCheck){
+            chkRemember.setImage(unCheck, for: UIControlState.normal)
+            isCheck = false
+        }
+        else {
+            chkRemember.setImage(checkbox, for: UIControlState.normal)
+            isCheck = true
+        }
+    }
     //lấy uid mặc định của user
     func getUid() -> String {
         return (Auth.auth().currentUser?.uid)!;
