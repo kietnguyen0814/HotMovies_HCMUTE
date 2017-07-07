@@ -656,7 +656,7 @@ class ChoosePlacesViewController: UIViewController {
                 else
                 {
                     //save places into list
-                    listPlaces.append("B1");
+                    listPlaces.append("B2");
                     
                     ticket -= 1
                     self.btnB2.backgroundColor = UIColor.green
@@ -1130,6 +1130,8 @@ class ChoosePlacesViewController: UIViewController {
                 //save into film
                 let dataUpdates = ["state": true, "bookBy": getUid()] as [String: AnyObject]
                 mDatabase.child("films").child(filmInfo.filmType).child(filmInfo.filmId).child("showTimes").child(time).child("seat").child(place).updateChildValues(dataUpdates)
+                
+                print(place)
             }
             //update balance
             let dataBalance = ["balance": Int64(userInfo.balance) - money]

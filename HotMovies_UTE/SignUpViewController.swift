@@ -90,8 +90,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                                 ] as [String : Any]
                             self.mDatabase.child("users").child((user?.uid)!).updateChildValues(dataUser)
                             //move qua user info
-                            let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
-                            self.present(srcUserInfo, animated: true)
+//                            let srcUserInfo = self.storyboard?.instantiateViewController(withIdentifier: "userInfoId") as! UserInfoViewController
+                            self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+                            //self.present(srcUserInfo, animated: true)
+                            
                         } else {
                             if let errCode = AuthErrorCode(rawValue: error!._code) {
                                 switch errCode {
