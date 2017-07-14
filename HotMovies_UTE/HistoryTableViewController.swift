@@ -19,18 +19,12 @@ class HistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mDatabase = Database.database().reference()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         loadData()
     }
     
     //load data from database
     func loadData() {
-        if (InternetConnection.isConnectedToNetwork()){
+        if (InternetConnection.isConnectedToNetwork()) {
             loadDataHistory()
         }
         else {
@@ -42,18 +36,17 @@ class HistoryTableViewController: UITableViewController {
     func showAlertDialogWithHandler(message: String) {
         let alertView = UIAlertController(title: "Thông Báo", message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Huỷ", style: .default, handler: nil)
-        
         let tryAgainAction = UIAlertAction(title: "Thử lại", style: .default, handler: { (action: UIAlertAction) in
             self.loadData()
         })
-        
+        // add action for alert
         alertView.addAction(cancelAction)
         alertView.addAction(tryAgainAction)
         present(alertView, animated: true, completion: nil)
     }
     
+    //Load data from history
     func loadDataHistory() {
-        
         mDatabase.child("users").child(getUid()).child("booked").observeSingleEvent(of: .value, with: { (snap) in
             if (snap.exists()) {
                 self.showProgress()
@@ -80,24 +73,17 @@ class HistoryTableViewController: UITableViewController {
                         let history: History = History(releaseDay: releaseDay, movieTitle: filmTitle, money: money, location: chairName, numberOfChair: seats.count, showTime: showTime, bookDay: timestamp)
                         //save into class
                         self.histories.append(history)
-                        // DispatchQueue.main.sync {
                         self.hideProgress()
-                        self.tableView.reloadData()
-                        
-                        //  }
-                        
-                        
+                        self.tableView.reloadData() // reload data
                     }) { (error) in
                         print(error.localizedDescription)
                     }
-                    
                 })
             }
             else {
                 self.showAlertDialog(message: "Không có lịch sử")
             }
         })
-        
     }
     
     //show alertView
@@ -141,12 +127,12 @@ class HistoryTableViewController: UITableViewController {
         return histories.count
     }
     
+    //config data in cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "History", for: indexPath) as! HistoryTableViewCell
         let history = histories[indexPath.row]
          cell.configWithCell(history: history)
         return cell
-        
     }
     
     

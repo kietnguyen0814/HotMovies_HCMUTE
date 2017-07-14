@@ -10,15 +10,11 @@ import UIKit
 import Firebase
 import MBProgressHUD
 
-
 class ChangePassViewController: UIViewController {
     
     @IBOutlet weak var txtCurrentPass: LoginTextField!
-    
     @IBOutlet weak var txtNewPass: LoginTextField!
-    
     @IBOutlet weak var txtConfirmPass: LoginTextField!
-    
     var user: User! = nil
     var loadingNotification: MBProgressHUD! = nil
     var mDatabase: DatabaseReference!
@@ -49,7 +45,7 @@ class ChangePassViewController: UIViewController {
      sự kiện click ok, nếu đã có kết nối internet thì thực hiện đổi mật khẩu
     */
     @IBAction func btnOk(_ sender: Any) {
-        if (InternetConnection.isConnectedToNetwork()){
+        if (InternetConnection.isConnectedToNetwork()) {
             let currentPass: String = txtCurrentPass.text!
             let newPass: String = txtNewPass.text!
             let confirmPass: String = txtConfirmPass.text!
@@ -60,7 +56,7 @@ class ChangePassViewController: UIViewController {
             else {
                 var result: Bool = true;
                 //check length
-                if (currentPass.characters.count < 6 || newPass.characters.count < 6 || confirmPass.characters.count < 6){
+                if (currentPass.characters.count < 6 || newPass.characters.count < 6 || confirmPass.characters.count < 6) {
                     result = false;
                     showAlertDialog(message: "Mật khẩu phải có ít nhất 6 kí tự");
                     return;
@@ -155,12 +151,13 @@ class ChangePassViewController: UIViewController {
         return true
     }
     
-    fileprivate func observerKeyboard(){
-        NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: self.view.window)
-        NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: self.view.window)
+    //Control Keyboard show and hide
+    func observerKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(ChangePassViewController.keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: self.view.window)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChangePassViewController.keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: self.view.window)
     }
     
-    func DismissKeyboard(){
+    func DismissKeyboard() {
         view.endEditing(true)
     }
     

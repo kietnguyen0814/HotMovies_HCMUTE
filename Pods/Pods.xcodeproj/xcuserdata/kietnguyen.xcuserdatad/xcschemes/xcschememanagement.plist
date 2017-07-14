@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>KeychainAccess.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -47,12 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4FD3A5C88E033BA40DA4A0E5513E5A9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>63316B336713F64F23EA5846D22A45F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>859AE132383CA9E949631E1FF130F478</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8905DB6521F8FDC34752B69DEE3FDEB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

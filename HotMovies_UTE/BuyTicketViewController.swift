@@ -12,25 +12,21 @@ import Firebase
 
 class BuyTicketViewController: UIViewController {
     
-    
     @IBOutlet weak var imgPoster: UIImageView!
     @IBOutlet weak var txtFilmName: UILabel!
     @IBOutlet weak var txtActor: UILabel!
-    
     @IBOutlet weak var lblMoney: UILabel!
     @IBOutlet weak var txtTime: UILabel!
     @IBOutlet weak var txtNumberTicket: BorderLabel!
-    
     @IBOutlet weak var txtPrice: UILabel!
+    // declare variable
     var mDatabase: DatabaseReference!
     var progressDialog: MBProgressHUD!
-    
     var filmInfo: FilmInfo!
     var time: String = ""
     var ticketNumber: Int64  = 1
     var priceFilm: Int64 = 0
     var money: Int64 = 0
-    
     var userInfo: User!
     
     override func viewDidLoad() {
@@ -41,7 +37,7 @@ class BuyTicketViewController: UIViewController {
     }
     
     func initData() {
-        if (InternetConnection.isConnectedToNetwork()){
+        if (InternetConnection.isConnectedToNetwork()) {
             loadData()
             loadDataFromDB()
         }
@@ -67,7 +63,6 @@ class BuyTicketViewController: UIViewController {
                 //load data price
                 self.money = self.priceFilm * self.ticketNumber
                 self.lblMoney.text = String(self.money) + "VND"
-                
             }
         })
     }

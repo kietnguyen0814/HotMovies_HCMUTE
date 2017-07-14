@@ -39,10 +39,8 @@
 		F72C1D631EE29E2000FE5306 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C1D621EE29E2000FE5306 /* ChangePassViewController.swift */; };
 		F72C1D651EE2AFF800FE5306 /* CommingSoonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C1D641EE2AFF800FE5306 /* CommingSoonTableViewController.swift */; };
 		F72C1D691EE2B22800FE5306 /* FilmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C1D681EE2B22800FE5306 /* FilmInfo.swift */; };
-		F72C1D6B1EE2B46800FE5306 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C1D6A1EE2B46800FE5306 /* Film.swift */; };
 		F72C1D6D1EE2B4A300FE5306 /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C1D6C1EE2B4A300FE5306 /* Seat.swift */; };
 		F72C1D6F1EE2B4DE00FE5306 /* ShowTimeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C1D6E1EE2B4DE00FE5306 /* ShowTimeInfo.swift */; };
-		F7609A081EE2C08900B0FB61 /* ShowTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7609A071EE2C08900B0FB61 /* ShowTime.swift */; };
 		F7656EEE1EE7E67300196F93 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7656EED1EE7E67300196F93 /* BuyTicketViewController.swift */; };
 		F7656EF01EE7F63E00196F93 /* BorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7656EEF1EE7F63E00196F93 /* BorderLabel.swift */; };
 		F7656EF21EE7FB0C00196F93 /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7656EF11EE7FB0C00196F93 /* YoutubeViewController.swift */; };
@@ -113,10 +111,8 @@
 		F72C1D621EE29E2000FE5306 /* ChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
 		F72C1D641EE2AFF800FE5306 /* CommingSoonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommingSoonTableViewController.swift; sourceTree = "<group>"; };
 		F72C1D681EE2B22800FE5306 /* FilmInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmInfo.swift; sourceTree = "<group>"; };
-		F72C1D6A1EE2B46800FE5306 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		F72C1D6C1EE2B4A300FE5306 /* Seat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
 		F72C1D6E1EE2B4DE00FE5306 /* ShowTimeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTimeInfo.swift; sourceTree = "<group>"; };
-		F7609A071EE2C08900B0FB61 /* ShowTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTime.swift; sourceTree = "<group>"; };
 		F7656EED1EE7E67300196F93 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
 		F7656EEF1EE7F63E00196F93 /* BorderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderLabel.swift; sourceTree = "<group>"; };
 		F7656EF11EE7FB0C00196F93 /* YoutubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
@@ -263,10 +259,8 @@
 			children = (
 				30F1498C1EE070D500E284D5 /* User.swift */,
 				F72C1D681EE2B22800FE5306 /* FilmInfo.swift */,
-				F72C1D6A1EE2B46800FE5306 /* Film.swift */,
 				F72C1D6C1EE2B4A300FE5306 /* Seat.swift */,
 				F72C1D6E1EE2B4DE00FE5306 /* ShowTimeInfo.swift */,
-				F7609A071EE2C08900B0FB61 /* ShowTime.swift */,
 				76782B791EE7E2060069F859 /* Constants.swift */,
 				F76DBFA21EF10D3D00E9BFAD /* History.swift */,
 			);
@@ -594,13 +588,11 @@
 				2E407B091EE04C5900208130 /* UserInfoViewController.swift in Sources */,
 				2EEE8FA71EDA988A003060A3 /* DesignView.swift in Sources */,
 				F7EF628C1EF50EF50056F24B /* AppUtility.swift in Sources */,
-				F7609A081EE2C08900B0FB61 /* ShowTime.swift in Sources */,
 				301F53E01EE4591C0032AD66 /* Downloader.swift in Sources */,
 				304F4F6A1EE70441006B36BE /* FilmDetailTableViewController.swift in Sources */,
 				F7656EF01EE7F63E00196F93 /* BorderLabel.swift in Sources */,
 				2EE078B31ED95A0400B619C3 /* AppDelegate.swift in Sources */,
 				2E407B071EE0462A00208130 /* ForgetPassViewController.swift in Sources */,
-				F72C1D6B1EE2B46800FE5306 /* Film.swift in Sources */,
 				F72C1D631EE29E2000FE5306 /* ChangePassViewController.swift in Sources */,
 				306B5FD81EEAADD200FACCFD /* ChoosePlacesViewController.swift in Sources */,
 				F72C1D6F1EE2B4DE00FE5306 /* ShowTimeInfo.swift in Sources */,

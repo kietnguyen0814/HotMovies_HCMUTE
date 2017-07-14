@@ -16,11 +16,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     /*@IBOutlet weak var imgBackground: UIImageView!
      @IBOutlet weak var btnSignIn: UIButton!*/
     @IBOutlet weak var txtEmailSignIn: LoginTextField!
-    
     @IBOutlet weak var chkRemember: DesignButton!
     @IBOutlet weak var txtPassSignIn: LoginTextField!
-    
-    
     var loadingNotification: MBProgressHUD!
     var checkbox = UIImage(named: "check")
     var unCheck = UIImage(named: "uncheck")
@@ -61,7 +58,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         let keys = keychain.allKeys()
         for key in keys {
             let password = try! keychain.get(key)
-            if (password != nil){
+            if (password != nil) {
                 txtPassSignIn.text = password
                 txtEmailSignIn.text = key
                 chkRemember.setImage(checkbox, for: UIControlState.normal)
@@ -76,9 +73,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
      */
     @IBAction func btnLogin(_ sender: Any) {
         if (InternetConnection.isConnectedToNetwork()) {
+            //lấy dữ liệu người dùng vừa nhập
             let email: String = txtEmailSignIn.text!
             let password: String = txtPassSignIn.text!
-            
+            //kiểm tra logic
             if (email.isEmpty || password.isEmpty) {
                 showAlertDialog(message: "Hãy điền đầy đủ thông tin");
             }
@@ -94,7 +92,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                         self.hideProgress()
                         if (error == nil) {
                             //save password
-                            if (self.isCheck){
+                            if (self.isCheck) {
                                 do {
                                     //remove all keychain
                                     try self.keychain.removeAll()
@@ -133,7 +131,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     //event click checkbox
     @IBAction func chkRememberClick(_ sender: Any) {
-        if (isCheck){
+        if (isCheck) {
             chkRemember.setImage(unCheck, for: UIControlState.normal)
             isCheck = false
         }
@@ -163,7 +161,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Show, Hide Keyboard
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if txtEmailSignIn.isEditing {
+        if (txtEmailSignIn.isEditing) {
             txtPassSignIn.becomeFirstResponder()
         } else {
             txtPassSignIn.resignFirstResponder()
@@ -171,21 +169,24 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    fileprivate func observerKeyboard(){
+    
+    fileprivate func observerKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: self.view.window)
         NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: self.view.window)
     }
     
-    func DismissKeyboard(){
+    func DismissKeyboard() {
         view.endEditing(true)
     }
     
+    // Show keyboard
     func keyboardWillShow(sender: NSNotification) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.view.frame = CGRect(x: 0, y: -70, width: self.view.frame.width, height: self.view.frame.height)
         }, completion: nil)
     }
     
+    //Hide Keyboard
     func keyboardWillHide(sender: NSNotification) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
